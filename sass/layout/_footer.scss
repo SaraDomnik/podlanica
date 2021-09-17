@@ -1,0 +1,92 @@
+.footer {
+  font-weight: lighter;
+  width: 100vw;
+  position: relative;
+  background-color: $color-primary;
+
+  grid-row: 9 / 10;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50rem 25rem;
+
+  @media only screen and (max-width: $bp-big) {
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__map {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-self: center;
+  }
+
+  &__socialmedia {
+    font-size: 3rem;
+    color: $color-grey-1;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: center;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--ig {
+    }
+
+    &--fb {
+      margin-left: 4rem;
+    }
+
+    &--trip {
+      margin-left: 4rem;
+      height: 3rem;
+    }
+  }
+
+  &__location {
+    color: $color-grey-1;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      font-size: 3.6rem;
+      margin-right: 2rem;
+    }
+
+    &--text {
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+  }
+
+  &__contact {
+    color: $color-grey-1;
+
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      font-size: 3.6rem;
+      margin-right: 2rem;
+    }
+
+    &--text {
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+  }
+}

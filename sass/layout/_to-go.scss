@@ -1,0 +1,114 @@
+.to-go {
+  background-image: url(/Img/podlanica_pattern-white--rotated.svg);
+  background-color: $color-primary;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+  border-top: 4px solid $color-primary-dark;
+  border-bottom: 4px solid $color-primary-dark;
+  z-index: 2;
+  position: relative;
+
+  grid-row: 4 / 5;
+
+  display: grid;
+  grid-template-columns: 10rem repeat(3, 1fr) 10rem;
+  grid-template-rows: 20rem 60rem;
+  justify-items: center;
+  align-items: center;
+
+  &__heading-bg {
+    z-index: 0;
+    background-color: $color-primary-light;
+    height: 100%;
+    width: 100%;
+    opacity: 70%;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  &__heading {
+    z-index: 1;
+    color: #fff;
+    // text-shadow: 2px 2px $color-primary-dark;
+    text-align: center;
+    font-family: $font-podlanica;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    justify-self: center;
+    align-self: center;
+
+    h2 {
+      // text-transform: uppercase;
+      font-size: 7rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+    }
+  }
+
+  &__card {
+    height: 50rem;
+    width: 30rem;
+    background-color: #fff;
+    box-shadow: 1rem 1rem 1rem rgba($color-primary-dark, 0.8);
+
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin: 2rem 0;
+      font-size: 2.5rem;
+    }
+
+    p {
+    }
+
+    &--img {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      z-index: 0;
+
+      &--1 {
+        background-image: url(/Img/to-go-placeholder-1.jpg);
+      }
+
+      &--2 {
+        background-image: url(/Img/to-go-placeholder-2.jpg);
+      }
+
+      &--3 {
+        background-image: url(/Img/to-go-placeholder-3.jpg);
+      }
+    }
+
+    &--text {
+      height: 20rem;
+      text-align: center;
+      z-index: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+
+    &--1 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &--2 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+
+    &--3 {
+      grid-column: 4 / 5;
+      grid-row: 2 / 3;
+    }
+  }
+}

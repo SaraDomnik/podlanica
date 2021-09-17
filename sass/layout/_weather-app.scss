@@ -1,0 +1,116 @@
+.weather-app {
+  height: 85%;
+  width: 100vw;
+  color: #fff;
+
+  grid-row: 7 / 8;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__left {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    padding: 5rem;
+    font-family: $font-podlanica;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+
+    justify-self: center;
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 25rem 50rem;
+
+    &--1 {
+      font-size: 3rem;
+      margin-left: 10rem;
+
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+
+      justify-self: start;
+      align-self: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &--city {
+        font-size: 7rem;
+      }
+
+      p {
+      }
+    }
+
+    &--icon {
+      font-size: 15rem;
+
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+
+      align-self: start;
+      justify-self: end;
+    }
+
+    &--2 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+
+      align-self: start;
+      justify-self: end;
+      &--temp {
+        font-size: 12rem;
+      }
+
+      p {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__form {
+    z-index: 2;
+    height: 50rem;
+    margin: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+
+  &__right {
+    z-index: 1;
+    padding: 5rem;
+    font-size: 3rem;
+    font-family: $font-podlanica;
+
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--time {
+      margin: 5rem 0;
+      font-size: 13rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__animation {
+    z-index: 0;
+    filter: blur(2px);
+
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+}

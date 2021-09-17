@@ -1,0 +1,91 @@
+.menu {
+  background-image: url(/Img/bg-fish-2.png);
+  background-color: $color-primary;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+  border-top: 4px solid $color-primary-dark;
+  z-index: 2;
+  transform: translateY(-1rem);
+
+  grid-row: 6 / 7;
+
+  &__food {
+    padding: 3rem;
+    margin: 10rem;
+    z-index: 20;
+    font-size: 2.5rem;
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem repeat(2, 1fr);
+
+    grid-gap: 5rem;
+    justify-items: start;
+    align-items: start;
+
+    section {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 1rem;
+    }
+
+    section > * {
+      padding: 0;
+      margin: 0;
+    }
+
+    span {
+      flex: 1;
+      border-bottom: 2px dotted #333;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h3 {
+      padding-left: 2rem;
+      margin-bottom: 4rem;
+      color: #fff;
+      background-color: $color-primary;
+    }
+
+    &--h2 {
+      font-size: 7rem;
+      font-family: $font-podlanica;
+      text-transform: uppercase;
+      color: $color-primary-dark;
+
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      justify-self: center;
+      align-self: center;
+    }
+
+    &--apetizers {
+      width: 100%;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &--main-dishes {
+      width: 100%;
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    &--fish {
+      width: 100%;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &--side-dishes {
+      width: 100%;
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+  }
+}

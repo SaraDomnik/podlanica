@@ -1,0 +1,39 @@
+//FONT
+$font-text: "Open Sans", sans-serif;
+$font-heading: "Six Caps", sans-serif;
+
+$font-raleway: "Raleway", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+$font-podlanica: "Poiret One", cursive;
+$font-handwriting-1: "Allison", cursive;
+$font-handwriting-2: "WindSong", cursive;
+
+$fa-font-path: "../Fonts/webfonts";
+
+//COLORS
+$color-primary: #497382;
+$color-primary-dark: #2d4750;
+$color-primary-light: #7cb1c4;
+
+$color-secondary: #c9c6b3;
+$color-secondary-dark: #9b9780;
+$color-secondary-light: #f1eed4;
+
+$color-dark-blue-1: #314757;
+$color-blue-grey-1: #697984;
+$color-blue-grey-2: #3a505f;
+$color-bage-dark-1: #bcac89;
+$color-grey-1: #dddddd;
+
+//SHADOW
+$shadow-medium: 2rem 2rem 3rem rgba(#000, 0.5);
+
+//MEADIA QUERIES
+$bp-largest: 96.875em; //1550px
+$bp-big: 84.375em; //1350px
+$bp-large: 71.875em; //1150px
+$bp-medium: 56.25em; //900px
+$bp-small: 46.875em; //750px
+$bp-smaller: 40.625em; //650px
+$bp-smallest: 34.375em; //550px
+$bp-tiny: 21.875em; //350px

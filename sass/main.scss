@@ -1,0 +1,20 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/navigation";
+@import "layout/weather-app";
+@import "layout/header";
+@import "layout/about-us";
+@import "layout/to-go";
+@import "layout/fishing-video";
+@import "layout/menu";
+@import "layout/gallery";
+@import "layout/footer";
+
+@import "./Fonts/scss/fontawesome.scss";
