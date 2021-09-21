@@ -241,7 +241,7 @@
           <p id="date">DATE</p>
         </div>
         
-        <div class="weather-app__left--icon" id="icon"><i class="fas fa-cloud"></i></div>
+        <img src="/Img/weather-app--icons/SVG/01d.svg" alt="Weather icons" id="icon"  class="weather-app__left--icon">
         <div class="weather-app__left--2">
            <h3 class="weather-app__left--2--temp" id="temp">30</h3>
            <p id="description">Description</p>
@@ -249,17 +249,42 @@
         
       </div>
       <div class="weather-app__form">
-   
+          <div class="weather-app__form--text">
+            <h2>Reserve a table now</h2>
+            <p>Reservation is required. Give us a call.</p>
+          </div>
+          <div class="weather-app__form--phone">
+            <i class="weather-app__form--icon fas fa-mobile-alt"></i>
+            <p>00386 41 338 612</p>
+          </div>
+          <div class="weather-app__form--location">
+            <i class="weather-app__form--icon fas fa-map-marker-alt"></i>
+            <p>Pristanišče, <br>6300 Piran, <br> Slovenia</p>
+          </div>
+      
+          <div class="weather-app__form--time">
+            <i class="weather-app__form--icon far fa-clock"></i>
+           <p> Open: 13h - 20h, <br><b>Thuseday closed </b></p>
+          </div>
+        
         </div>
       <div class="weather-app__right">
         <h2 class="weather-app__right--time" id="time">Time</h2>
-        <p id="max-temp">Max</p>
-        <p id="min-temp">Min</p>
+        <div class="weather-app__right--max">
+          <p>High:</p>
+          <p id="max-temp">Max</p>
+        </div>
+        <div class="weather-app__right--min">
+          <p>Low:</p>
+          <p id="min-temp">Min</p>
+        </div>
+        
         <p id="sunrise">Sunrise</p>
         <p id="sunset">Sunset</p>
-      </div>
-      <dotlottie-player class="weather-app__animation" src="https://assets5.lottiefiles.com/dotlotties/dlf10_qs8rethl.lottie" mode="bounce" background="transparent"  speed=".7"    loop controls ></dotlottie-player>
-    </div>
+    
+     </div>
+     <div id="bm"></div>
+     </div>
     <!--WEATHER APP + RESERVATION FORM -->
     <!--GALLERY START-->
   
@@ -329,6 +354,7 @@
     </footer>
     <!--FOOTER END -->
     <!--SCRIPTS START-->
+   
     <!--Normal script-->
     <script src="script.js"></script>
     <!--Google Map-->
@@ -336,7 +362,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOMRSckt288BdAN2l5LaqkbewTCAn6vj0&callback=initMap">
 </script>
     <!--Lottie files-->
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+
     <!--Weather app-->
     <script src="weather-app.js"></script>
     <!--SCRIPTS END-->

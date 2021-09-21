@@ -1,3 +1,5 @@
+// const { default: Lottie } = require("lottie-web");
+
 let temp = document.getElementById("temp");
 let city = document.getElementById("city");
 let description = document.getElementById("description");
@@ -20,7 +22,12 @@ window.addEventListener("load", () => {
         description.textContent = data.weather[0].main;
         maxTemp.textContent = Math.round(data.main.temp_max) + "\u00B0";
         minTemp.textContent = Math.round(data.main.temp_min) + "\u00B0";
+        //Set icon
+        document.getElementById(
+          "icon"
+        ).src = `img/weather-app--icons/SVG/${data.weather[0].icon}.svg`;
       });
+    //Lottie animation
   }
 });
 
