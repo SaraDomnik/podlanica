@@ -1,17 +1,27 @@
 .weather-app {
-  height: 85%;
-  width: 100vw;
+  height: 100%;
   color: #fff;
+  transform: translateY(-1rem);
 
   grid-row: 7 / 8;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  &__left {
-    z-index: 1;
+  &__animation {
+    z-index: 0;
     height: 100%;
     width: 100%;
+    transform: translateY(-3px);
+    object-fit: cover;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  &__left {
+    height: 100%;
+    z-index: 1;
     padding: 5rem;
     font-family: $font-podlanica;
 
@@ -23,7 +33,7 @@
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 25rem 50rem;
+    grid-template-rows: 40% 60%;
 
     &--1 {
       font-size: 2.5rem;
@@ -143,6 +153,8 @@
 
   &__right {
     z-index: 1;
+    height: 100%;
+    width: 100%;
     padding: 5rem;
     font-size: 3rem;
     font-family: $font-podlanica;
@@ -174,20 +186,4 @@
       display: flex;
     }
   }
-
-  &__animation {
-    z-index: 0;
-    // filter: blur(2px);
-
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-  }
 }
-
-// #bm {
-//   height: 50rem;
-//   width: 50rem;
-
-//   grid-column: 1 / -1;
-//   grid-row: 1 / -1;
-// }

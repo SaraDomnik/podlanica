@@ -1,5 +1,3 @@
-// const { default: Lottie } = require("lottie-web");
-
 let temp = document.getElementById("temp");
 let city = document.getElementById("city");
 let description = document.getElementById("description");
@@ -26,8 +24,18 @@ window.addEventListener("load", () => {
         document.getElementById(
           "icon"
         ).src = `img/weather-app--icons/SVG/${data.weather[0].icon}.svg`;
+
+        //Lottie animation
+        bodymovin.loadAnimation({
+          container: document.getElementById("lottie-animation"), // required
+          path: `Img/weather-app--animations/${data.weather[0].icon}.json`, // required
+          // path: `Img/weather-app--animations/50n.json`, // required
+          renderer: "svg", // required
+          loop: true, // optional
+          autoplay: true, // optional
+          name: "Demo Animation", // optional
+        });
       });
-    //Lottie animation
   }
 });
 

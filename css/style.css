@@ -174,16 +174,23 @@ body {
     transform: translateY(0); }
 
 .weather-app {
-  height: 85%;
-  width: 100vw;
+  height: 100%;
   color: #fff;
+  transform: translateY(-1rem);
   grid-row: 7 / 8;
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
-  .weather-app__left {
-    z-index: 1;
+  .weather-app__animation {
+    z-index: 0;
     height: 100%;
     width: 100%;
+    transform: translateY(-3px);
+    object-fit: cover;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1; }
+  .weather-app__left {
+    height: 100%;
+    z-index: 1;
     padding: 5rem;
     font-family: "Poiret One", cursive;
     grid-column: 1 / 2;
@@ -192,7 +199,7 @@ body {
     align-self: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 25rem 50rem; }
+    grid-template-rows: 40% 60%; }
     .weather-app__left--1 {
       font-size: 2.5rem;
       text-shadow: 2px 2px 2px rgba(73, 115, 130, 0.5);
@@ -271,6 +278,8 @@ body {
         font-size: 1.7rem; }
   .weather-app__right {
     z-index: 1;
+    height: 100%;
+    width: 100%;
     padding: 5rem;
     font-size: 3rem;
     font-family: "Poiret One", cursive;
@@ -291,10 +300,6 @@ body {
       display: flex; }
     .weather-app__right--min {
       display: flex; }
-  .weather-app__animation {
-    z-index: 0;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1; }
 
 .header {
   width: 100vw;

@@ -38,35 +38,33 @@
           <li><a href="#" class="navigation__item">Contact</a></li>
         </ul>
       </nav>
+    </div> 
+    <!--NAVIGATION END-->
 
-    
- </div> 
- <!--NAVIGATION END-->
-
-   <!--HAMBURGER MENU START-->
-   <div class="ham" id="ham">
-    <!--Hamburger menu ul start-->
-    <ul class="ham__list">
-      <li><a href="#" class="ham__item">Home </a></li>
-      <li><a href="#" class="ham__item">About us</a></li>
-      <li><a href="#" class="ham__item">Menu</a></li>
-      <li><a href="#" class="ham__item">Comments</a></li>
-      <li><a href="#" class="ham__item">Gallery</a></li>
-      <li><a href="#" class="ham__item">Contact</a></li>
-    </ul>
-    <!--Hamburger menu ul end-->
-    <!--Hamburger menu button start-->
-  <button class="ham__btn">
-    <span class="ham__btn--menu-icon">
-      <i class="fas fa-bars"></i>
-    </span>
-    <span class="ham__btn--x-icon">
-      <i class="fas fa-times"></i>
-    </span>
-  </button>
-   <!--Hamburger menu button end-->
- </div>
-<!--HAMBURGER MENU END-->
+    <!--HAMBURGER MENU START-->
+    <div class="ham" id="ham">
+      <!--Hamburger menu ul start-->
+      <ul class="ham__list">
+        <li><a href="#" class="ham__item">Home </a></li>
+        <li><a href="#" class="ham__item">About us</a></li>
+        <li><a href="#" class="ham__item">Menu</a></li>
+        <li><a href="#" class="ham__item">Comments</a></li>
+        <li><a href="#" class="ham__item">Gallery</a></li>
+        <li><a href="#" class="ham__item">Contact</a></li>
+      </ul>
+      <!--Hamburger menu ul end-->
+      <!--Hamburger menu button start-->
+      <button class="ham__btn">
+        <span class="ham__btn--menu-icon">
+          <i class="fas fa-bars"></i>
+        </span>
+        <span class="ham__btn--x-icon">
+          <i class="fas fa-times"></i>
+        </span>
+      </button>
+      <!--Hamburger menu button end-->
+    </div>
+    <!--HAMBURGER MENU END-->
    
  <!--HEADER START-->
     <header class="header">
@@ -235,6 +233,7 @@
      
     <!--WEATHER APP + RESERVATION FORM-->
     <div class="weather-app">
+      <div id="lottie-animation" class="weather-app__animation"></div>
       <div class="weather-app__left">
         <div class="weather-app__left--1">
           <p class="weather-app__left--1--city" id="city">CITY</p>
@@ -249,7 +248,7 @@
         
       </div>
       <div class="weather-app__form">
-          <div class="weather-app__form--text">
+         <div class="weather-app__form--text">
             <h2>Reserve a table now</h2>
             <p>Reservation is required. Give us a call.</p>
           </div>
@@ -271,24 +270,20 @@
       <div class="weather-app__right">
         <h2 class="weather-app__right--time" id="time">Time</h2>
         <div class="weather-app__right--max">
-          <p>High:</p>
+          <p>Max-Temp:</p>
           <p id="max-temp">Max</p>
         </div>
         <div class="weather-app__right--min">
-          <p>Low:</p>
+          <p>Min-Temp:</p>
           <p id="min-temp">Min</p>
         </div>
         
-        <p id="sunrise">Sunrise</p>
-        <p id="sunset">Sunset</p>
-    
      </div>
-     <div id="bm"></div>
      </div>
     <!--WEATHER APP + RESERVATION FORM -->
     <!--GALLERY START-->
   
-    <div class="gallery">
+    <!-- <div class="gallery">
       <figure class="gallery__item gallery__item--1">
         <img src="Img/image-1.jpg" alt="image 1" class="gallery__img" />
       </figure>
@@ -307,7 +302,7 @@
       <figure class="gallery__item gallery__item--6">
         <img src="Img/image-6.jpg" alt="image 6" class="gallery__img" />
       </figure>
-    </div>
+    </div> -->
     <!--GALLERY END-->
     <!--FOOTER START-->
     <footer class="footer">
@@ -352,19 +347,19 @@
       <!--FOOTER END-->
       
     </footer>
+    <div id="icon-container"></div>¨
     <!--FOOTER END -->
     <!--SCRIPTS START-->
-   
-    <!--Normal script-->
-    <script src="script.js"></script>
     <!--Google Map-->
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOMRSckt288BdAN2l5LaqkbewTCAn6vj0&callback=initMap">
-</script>
+    </script>
     <!--Lottie files-->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <!--Weather app-->
     <script src="weather-app.js"></script>
+    <!--Normal script-->
+    <script src="script.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

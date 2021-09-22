@@ -93,13 +93,3 @@ menuItem.forEach(function (menuItem) {
 //     "url('/Img/podlanica_pattern-white--rotated.svg')";
 //   menuBg.style.backgroundSize = "cover";
 // });
-
-// //Lottie
-// debugger;
-// var animation = bodymovin.loadAnimation({
-//   conatiner: document.getElementById("bm"),
-//   renderer: "svg",
-//   loop: true,
-//   autoplay: true,
-//   path: "10d.json",
-// });
