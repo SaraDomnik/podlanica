@@ -1,5 +1,6 @@
 .about-us {
   border-top: 4px solid $color-primary-dark;
+  background-color: #fff;
 
   grid-row: 3 / 4;
 
@@ -11,22 +12,10 @@
 
     grid-template-rows: 30rem 50rem;
 
-    &--pattern-left {
-      height: 60rem;
-      margin-top: -11rem;
-      opacity: 30%;
-      z-index: -10;
-
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-      align-self: start;
-      justify-self: start;
-    }
-
     &--pattern-right {
       height: 65rem;
       opacity: 30%;
-      z-index: -10;
+      z-index: 1;
 
       grid-column: 2 / 3;
       grid-row: 2 / 3;
@@ -41,6 +30,7 @@
       width: 100%;
       grid-column: 1 / 2;
       grid-row: 1 / -1;
+      object-fit: cover;
 
       justify-self: center;
       align-self: center;

@@ -15,20 +15,17 @@ html {
 }
 
 body {
+  background-color: $color-primary;
   font-family: $font-raleway;
   font-weight: 300;
   line-height: 1.6;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
 .container {
   display: grid;
   grid-template-rows:
-    6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) 73rem minmax(
-      min-content,
-      50vh
-    )
-    minmax(min-content, 75rem);
-
-  justify-content: center;
+    6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) 73rem 50rem
+    70rem;
 }

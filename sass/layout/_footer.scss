@@ -1,50 +1,62 @@
 .footer {
   font-weight: lighter;
-  width: 100vw;
-  position: relative;
   background-color: $color-primary;
+  font-family: $font-podlanica;
 
   grid-row: 9 / 10;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50rem 25rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 45rem 25rem;
 
   @media only screen and (max-width: $bp-big) {
     grid-template-rows: repeat(2, 1fr);
   }
 
   &__map {
-    background-size: cover;
+    object-fit: cover;
     height: 100%;
     width: 100%;
+
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     justify-self: center;
   }
 
-  &__socialmedia {
-    font-size: 3rem;
-    color: $color-grey-1;
+  &__container {
+    padding: 3rem;
 
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    justify-self: center;
 
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-
-    &--ig {
+    &--sp {
+      margin-bottom: 1rem;
+      color: $color-grey-1;
+      font-size: 1.7rem;
     }
 
-    &--fb {
-      margin-left: 4rem;
-    }
+    &--socialmedia {
+      font-size: 3rem;
+      color: $color-grey-1;
 
-    &--trip {
-      margin-left: 4rem;
-      height: 3rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &--ig {
+      }
+
+      &--fb {
+        margin-left: 4rem;
+      }
+
+      &--trip {
+        margin-left: 4rem;
+        height: 3rem;
+      }
     }
   }
 
@@ -79,6 +91,25 @@
     display: flex;
     align-items: center;
 
+    &--icon {
+      font-size: 3.6rem;
+      margin-right: 2rem;
+    }
+
+    &--text {
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+  }
+
+  &__time {
+    color: $color-grey-1;
+
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+
+    display: flex;
+    align-items: center;
     &--icon {
       font-size: 3.6rem;
       margin-right: 2rem;

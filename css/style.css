@@ -12,15 +12,16 @@ html {
   font-size: 62.5%; }
 
 body {
+  background-color: #497382;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   line-height: 1.6;
+  max-width: 100%;
   overflow-x: hidden; }
 
 .container {
   display: grid;
-  grid-template-rows: 6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) 73rem minmax(min-content, 50vh) minmax(min-content, 75rem);
-  justify-content: center; }
+  grid-template-rows: 6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) 73rem 50rem 70rem; }
 
 .heading__title {
   line-height: 1; }
@@ -319,6 +320,8 @@ body {
   height: 100%;
   width: 100%;
   z-index: 0;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
   overflow: hidden; }
   .bg-video__content {
     height: 100%;
@@ -326,6 +329,7 @@ body {
     object-fit: cover; }
 
 .heading {
+  text-shadow: 2px 2px 3px #2d4750;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -350,25 +354,17 @@ body {
 
 .about-us {
   border-top: 4px solid #2d4750;
+  background-color: #fff;
   grid-row: 3 / 4; }
   .about-us__content {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 30rem 50rem; }
-    .about-us__content--pattern-left {
-      height: 60rem;
-      margin-top: -11rem;
-      opacity: 30%;
-      z-index: -10;
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-      align-self: start;
-      justify-self: start; }
     .about-us__content--pattern-right {
       height: 65rem;
       opacity: 30%;
-      z-index: -10;
+      z-index: 1;
       grid-column: 2 / 3;
       grid-row: 2 / 3;
       justify-self: end;
@@ -379,6 +375,7 @@ body {
       width: 100%;
       grid-column: 1 / 2;
       grid-row: 1 / -1;
+      object-fit: cover;
       justify-self: center;
       align-self: center; }
     .about-us__content--heading {
@@ -511,8 +508,8 @@ body {
     transform: translateY(-0.5rem);
     height: 100%;
     width: 100%;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
     overflow: hidden;
     object-fit: cover;
     justify-self: center; }
@@ -619,37 +616,44 @@ body {
 
 .footer {
   font-weight: lighter;
-  width: 100vw;
-  position: relative;
   background-color: #497382;
+  font-family: "Poiret One", cursive;
   grid-row: 9 / 10;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50rem 25rem; }
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 45rem 25rem; }
   @media only screen and (max-width: 84.375em) {
     .footer {
       grid-template-rows: repeat(2, 1fr); } }
   .footer__map {
-    background-size: cover;
+    object-fit: cover;
     height: 100%;
     width: 100%;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     justify-self: center; }
-  .footer__socialmedia {
-    font-size: 3rem;
-    color: #dddddd;
+  .footer__container {
+    padding: 3rem;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    justify-self: center;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center; }
-    .footer__socialmedia--fb {
-      margin-left: 4rem; }
-    .footer__socialmedia--trip {
-      margin-left: 4rem;
-      height: 3rem; }
+    .footer__container--sp {
+      margin-bottom: 1rem;
+      color: #dddddd;
+      font-size: 1.7rem; }
+    .footer__container--socialmedia {
+      font-size: 3rem;
+      color: #dddddd;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; }
+      .footer__container--socialmedia--fb {
+        margin-left: 4rem; }
+      .footer__container--socialmedia--trip {
+        margin-left: 4rem;
+        height: 3rem; }
   .footer__location {
     color: #dddddd;
     grid-column: 2 / 3;
@@ -674,6 +678,18 @@ body {
       font-size: 3.6rem;
       margin-right: 2rem; }
     .footer__contact--text {
+      font-size: 1.7rem;
+      font-weight: 400; }
+  .footer__time {
+    color: #dddddd;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center; }
+    .footer__time--icon {
+      font-size: 3.6rem;
+      margin-right: 2rem; }
+    .footer__time--text {
       font-size: 1.7rem;
       font-weight: 400; }
 

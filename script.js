@@ -4,12 +4,18 @@ let map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 45.52718350323489, lng: 13.567225039235982 },
+    center: new google.maps.LatLng(45.52718350323489, 13.567225039235982),
     zoom: 18,
     mapId: "d35677e370f6e0cd",
   });
-}
 
+  var iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(45.52718350323489, 13.567225039235982),
+    map: map,
+    icon: "/Img/map_pin.png",
+  });
+}
 //45.52718350323489, 13.567225039235982
 
 //MAIN NAV BACKGROUND CHANGE ON SCROLL
@@ -67,29 +73,4 @@ menuItem.forEach(function (menuItem) {
 //     return document.getElementById("ham").classList.remove("hide__ham");
 //   }
 //   return document.getElementById("ham").classList.add("hide__ham");
-// });
-
-//MENU VARIABLES
-// const menuHeading = document.getElementById("menu__heading");
-// const menuFood = document.getElementById("menu__food");
-// const menuBg = document.getElementById("menu");
-// const btn = document.getElementById("btn");
-
-// //MENU OPEN
-
-// menuHeading.addEventListener("click", function openMenu() {
-//   menuFood.style.display = "block";
-//   menuHeading.style.display = "none";
-//   menuBg.style.backgroundImage = "url('/Img/bg-fish-2.png')";
-//   menuBg.style.backgroundSize = "auto";
-// });
-
-// //MENU CLOSE
-
-// btn.addEventListener("click", function closeMenu() {
-//   menuFood.style.display = "none";
-//   menuHeading.style.display = "block";
-//   menuBg.style.backgroundImage =
-//     "url('/Img/podlanica_pattern-white--rotated.svg')";
-//   menuBg.style.backgroundSize = "cover";
 // });
