@@ -6,14 +6,14 @@
   grid-template-rows: repeat(3, 1fr);
 
   &__heading {
+    z-index: 1;
     padding: 2rem;
     color: #fff;
+    background-color: #fff;
     font-family: $font-podlanica;
     text-align: center;
     text-shadow: 2px 2px $color-primary-dark;
-    z-index: 1;
-    // background-color: $color-primary-dark;
-    // opacity: 70%;
+
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     justify-self: center;
@@ -30,18 +30,16 @@
   }
 
   &__video {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-
-    transform: translateY(-0.5rem);
     height: 100%;
     width: 100%;
+    transform: translateY(-0.5rem);
     filter: blur(6px);
     -webkit-filter: blur(6px);
-
     overflow: hidden;
     object-fit: cover;
 
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
     justify-self: center;
   }
 }

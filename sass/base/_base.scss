@@ -26,6 +26,10 @@ body {
 .container {
   display: grid;
   grid-template-rows:
-    6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) 73rem 50rem
+    6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) minmax(
+      80rem,
+      auto
+    )
+    70rem
     70rem;
 }

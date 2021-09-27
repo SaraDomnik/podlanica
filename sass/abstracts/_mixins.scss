@@ -32,3 +32,15 @@
     background-color: $color-blue-grey-2;
   }
 }
+
+//WEATHER APP
+@mixin weather-app-info {
+  margin-top: 5rem;
+
+  display: flex;
+
+  p {
+    margin-left: 3rem;
+    font-size: 2.1rem;
+  }
+}

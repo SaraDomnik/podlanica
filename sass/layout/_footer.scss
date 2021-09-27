@@ -1,6 +1,6 @@
 .footer {
-  font-weight: lighter;
   background-color: $color-primary;
+  font-weight: lighter;
   font-family: $font-podlanica;
 
   grid-row: 9 / 10;
@@ -9,14 +9,10 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 45rem 25rem;
 
-  @media only screen and (max-width: $bp-big) {
-    grid-template-rows: repeat(2, 1fr);
-  }
-
   &__map {
-    object-fit: cover;
     height: 100%;
     width: 100%;
+    object-fit: cover;
 
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -39,15 +35,12 @@
     }
 
     &--socialmedia {
-      font-size: 3rem;
       color: $color-grey-1;
+      font-size: 3rem;
 
       display: flex;
       justify-content: flex-end;
       align-items: center;
-
-      &--ig {
-      }
 
       &--fb {
         margin-left: 4rem;
@@ -71,8 +64,8 @@
     align-items: center;
 
     &--icon {
-      font-size: 3.6rem;
       margin-right: 2rem;
+      font-size: 3.6rem;
     }
 
     &--text {
@@ -92,8 +85,8 @@
     align-items: center;
 
     &--icon {
-      font-size: 3.6rem;
       margin-right: 2rem;
+      font-size: 3.6rem;
     }
 
     &--text {
@@ -111,8 +104,8 @@
     display: flex;
     align-items: center;
     &--icon {
-      font-size: 3.6rem;
       margin-right: 2rem;
+      font-size: 3.6rem;
     }
 
     &--text {

@@ -27,13 +27,13 @@ window.addEventListener("load", () => {
 
         //Lottie animation
         bodymovin.loadAnimation({
-          container: document.getElementById("lottie-animation"), // required
-          path: `Img/weather-app--animations/${data.weather[0].icon}.json`, // required
-          // path: `Img/weather-app--animations/50n.json`, // required
-          renderer: "svg", // required
-          loop: true, // optional
-          autoplay: true, // optional
-          name: "Demo Animation", // optional
+          container: document.getElementById("lottie-animation"),
+          path: `Img/weather-app--animations/${data.weather[0].icon}.json`,
+          // path: `Img/weather-app--animations/01d.json`,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          name: "Demo Animation",
         });
       });
   }
