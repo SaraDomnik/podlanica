@@ -12,7 +12,7 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(45.52718350323489, 13.567225039235982),
     map: map,
-    icon: "/Img/Map_pin.png",
+    icon: "/img/Map_pin.png",
   });
 }
 //45.52718350323489, 13.567225039235982
@@ -74,54 +74,41 @@ menuItem.forEach(function (menuItem) {
 //   return document.getElementById("ham").classList.add("hide__ham");
 // });
 
-//SLIDESHOW
-let slideIndex = 1;
-showSlides(slideIndex);
+//OWL CAROUSEL
+$("#owl-menu").owlCarousel({
+  margin: 20,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+});
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("gallery__mySlides");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-
-//auto slide
-
-let autoIndex = 0;
-showAutoSlides();
-
-function showAutoSlides() {
-  let i;
-  let autoSlides = document.getElementsByClassName("gallery__mySlides");
-
-  for (i = 0; i < autoSlides.length; i++) {
-    autoSlides[i].style.display = "none";
-  }
-
-  autoIndex++;
-  if (autoIndex > autoSlides.length) {
-    autoIndex = 1;
-  }
-
-  autoSlides[autoIndex - 1].style.display = "block";
-  setTimeout(showAutoSlides, 5000);
-}
+$("#owl-gallery").owlCarousel({
+  margin: 20,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+});

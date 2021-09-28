@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--OWL CAROUSEL-->
+    <link rel="stylesheet" href="owl-css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl-css/owl.theme.default.min.css" />
     <!--ICONS-->
     <link rel="stylesheet" href="/Fonts/css/all.css">
     <link rel="stylesheet" href="/Fonts/js/all.js">
@@ -79,14 +82,14 @@
       </div>
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
-          <source src="Video/Fishing-2-comp.mp4" type="video/mp4" />
+          <source src="video/Fishing-2-comp.mp4" type="video/mp4" />
         </video>
       </div>
     </header>
     <!--ABOUT US-->
     <div class="about-us">
        <div class="about-us__content">
-         <img src="/Img/img1.jpg" alt="Restaurant owners" class="about-us__content--img">
+         <img src="img/img1.jpg" alt="Restaurant owners" class="about-us__content--img">
          <h2 class="about-us__content--heading heading-2">About us</h2>
          <p class="about-us__content--paragraph">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
@@ -96,42 +99,44 @@
           consectetur adipisicing elit. Tempore facere, explicabo repudiandae
           cum excepturi laudantium reiciendis? 
          </p>
-         <img class="about-us__content--pattern-right"  src="/Img/podlanica_pattern-blue-mirrored.svg" alt="">
+         <img class="about-us__content--pattern-right"  src="img/podlanica_pattern-blue-mirrored.svg" alt="Background pattern">
        </div> 
     </div>
      <!--ABOUT US END-->
      <!--DAILY TO GO START-->
-    <div class="to-go">
+    <div class="to-go ">
        <div class="to-go__heading-bg"></div>
        <div class="to-go__heading">
          <h2>Menu To Go</h2>
          <h3>Daily offers that you can order to go</h3>
        </div>
-       
-      <div class="to-go__card to-go__card--1">
-       <div class="to-go__card--img to-go__card--img--1"></div>
-       <div class="to-go__card--text">
-          <h2>Bakala</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <div id="owl-menu" class="to-go__carousel owl-carousel owl-theme">
+        <div class="item to-go__card to-go__card--1">
+          <div class="to-go__card--img to-go__card--img--1"></div>
+          <div class="to-go__card--text">
+            <h2>Bakala</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="to-go__card to-go__card--2">
-        <div class="to-go__card--img to-go__card--img--2"></div>
-        <div class="to-go__card--text">
-          <h2>Marinated sardins</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <div class="item to-go__card to-go__card--2">
+          <div class="to-go__card--img to-go__card--img--2"></div>
+          <div class="to-go__card--text">
+            <h2>Marinated sardins</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="to-go__card to-go__card--3">
-        <div class="to-go__card--img to-go__card--img--3"></div>
-        <div class="to-go__card--text">
-          <h2>Salty filets</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <div class="item to-go__card to-go__card--3">
+          <div class="to-go__card--img to-go__card--img--3"></div>
+          <div class="to-go__card--text">
+            <h2>Salty filets</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </div>
         </div>
-      </div>
     </div>
+  </div>
+  
      <!--DAILY TO GO END-->
      <!--FISHING VIDEO START-->
     <div class="fishing-video">
@@ -140,7 +145,7 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur nulla repudiandae corrupti!</p>
       </div>
         <video class="fishing-video__video" autoplay muted loop>
-          <source src="Video/Fishing-2-comp.mp4" type="video/mp4" />
+          <source src="video/Fishing-2-comp.mp4" type="video/mp4" />
         </video>
     </div>
      <!--FISHING VIDEO END-->
@@ -239,7 +244,7 @@
           <p id="date">DATE</p>
         </div>
         
-        <img src="/Img/weather-app--icons/SVG/01d.svg" alt="Weather icons" id="icon"  class="weather-app__left--icon">
+        <img src="img/weather-app--icons/SVG/01d.svg" alt="Weather icons" id="icon"  class="weather-app__left--icon">
         <div class="weather-app__left--2">
            <h3 class="weather-app__left--2--temp" id="temp">30</h3>
            <p id="description">Description</p>
@@ -285,24 +290,17 @@
     
     <!--GALLERY START-->
      <!-- Slideshow container -->
-    <div class="gallery-container">
-      <div class="gallery">
-    <!-- Full-width images with number and caption text -->
-        <div class="gallery__mySlides fade">
-          <img src="/Img/img1.jpg" >
-        </div>
-        <div class="gallery__mySlides fade">
-          <img src="/Img/img2.jpg" >
-        </div>
-        <div class="gallery__mySlides fade">
-          <img src="/Img/img3.jpg">
-        </div>
-
-  <!-- Next and previous buttons -->
-        <a class="gallery__prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="gallery__next" onclick="plusSlides(1)">&#10095;</a>
+     <div class="gallery-container">
+      <div id="owl-gallery" class="owl-carousel owl-theme owl-loaded">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+              <div class="owl-item"><img src="img/img1.jpg" alt="owners"></div>
+              <div class="owl-item"><img src="img/img2.jpg" alt="owners"></div>
+              <div class="owl-item"><img src="img/img3.jpg" alt="owners"></div>
+          </div>
       </div>
-    </div>   
+    </div>
+  </div>
     <!--GALLERY END-->
     <!--FOOTER START-->
     <footer class="footer">
@@ -355,10 +353,15 @@
     <!--Lottie files-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!--Owl Carousel-->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+   
     <!--Weather app-->
-    <script src="weather-app.js"></script>
+    <script src="js/weather-app.js"></script>
     <!--Normal script-->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <!--Google Map-->
     <script async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOMRSckt288BdAN2l5LaqkbewTCAn6vj0&callback=initMap&v=weekly" async>

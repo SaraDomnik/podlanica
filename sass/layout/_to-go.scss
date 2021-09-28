@@ -1,7 +1,7 @@
 .to-go {
   position: relative;
   z-index: 2;
-  background-image: url(/Img/podlanica_pattern-white--rotated.svg);
+  background-image: url(/img/podlanica_pattern-white--rotated.svg);
   background-color: $color-primary;
   background-repeat: repeat-y;
   background-size: cover;
@@ -48,6 +48,13 @@
     }
   }
 
+  &__carousel {
+    margin-left: 14rem;
+
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
   &__card {
     height: 50rem;
     width: 30rem;
@@ -71,15 +78,15 @@
       z-index: 0;
 
       &--1 {
-        background-image: url(/Img/to-go-placeholder-1.jpg);
+        background-image: url(/img/to-go-placeholder-1.jpg);
       }
 
       &--2 {
-        background-image: url(/Img/to-go-placeholder-2.jpg);
+        background-image: url(/img/to-go-placeholder-2.jpg);
       }
 
       &--3 {
-        background-image: url(/Img/to-go-placeholder-3.jpg);
+        background-image: url(/img/to-go-placeholder-3.jpg);
       }
     }
 

@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
         //Lottie animation
         bodymovin.loadAnimation({
           container: document.getElementById("lottie-animation"),
-          path: `Img/weather-app--animations/${data.weather[0].icon}.json`,
+          path: `img/weather-app--animations/${data.weather[0].icon}.json`,
           // path: `Img/weather-app--animations/01d.json`,
           renderer: "svg",
           loop: true,

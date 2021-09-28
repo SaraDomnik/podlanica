@@ -4,9 +4,10 @@
   "description": "website for Ladja Podlanica",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
     "devserver": "live-server --browser=firefox",
-    "start": "npm-run-all --parallel devserver watch:sass",
+    "nodemon": "nodemon app.js",
+    "start": "npm-run-all --parallel watch:sass nodemon",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
@@ -19,14 +20,19 @@
     "concat": "^1.0.3",
     "live-server": "^1.2.1",
     "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
     "sass": "^1.38.0"
   },
   "dependencies": {
     "@splidejs/splide": "^2.4.21",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "git": "^0.1.5",
+    "jquery": "^3.6.0",
     "lottie-web": "^5.7.13",
+    "owl.carousel": "^2.3.4",
     "suncalc": "^1.8.0"
   }
 }

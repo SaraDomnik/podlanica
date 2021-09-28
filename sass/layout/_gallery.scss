@@ -1,86 +1,26 @@
 .gallery-container {
   height: 100%;
-  background-image: url(/Img/podlanica_pattern-white--rotated.svg);
+  background-image: url(/img/podlanica_pattern-white--rotated.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 5rem;
   overflow: hidden;
 
   grid-row: 8 / 9;
+  display: grid;
+  grid-template-rows: 20rem 50rem;
+}
 
+.owl-carousel {
+  grid-row: 2 / 3;
+}
+
+.owl-carousel .owl-stage {
   display: flex;
-  justify-content: center;
-  align-self: center;
 }
 
-.gallery {
-  background-color: #fff;
-  padding: 3rem;
-  border-radius: 0.5rem;
-  max-width: 100%;
-  height: 60rem;
-  position: relative;
-  margin: auto;
+.owl-carousel .owl-item img {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-
-  img {
-    overflow: hidden;
-    height: 54rem;
-    box-shadow: 6px 6px 6px rgba(#000, 0.6);
-  }
-
-  &__mySlides {
-    display: none;
-  }
-
-  &__prev,
-  &__next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 5rem;
-    color: white;
-    font-size: 5rem;
-    font-weight: bold;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-  }
-
-  &__next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
