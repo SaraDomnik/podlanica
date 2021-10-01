@@ -1,5 +1,5 @@
 .about-us {
-  // border-top: 4px solid $color-primary-dark;
+  z-index: 0;
   background-color: #fff;
 
   grid-row: 3 / 4;
@@ -8,7 +8,7 @@
     width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 55% 45%;
     grid-template-rows: 30rem 50rem;
 
     &--pattern-right {
@@ -24,21 +24,36 @@
     }
 
     &--img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+      z-index: 1;
+      height: 50rem;
+      width: 75rem;
 
       grid-column: 1 / 2;
       grid-row: 1 / -1;
 
-      justify-self: center;
+      justify-self: end;
+      align-self: center;
+    }
+
+    &--heading-bg {
+      z-index: -1;
+      height: 50rem;
+      width: 75rem;
+      background-color: $color-primary-light;
+      transform: translateY(10rem) translateX(10rem);
+
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+
       align-self: center;
     }
 
     &--heading {
       margin-top: 5rem;
-      font-size: 5rem;
+      font-size: 8rem;
+      font-family: $font-podlanica;
       text-align: center;
+      pointer-events: none;
       z-index: 20;
 
       grid-column: 2 / 3;

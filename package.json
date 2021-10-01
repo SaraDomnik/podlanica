@@ -6,7 +6,7 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
     "devserver": "live-server --browser=firefox",
-    "nodemon": "nodemon app.js",
+    "nodemon": "nodemon app.js --ext *",
     "start": "npm-run-all --parallel watch:sass nodemon",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
@@ -27,12 +27,14 @@
   },
   "dependencies": {
     "@splidejs/splide": "^2.4.21",
+    "connect-livereload": "^0.6.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "git": "^0.1.5",
     "jquery": "^3.6.0",
+    "livereload": "^0.9.3",
     "lottie-web": "^5.7.13",
-    "owl.carousel": "^2.3.4",
-    "suncalc": "^1.8.0"
+    "suncalc": "^1.8.0",
+    "swiper": "^7.0.7"
   }
 }

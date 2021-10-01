@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--OWL CAROUSEL-->
-    <link rel="stylesheet" href="owl-css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owl-css/owl.theme.default.min.css" />
+    <!--SWIPER-->
+    <link
+       rel="stylesheet"
+       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <!--ICONS-->
     <link rel="stylesheet" href="/Fonts/css/all.css">
     <link rel="stylesheet" href="/Fonts/js/all.js">
@@ -89,6 +91,7 @@
     <!--ABOUT US-->
     <div class="about-us">
        <div class="about-us__content">
+         <div class="about-us__content--heading-bg"></div>
          <img src="img/img1.jpg" alt="Restaurant owners" class="about-us__content--img">
          <h2 class="about-us__content--heading heading-2">About us</h2>
          <p class="about-us__content--paragraph">
@@ -105,36 +108,44 @@
      <!--ABOUT US END-->
      <!--DAILY TO GO START-->
     <div class="to-go ">
-       <div class="to-go__heading-bg"></div>
-       <div class="to-go__heading">
-         <h2>Menu To Go</h2>
-         <h3>Daily offers that you can order to go</h3>
-       </div>
-      <div id="owl-menu" class="to-go__carousel owl-carousel owl-theme">
-        <div class="item to-go__card to-go__card--1">
-          <div class="to-go__card--img to-go__card--img--1"></div>
-          <div class="to-go__card--text">
-            <h2>Bakala</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          </div>
+      <div class="to-go__heading">
+        <h2 >To go Menu</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+
+      <div class="to-go__menu">
+        <div class="to-go__menu--item">
+          <h3>Marinirane sardele</h3>
+          <p>8 €</p>
         </div>
 
-        <div class="item to-go__card to-go__card--2">
-          <div class="to-go__card--img to-go__card--img--2"></div>
-          <div class="to-go__card--text">
-            <h2>Marinated sardins</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          </div>
+        <div class="to-go__menu--item">
+          <h3>Spaghetti with vongole</h3>
+          <p>8 €</p>
         </div>
 
-        <div class="item to-go__card to-go__card--3">
-          <div class="to-go__card--img to-go__card--img--3"></div>
-          <div class="to-go__card--text">
-            <h2>Salty filets</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          </div>
+        <div class="to-go__menu--item">
+          <h3>Slani fileti</h3>
+          <p>8 €</p>
         </div>
-    </div>
+
+        <div class="to-go__menu--item">
+          <h3>Bakala</h3>
+          <p>20 €</p>
+        </div>
+      </div>
+
+      <div class="to-go__menu-special">
+        <div class="to-go__menu-special--item">
+          <h3>Special offer</h3>
+          <p>8 €</p>
+        </div>
+        
+        <div class="to-go__menu-special--item">
+          <h3>Special offer</h3>
+          <p>15 €</p>
+        </div>
+      </div>
   </div>
   
      <!--DAILY TO GO END-->
@@ -142,7 +153,6 @@
     <div class="fishing-video">
       <div class="fishing-video__heading">
         <h2>We have the freshes fish in town</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur nulla repudiandae corrupti!</p>
       </div>
         <video class="fishing-video__video" autoplay muted loop>
           <source src="video/Fishing-2-comp.mp4" type="video/mp4" />
@@ -289,17 +299,30 @@
     <!--WEATHER APP + RESERVATION FORM -->
     
     <!--GALLERY START-->
-     <!-- Slideshow container -->
-     <div class="gallery-container">
-      <div id="owl-gallery" class="owl-carousel owl-theme owl-loaded">
-        <div class="owl-stage-outer">
-          <div class="owl-stage">
-              <div class="owl-item"><img src="img/img1.jpg" alt="owners"></div>
-              <div class="owl-item"><img src="img/img2.jpg" alt="owners"></div>
-              <div class="owl-item"><img src="img/img3.jpg" alt="owners"></div>
-          </div>
+    <div class="gallery">
+      <div class="gallery__heading-bg"></div>
+      <div class="gallery__heading"><p>Gallery</p></div>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide swiper-slide--1"></div>
+          <div class="swiper-slide swiper-slide--2"></div>
+          <div class="swiper-slide swiper-slide--3"></div>
+          <div class="swiper-slide swiper-slide--4"></div>
+          <div class="swiper-slide swiper-slide--5"></div>
+          <div class="swiper-slide swiper-slide--6"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev "></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
-    </div>
   </div>
     <!--GALLERY END-->
     <!--FOOTER START-->
@@ -353,11 +376,8 @@
     <!--Lottie files-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!--Owl Carousel-->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-   
+    <!--Swiper--> 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!--Weather app-->
     <script src="js/weather-app.js"></script>
     <!--Normal script-->

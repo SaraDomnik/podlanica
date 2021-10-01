@@ -1,11 +1,7 @@
 .to-go {
-  position: relative;
   z-index: 2;
-  background-image: url(/img/podlanica_pattern-white--rotated.svg);
-  background-color: $color-primary;
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: center;
+  font-family: $font-podlanica;
+  background-color: #fff;
   border-top: 4px solid $color-primary-dark;
   border-bottom: 4px solid $color-primary-dark;
 
@@ -17,102 +13,61 @@
   justify-items: center;
   align-items: center;
 
-  &__heading-bg {
-    z-index: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 70%;
-    background-color: $color-primary-light;
-
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-  }
-
   &__heading {
     z-index: 1;
-    color: #fff;
+    height: 100%;
+    width: 100%;
     text-align: center;
-    font-family: $font-podlanica;
+    background-color: $color-primary-light;
+    pointer-events: none;
 
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     justify-self: center;
-    align-self: center;
+    align-self: start;
 
     h2 {
       font-size: 7rem;
     }
 
-    h3 {
+    p {
       font-size: 3rem;
     }
   }
 
-  &__carousel {
-    margin-left: 14rem;
-
+  &__menu {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-  }
+    justify-self: center;
+    align-self: start;
 
-  &__card {
-    height: 50rem;
-    width: 30rem;
-    background-color: #fff;
-    box-shadow: 1rem 1rem 1rem rgba($color-primary-dark, 0.8);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+    &--item {
+      border-bottom: 13px solid transparent;
+      border-image: url(/img/podlanica_pattern-blue-rotated.svg) 4000 repeat;
 
-    display: flex;
-    flex-direction: column;
-    h2 {
-      margin: 2rem 0;
-      font-size: 2.5rem;
-    }
-
-    p {
-    }
-
-    &--img {
-      height: 100%;
-      width: 100%;
-      background-size: cover;
-      z-index: 0;
-
-      &--1 {
-        background-image: url(/img/to-go-placeholder-1.jpg);
-      }
-
-      &--2 {
-        background-image: url(/img/to-go-placeholder-2.jpg);
-      }
-
-      &--3 {
-        background-image: url(/img/to-go-placeholder-3.jpg);
-      }
-    }
-
-    &--text {
-      z-index: 1;
-      height: 20rem;
-      text-align: center;
+      justify-self: center;
 
       display: flex;
       flex-direction: column;
-      align-self: center;
-    }
+      align-items: center;
 
-    &--1 {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
+      h3 {
+        font-size: 3rem;
+      }
 
-    &--2 {
-      grid-column: 3 / 4;
-      grid-row: 2 / 3;
+      p {
+        font-size: 2rem;
+      }
     }
+  }
 
-    &--3 {
-      grid-column: 4 / 5;
-      grid-row: 2 / 3;
-    }
+  &__menu-special {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    justify-self: center;
   }
 }

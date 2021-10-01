@@ -12,6 +12,7 @@
     font-family: $font-podlanica;
     text-align: center;
     text-shadow: 2px 2px $color-primary-dark;
+    pointer-events: none;
 
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -20,11 +21,7 @@
 
     h2 {
       text-transform: uppercase;
-      font-size: 4.5rem;
-    }
-
-    p {
-      font-size: 2.5rem;
+      font-size: 5.5rem;
     }
   }
 

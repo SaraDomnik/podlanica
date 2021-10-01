@@ -21,7 +21,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) minmax(80rem, auto) 70rem 70rem; }
+  grid-template-rows: 6rem repeat(3, minmax(80rem, auto)) 60rem minmax(80rem, auto) minmax(80rem, auto) 80rem 70rem; }
 
 .heading__title {
   line-height: 1; }
@@ -197,6 +197,7 @@ body {
     padding: 5rem;
     height: 100%;
     font-family: "Poiret One", cursive;
+    pointer-events: none;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     justify-self: center;
@@ -257,30 +258,35 @@ body {
     .weather-app__form--icon {
       font-size: 3.2rem;
       margin-left: 12rem; }
-    .weather-app__form--text h2 {
-      margin-top: 3rem;
-      font-size: 4.2rem;
-      text-transform: uppercase;
-      text-align: center; }
-    .weather-app__form--text p {
-      font-size: 2.5rem;
-      line-height: 2;
-      text-align: center; }
+    .weather-app__form--text {
+      pointer-events: none; }
+      .weather-app__form--text h2 {
+        margin-top: 3rem;
+        font-size: 4.2rem;
+        text-transform: uppercase;
+        text-align: center; }
+      .weather-app__form--text p {
+        font-size: 2.5rem;
+        line-height: 2;
+        text-align: center; }
     .weather-app__form--location {
       margin-top: 5rem;
-      display: flex; }
+      display: flex;
+      cursor: pointer; }
       .weather-app__form--location p {
         margin-left: 3rem;
         font-size: 2.1rem; }
     .weather-app__form--phone {
       margin-top: 5rem;
-      display: flex; }
+      display: flex;
+      cursor: pointer; }
       .weather-app__form--phone p {
         margin-left: 3rem;
         font-size: 2.1rem; }
     .weather-app__form--time {
       margin-top: 5rem;
-      display: flex; }
+      display: flex;
+      pointer-events: none; }
       .weather-app__form--time p {
         margin-left: 3rem;
         font-size: 2.1rem; }
@@ -289,6 +295,7 @@ body {
     padding: 5rem;
     font-size: 4rem;
     font-family: "Poiret One", cursive;
+    pointer-events: none;
     grid-column: 3 / 4;
     grid-row: 1 / -1;
     justify-self: center;
@@ -356,12 +363,13 @@ body {
       background-color: #fff; }
 
 .about-us {
+  z-index: 0;
   background-color: #fff;
   grid-row: 3 / 4; }
   .about-us__content {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 55% 45%;
     grid-template-rows: 30rem 50rem; }
     .about-us__content--pattern-right {
       height: 65rem;
@@ -372,17 +380,28 @@ body {
       justify-self: end;
       align-self: end; }
     .about-us__content--img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+      z-index: 1;
+      height: 50rem;
+      width: 75rem;
       grid-column: 1 / 2;
       grid-row: 1 / -1;
-      justify-self: center;
+      justify-self: end;
+      align-self: center; }
+    .about-us__content--heading-bg {
+      z-index: -1;
+      height: 50rem;
+      width: 75rem;
+      background-color: #7cb1c4;
+      transform: translateY(10rem) translateX(10rem);
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
       align-self: center; }
     .about-us__content--heading {
       margin-top: 5rem;
-      font-size: 5rem;
+      font-size: 8rem;
+      font-family: "Poiret One", cursive;
       text-align: center;
+      pointer-events: none;
       z-index: 20;
       grid-column: 2 / 3;
       grid-row: 1 / 2;
@@ -401,13 +420,9 @@ body {
       align-self: start; }
 
 .to-go {
-  position: relative;
   z-index: 2;
-  background-image: url(/img/podlanica_pattern-white--rotated.svg);
-  background-color: #497382;
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: center;
+  font-family: "Poiret One", cursive;
+  background-color: #fff;
   border-top: 4px solid #2d4750;
   border-bottom: 4px solid #2d4750;
   grid-row: 4 / 5;
@@ -416,68 +431,45 @@ body {
   grid-template-rows: 20rem 60rem;
   justify-items: center;
   align-items: center; }
-  .to-go__heading-bg {
-    z-index: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 70%;
-    background-color: #7cb1c4;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2; }
   .to-go__heading {
     z-index: 1;
-    color: #fff;
+    height: 100%;
+    width: 100%;
     text-align: center;
-    font-family: "Poiret One", cursive;
+    background-color: #7cb1c4;
+    pointer-events: none;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     justify-self: center;
-    align-self: center; }
+    align-self: start; }
     .to-go__heading h2 {
       font-size: 7rem; }
-    .to-go__heading h3 {
+    .to-go__heading p {
       font-size: 3rem; }
-  .to-go__carousel {
-    margin-left: 14rem;
+  .to-go__menu {
     grid-column: 1 / -1;
-    grid-row: 2 / 3; }
-  .to-go__card {
-    height: 50rem;
-    width: 30rem;
-    background-color: #fff;
-    box-shadow: 1rem 1rem 1rem rgba(45, 71, 80, 0.8);
-    display: flex;
-    flex-direction: column; }
-    .to-go__card h2 {
-      margin: 2rem 0;
-      font-size: 2.5rem; }
-    .to-go__card--img {
-      height: 100%;
-      width: 100%;
-      background-size: cover;
-      z-index: 0; }
-      .to-go__card--img--1 {
-        background-image: url(/img/to-go-placeholder-1.jpg); }
-      .to-go__card--img--2 {
-        background-image: url(/img/to-go-placeholder-2.jpg); }
-      .to-go__card--img--3 {
-        background-image: url(/img/to-go-placeholder-3.jpg); }
-    .to-go__card--text {
-      z-index: 1;
-      height: 20rem;
-      text-align: center;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem; }
+    .to-go__menu--item {
+      border-bottom: 13px solid transparent;
+      border-image: url(/img/podlanica_pattern-blue-rotated.svg) 4000 repeat;
+      justify-self: center;
       display: flex;
       flex-direction: column;
-      align-self: center; }
-    .to-go__card--1 {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3; }
-    .to-go__card--2 {
-      grid-column: 3 / 4;
-      grid-row: 2 / 3; }
-    .to-go__card--3 {
-      grid-column: 4 / 5;
-      grid-row: 2 / 3; }
+      align-items: center; }
+      .to-go__menu--item h3 {
+        font-size: 3rem; }
+      .to-go__menu--item p {
+        font-size: 2rem; }
+  .to-go__menu-special {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    justify-self: center; }
 
 .fishing-video {
   grid-row: 5 / 6;
@@ -491,15 +483,14 @@ body {
     font-family: "Poiret One", cursive;
     text-align: center;
     text-shadow: 2px 2px #2d4750;
+    pointer-events: none;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     justify-self: center;
     align-self: center; }
     .fishing-video__heading h2 {
       text-transform: uppercase;
-      font-size: 4.5rem; }
-    .fishing-video__heading p {
-      font-size: 2.5rem; }
+      font-size: 5.5rem; }
   .fishing-video__video {
     height: 100%;
     width: 100%;
@@ -515,7 +506,7 @@ body {
 .menu {
   z-index: 2;
   height: 105%;
-  background-image: url(/public/img/bg-fish-2.png);
+  background-image: url(/img/bg-fish-2.png);
   background-color: #497382;
   background-repeat: repeat-y;
   background-size: cover;
@@ -533,6 +524,7 @@ body {
     margin: 10rem;
     font-size: 2.5rem;
     background-color: #fff;
+    pointer-events: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 10rem repeat(2, 1fr);
@@ -582,27 +574,81 @@ body {
       grid-column: 2 / 3;
       grid-row: 3 / 4; }
 
-.gallery-container {
+.gallery {
   height: 100%;
-  background-image: url(/img/podlanica_pattern-white--rotated.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(/img/podlanica_pattern-blue-rotated.svg);
+  background-color: #2d4750;
+  background-position: top;
   background-size: cover;
-  overflow: hidden;
   grid-row: 8 / 9;
   display: grid;
-  grid-template-rows: 20rem 50rem; }
+  grid-template-columns: 1fr;
+  grid-template-rows: 20rem 50rem;
+  justify-content: center; }
+  .gallery__heading-bg {
+    bottom: 0;
+    right: 0;
+    height: 60%;
+    width: 100%;
+    background-color: #7cb1c4;
+    background-image: url(/img/podlanica_pattern-blue-rotated.svg);
+    background-size: cover;
+    background-position: bottom;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1; }
+  .gallery__heading {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 12rem;
+    font-family: "Poiret One", cursive;
+    text-align: center;
+    text-shadow: 10px 10px 5px #2d4750;
+    background-color: #497382;
+    pointer-events: none;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center; }
 
-.owl-carousel {
-  grid-row: 2 / 3; }
-
-.owl-carousel .owl-stage {
-  display: flex; }
-
-.owl-carousel .owl-item img {
-  width: 100%;
+.swiper {
+  width: 95%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 5rem;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3; }
+  .swiper-slide {
+    background-size: cover;
+    background-position: center; }
+    .swiper-slide--1 {
+      background-image: url(/img/img1.jpg); }
+    .swiper-slide--2 {
+      background-color: aquamarine; }
+    .swiper-slide--3 {
+      background-image: url(/img/img1.jpg); }
+    .swiper-slide--4 {
+      background-color: blueviolet; }
+    .swiper-slide--5 {
+      background-image: url(/img/img1.jpg); }
+    .swiper-slide--6 {
+      background-color: brown; }
+  .swiper-pagination {
+    margin-bottom: 1rem; }
+    .swiper-pagination-bullet {
+      opacity: 80%;
+      height: 1.9rem;
+      width: 1.9rem;
+      background-color: #f1eed4; }
+      .swiper-pagination-bullet-active {
+        opacity: 100%;
+        background-color: #9b9780; }
+  .swiper-button-prev, .swiper-button-next {
+    color: #fff; }
+    .swiper-button-prev:hover, .swiper-button-prev:active, .swiper-button-next:hover, .swiper-button-next:active {
+      color: #9b9780; }
+  .swiper-scrollbar-drag {
+    background-color: #9b9780; }
 
 .footer {
   background-color: #497382;

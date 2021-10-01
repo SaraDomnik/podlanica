@@ -74,41 +74,36 @@ menuItem.forEach(function (menuItem) {
 //   return document.getElementById("ham").classList.add("hide__ham");
 // });
 
-//OWL CAROUSEL
-$("#owl-menu").owlCarousel({
-  margin: 20,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 2,
-    },
-    1000: {
-      items: 3,
-    },
-  },
-});
+//SWIPER
 
-$("#owl-gallery").owlCarousel({
-  margin: 20,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 2,
-    },
-    1000: {
-      items: 3,
-    },
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  autoplay: {
+    delay: 6000,
+  },
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
+  // Pagination
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    dynamicBullets: true,
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // Scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
   },
 });
