@@ -13,8 +13,14 @@ function initMap() {
     position: new google.maps.LatLng(45.52718350323489, 13.567225039235982),
     map: map,
     icon: "/img/Map_pin.png",
+    url: "https://goo.gl/maps/tH1ADvfayPqEfvxj9",
+  });
+
+  google.maps.addEventListener(marker, "click", () => {
+    window.location.href = "https://goo.gl/maps/tH1ADvfayPqEfvxj9";
   });
 }
+
 //45.52718350323489, 13.567225039235982
 
 //MAIN NAV BACKGROUND CHANGE ON SCROLL

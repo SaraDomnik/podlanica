@@ -37,12 +37,12 @@
     <div class="navigation" id="navigation">
       <nav class="navigation__nav" id="navigation__nav">
         <ul class="navigation__list">
-          <li><a href="#" class="navigation__item">Home </a></li>
-          <li><a href="#" class="navigation__item">About us</a></li>
-          <li><a href="#" class="navigation__item">Menu</a></li>
-          <li><a href="#" class="navigation__item">Comments</a></li>
-          <li><a href="#" class="navigation__item">Gallery</a></li>
-          <li><a href="#" class="navigation__item">Contact</a></li>
+          <li><a href="#" class="navigation__item"></a></li>
+          <li><a href="#" class="navigation__item"> {{about_us}} </a></li>
+          <li><a href="#" class="navigation__item"> {{to_go}} </a></li>
+          <li><a href="#" class="navigation__item"> {{menu}} </a></li>
+          <li><a href="#" class="navigation__item"> {{contact}} </a></li>
+          <li><a href="#" class="navigation__item"> {{gallery}} </a></li>
         </ul>
       </nav>
     </div> 
@@ -77,10 +77,10 @@
     <header class="header">
       <div class="heading">
        <!-- <img src="img/podlanica_logo-gold.png" class="heading__logo" alt=""> -->
-        <h2 class="heading__title heading__title--2">boat</h2>
+        <h2 class="heading__title heading__title--2"> {{boat}} </h2>
         <h1 class="heading__title heading__title--1 ">Podlanica</h1>
-        <h3 class="heading__title heading__title--3 ">Restaurant</h3> 
-        <button class="heading__btn">Reserve now</button>
+        <h3 class="heading__title heading__title--3 "> {{restavrant}} </h3> 
+        <button class="heading__btn"> {{reserve_now}} </button>
       </div>
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
@@ -108,43 +108,54 @@
      <!--ABOUT US END-->
      <!--DAILY TO GO START-->
     <div class="to-go ">
+      <img src="/img/garlic-1.png" alt="garlic" class="to-go__image--1">
+      <img src="/img/parsley.png" alt="parsley" class="to-go__image--2">
+      <img src="/img/salt.png" alt="salt" class="to-go__image--4">
+      <div class="to-go__menu-bg"></div>
+      <div class="to-go__heading--bg"></div>
       <div class="to-go__heading">
-        <h2 >To go Menu</h2>
+        <h1 >TO GO </h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
 
       <div class="to-go__menu">
-        <div class="to-go__menu--item">
-          <h3>Marinirane sardele</h3>
-          <p>8 €</p>
-        </div>
+        <section>
+          <h3>Marinated sardines</h3>
+          <span></span>
+          <p>8€</p>
+        </section>
 
-        <div class="to-go__menu--item">
-          <h3>Spaghetti with vongole</h3>
-          <p>8 €</p>
-        </div>
-
-        <div class="to-go__menu--item">
-          <h3>Slani fileti</h3>
-          <p>8 €</p>
-        </div>
-
-        <div class="to-go__menu--item">
+        <section>
           <h3>Bakala</h3>
-          <p>20 €</p>
-        </div>
-      </div>
-
-      <div class="to-go__menu-special">
-        <div class="to-go__menu-special--item">
-          <h3>Special offer</h3>
-          <p>8 €</p>
-        </div>
+          <span></span>
+          <p>8€</p>
+        </section>
         
-        <div class="to-go__menu-special--item">
+        <section>
+          <h3>Salty fillets</h3>
+          <span></span>
+          <p>8€</p>
+        </section>
+
+        <section>
+          <h3>Spaghetti with vongole</h3>
+          <span></span>
+          <p>12€</p>
+        </section>
+      </div>
+      <h2 class="to-go__heading-specail">Special daily offers</h2>
+      <div class="to-go__menu-special">
+        <section>
           <h3>Special offer</h3>
-          <p>15 €</p>
-        </div>
+          <span></span>
+          <p>12€</p>
+        </section>
+        
+        <section>
+          <h3>Special offer</h3>
+          <span></span>
+          <p>12€</p>
+        </section>
       </div>
   </div>
   
@@ -312,6 +323,7 @@
           <div class="swiper-slide swiper-slide--4"></div>
           <div class="swiper-slide swiper-slide--5"></div>
           <div class="swiper-slide swiper-slide--6"></div>
+          <div class="swiper-slide swiper-slide--7"></div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>

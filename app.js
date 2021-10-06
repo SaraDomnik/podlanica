@@ -3,6 +3,8 @@ const express = require("express");
 const connectLivereload = require("connect-livereload");
 const livereload = require("livereload");
 const liveReloadServer = livereload.createServer();
+const i18next = require("i18next");
+const middleware = require("i18next-express-middleware");
 const app = express();
 const port = 8080;
 
@@ -15,6 +17,8 @@ liveReloadServer.server.once("connection", () => {
 });
 
 app.use(connectLivereload());
+
+// Internationalization i18next
 
 //Static
 

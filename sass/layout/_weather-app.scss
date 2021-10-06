@@ -1,10 +1,9 @@
 .weather-app {
   height: 100%;
   color: #fff;
-  background-color: #1e3233;
   overflow: hidden;
 
-  grid-row: 7 / 8;
+  grid-row: 6 / 7;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
