@@ -15,10 +15,6 @@ function initMap() {
     icon: "/img/Map_pin.png",
     url: "https://goo.gl/maps/tH1ADvfayPqEfvxj9",
   });
-
-  google.maps.addEventListener(marker, "click", () => {
-    window.location.href = "https://goo.gl/maps/tH1ADvfayPqEfvxj9";
-  });
 }
 
 //45.52718350323489, 13.567225039235982
@@ -28,9 +24,12 @@ let nav = document.getElementById("navigation");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 60) {
-    return (nav.style.backgroundColor = "#497382");
+    nav.style.backgroundColor = "#497382";
+    nav.style.color = "#fff";
+  } else {
+    nav.style.backgroundColor = "transparent";
+    nav.css.color = "#000";
   }
-  return (nav.style.backgroundColor = "transparent");
 });
 
 //HAMBURGER MENU
@@ -84,6 +83,9 @@ menuItem.forEach(function (menuItem) {
 
 const swiper = new Swiper(".swiper", {
   // Optional parameters
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: true,
   autoplay: {
     delay: 6000,
   },
@@ -113,3 +115,19 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 });
+
+//PARALLAX
+// document.addEventListener("mousemove", parallax);
+
+// function parallax(e) {
+//   document.querySelectorAll(".object").forEach(function (move) {
+//     let movingValue = move.getAttribute("data-value");
+//     let x = (e.clientX * movingValue) / 250;
+//     let y = (e.clientY * movingValue) / 250;
+
+//     move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+//   });
+// }
+
+//ELEMENTS ANIMATION
+AOS.init();

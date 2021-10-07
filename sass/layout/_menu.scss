@@ -5,6 +5,7 @@
   background-color: $color-primary;
   background-repeat: repeat-y;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   border-top: 4px solid $color-primary;
   transform: translateY(-1rem);
@@ -22,6 +23,7 @@
     margin: 10rem;
     font-size: 2.5rem;
     background-color: #fff;
+    border: 2rem solid $color-secondary;
     pointer-events: none;
 
     display: grid;
@@ -55,15 +57,16 @@
     h3 {
       padding-left: 2rem;
       margin-bottom: 4rem;
-      color: #fff;
-      background-color: $color-primary;
+      color: $color-white;
+      background-color: $color-secondary-light;
     }
 
     &--h2 {
       font-size: 7rem;
-      font-family: $font-podlanica;
+      font-family: $font-heading;
+      font-weight: 300;
       text-transform: uppercase;
-      color: $color-primary-dark;
+      color: $color-secondary;
 
       grid-column: 1 / -1;
       grid-row: 1 / 2;
@@ -72,6 +75,7 @@
     }
 
     &--apetizers {
+      font-family: $font-heading;
       width: 100%;
 
       grid-column: 1 / 2;
@@ -79,6 +83,7 @@
     }
 
     &--main-dishes {
+      font-family: $font-heading;
       width: 100%;
 
       grid-column: 1 / 2;
@@ -86,6 +91,7 @@
     }
 
     &--fish {
+      font-family: $font-heading;
       width: 100%;
 
       grid-column: 2 / 3;
@@ -93,6 +99,7 @@
     }
 
     &--side-dishes {
+      font-family: $font-heading;
       width: 100%;
 
       grid-column: 2 / 3;

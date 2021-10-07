@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  background-color: $color-primary;
-  font-family: $font-raleway;
+  background-color: $color-primary-dark;
+  font-family: $font-text;
   font-weight: 300;
   line-height: 1.6;
   max-width: 100%;
@@ -30,3 +30,16 @@ body {
     80rem
     70rem;
 }
+
+// .navigation,
+// .ham,
+// .header,
+// .to-go,
+// .fishing-video,
+// .menu,
+// .weather-app,
+// .about-us,
+// .gallery,
+// .footer {
+//   max-width: 1920px;
+// }

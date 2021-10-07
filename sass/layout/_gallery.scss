@@ -1,8 +1,8 @@
 .gallery {
   height: 100%;
-
-  background-image: url(/img/podlanica_pattern-blue-rotated.svg);
-  background-color: $color-primary-dark;
+  // background-image: url(/img/podlanica_pattern-blue-rotated.svg);
+  background-color: $color-primary;
+  background-attachment: fixed;
   background-position: top;
   background-size: cover;
 
@@ -13,31 +13,16 @@
   grid-template-rows: 20rem 50rem;
   justify-content: center;
 
-  &__heading-bg {
-    bottom: 0;
-    right: 0;
-    height: 60%;
-    width: 100%;
-
-    background-color: $color-primary-light;
-
-    background-image: url(/img/podlanica_pattern-blue-rotated.svg);
-    background-size: cover;
-    background-position: bottom;
-
-    grid-row: 2 / 3;
-    grid-column: 1 / -1;
-  }
-
   &__heading {
     width: 100%;
     height: 100%;
     color: #fff;
+    font-family: $font-heading;
+    font-weight: 300;
     font-size: 12rem;
-    font-family: $font-podlanica;
     text-align: center;
     text-shadow: 10px 10px 5px rgba($color-primary-dark, 1);
-    background-color: $color-primary;
+    background-color: $color-secondary;
     pointer-events: none;
 
     grid-row: 1 / 2;
@@ -59,33 +44,6 @@
   &-slide {
     background-size: cover;
     background-position: center;
-    &--1 {
-      background-image: url(/img/img9.jpg);
-    }
-
-    &--2 {
-      background-image: url(/img/img10.jpg);
-    }
-
-    &--3 {
-      background-image: url(/img/img4.jpg);
-    }
-
-    &--4 {
-      background-image: url(/img/img2.jpg);
-    }
-
-    &--5 {
-      background-image: url(/img/img6.jpg);
-    }
-
-    &--6 {
-      background-image: url(/img/img8.jpg);
-    }
-
-    &--7 {
-      background-image: url(/img/img11.jpg);
-    }
   }
 
   &-pagination {
@@ -98,7 +56,7 @@
 
       &-active {
         opacity: 100%;
-        background-color: $color-secondary-dark;
+        background-color: $color-primary;
       }
     }
   }
@@ -109,13 +67,13 @@
 
     &:hover,
     &:active {
-      color: $color-secondary-dark;
+      color: $color-secondary;
     }
   }
 
   &-scrollbar {
     &-drag {
-      background-color: $color-secondary-dark;
+      background-color: $color-secondary;
     }
   }
 }

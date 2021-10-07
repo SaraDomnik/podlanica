@@ -1,6 +1,8 @@
 .about-us {
   z-index: 0;
-  background-color: #fff;
+  background-color: $color-white;
+  border-top: 5rem solid $color-secondary;
+  border-bottom: 5rem solid $color-primary;
 
   grid-row: 7 / 8;
 
@@ -37,9 +39,9 @@
 
     &--heading-bg {
       z-index: -1;
-      height: 50rem;
+      height: 60rem;
       width: 75rem;
-      background-color: $color-primary-light;
+      background-color: $color-primary;
       transform: translateY(10rem) translateX(10rem);
 
       grid-column: 1 / 2;
@@ -49,12 +51,14 @@
     }
 
     &--heading {
+      z-index: 20;
       margin-top: 5rem;
+      font-family: $font-heading;
+      font-weight: 300;
+      color: $color-secondary;
       font-size: 8rem;
-      font-family: $font-podlanica;
       text-align: center;
       pointer-events: none;
-      z-index: 20;
 
       grid-column: 2 / 3;
       grid-row: 1 / 2;

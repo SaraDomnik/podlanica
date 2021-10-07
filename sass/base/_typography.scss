@@ -2,34 +2,18 @@
 .heading__title {
   line-height: 1;
   &--1 {
-    font-weight: 600;
+    font-weight: 300;
     font-size: 15rem;
-    font-family: $font-podlanica;
+    font-family: $font-heading;
     text-transform: uppercase;
     letter-spacing: 2rem;
     color: #fff;
-
-    @media only screen and (max-width: $bp-big) {
-      font-size: 12rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-      font-size: 8.5rem;
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-      font-size: 5.5rem;
-    }
-
-    @media only screen and (max-width: $bp-tiny) {
-      font-size: 5rem;
-    }
   }
 
   &--2 {
-    font-weight: 300;
-    font-size: 7rem;
-    font-family: $font-handwriting-1;
+    font-weight: 200;
+    font-size: 6rem;
+    font-family: $font-handwriting;
     letter-spacing: 2rem;
     letter-spacing: 0.3rem;
     color: #fff;
@@ -38,53 +22,14 @@
   &--3 {
     font-weight: 200;
     font-size: 5rem;
-    font-family: $font-handwriting-1;
+    font-family: $font-handwriting;
     letter-spacing: 0.5rem;
     color: #fff;
-
-    @media only screen and (max-width: $bp-big) {
-      font-size: 5rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-      font-size: 3.5rem;
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-      font-size: 2.5rem;
-    }
   }
-}
-
-//H1 - H4
-.heading-1 {
-  font-size: 4.5rem;
-}
-
-.heading-2 {
-  font-size: 4rem;
-
-  @media only screen and (max-width: $bp-smallest) {
-    font-size: 3rem;
-  }
-}
-
-.heading-3 {
-  font-size: 1.6rem;
-}
-
-.heading-4 {
-  font-size: 1.9rem;
 }
 
 //NAVIGATION
 .navigation {
-  font-family: $font-text;
-  &__logo {
-    font-size: 4rem;
-    color: #fff;
-  }
-
   &__item {
     color: #fff;
     font-size: 1.6rem;

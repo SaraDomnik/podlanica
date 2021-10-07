@@ -1,7 +1,6 @@
 .footer {
-  background-color: $color-primary;
-  font-weight: lighter;
-  font-family: $font-podlanica;
+  color: $color-grey-1;
+  background-color: $color-secondary;
 
   grid-row: 9 / 10;
 
@@ -30,12 +29,10 @@
     align-items: center;
     &--sp {
       margin-bottom: 1rem;
-      color: $color-grey-1;
       font-size: 1.7rem;
     }
 
     &--socialmedia {
-      color: $color-grey-1;
       font-size: 3rem;
 
       display: flex;
@@ -54,8 +51,6 @@
   }
 
   &__location {
-    color: $color-grey-1;
-
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     justify-self: center;
@@ -75,8 +70,6 @@
   }
 
   &__contact {
-    color: $color-grey-1;
-
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     justify-self: center;
@@ -96,8 +89,6 @@
   }
 
   &__time {
-    color: $color-grey-1;
-
     grid-column: 4 / 5;
     grid-row: 2 / 3;
 

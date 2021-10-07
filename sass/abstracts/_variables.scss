@@ -1,31 +1,22 @@
-//FONT
-$font-text: "Open Sans", sans-serif;
-$font-heading: "Six Caps", sans-serif;
+// //FONT
+$font-text: "Nunito", sans-serif;
+$font-heading: "Roboto", sans-serif;
 
-$font-raleway: "Raleway", sans-serif;
-$font-roboto: "Roboto", sans-serif;
-$font-podlanica: "Poiret One", cursive;
-$font-handwriting-1: "Allison", cursive;
-$font-handwriting-2: "WindSong", cursive;
+$font-handwriting: "Amatic SC", cursive;
 
 $fa-font-path: "../Fonts/webfonts";
 
 //COLORS
-$color-primary: #497382;
-$color-primary-dark: #2d4750;
-$color-primary-light: #7cb1c4;
+$color-primary: #61848c;
+$color-primary-light: #96ccd9;
+$color-primary-dark: #35484d;
 
-$color-secondary: #c9c6b3;
-$color-secondary-dark: #9b9780;
-$color-secondary-light: #f1eed4;
+$color-secondary: #8c7561;
+$color-secondary-light: #bfae99;
+$color-secondary-dark: #403226;
 
-$color-dark-blue-1: #314757;
-$color-blue-grey-1: #697984;
-$color-blue-grey-2: #3a505f;
-$color-bage-dark-1: #bcac89;
-$color-grey-1: #dddddd;
-$color-yellow: #eddc3f;
-$color-yellow-2: #baaa38;
+$color-grey-1: #f5f5f5;
+$color-white: #f6f4f1;
 
 //SHADOW
 $shadow-medium: 2rem 2rem 3rem rgba(#000, 0.5);

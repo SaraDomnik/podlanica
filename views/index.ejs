@@ -15,20 +15,12 @@
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Six+Caps&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Allison&family=Poiret+One&family=WindSong&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
-      rel="stylesheet"
-    />
- 
-    <!--CSS-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+     <!--CSS-->
     <link rel="stylesheet" href="css/style.css" />
-   
+    <!--Elements animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <title>Ladja Podlanica</title>
   </head>
@@ -37,14 +29,22 @@
     <div class="navigation" id="navigation">
       <nav class="navigation__nav" id="navigation__nav">
         <ul class="navigation__list">
-          <li><a href="#" class="navigation__item"></a></li>
-          <li><a href="#" class="navigation__item"> {{about_us}} </a></li>
-          <li><a href="#" class="navigation__item"> {{to_go}} </a></li>
-          <li><a href="#" class="navigation__item"> {{menu}} </a></li>
-          <li><a href="#" class="navigation__item"> {{contact}} </a></li>
-          <li><a href="#" class="navigation__item"> {{gallery}} </a></li>
+          <li><a href="#" class="navigation__item">Home</a></li>
+          <li><a href="#" class="navigation__item"> TO GO </a></li>
+          <li><a href="#" class="navigation__item"> Menu </a></li>
+          <li><a href="#" class="navigation__item"> Contact </a></li>
+          <li><a href="#" class="navigation__item"> About us </a></li>
+          <li><a href="#" class="navigation__item"> Gallery </a></li>
         </ul>
       </nav>
+      <div class="navigation__dropdown">
+        <button class="navigation__dropdown--dropbtn">Select language</button>
+        <div class="navigation__dropdown--content">
+          <a href="#">Slovenian</a>
+          <a href="#">English</a>
+          <a href="#">Italian</a>
+        </div>
+      </div>
     </div> 
     <!--NAVIGATION END-->
 
@@ -77,48 +77,80 @@
     <header class="header">
       <div class="heading">
        <!-- <img src="img/podlanica_logo-gold.png" class="heading__logo" alt=""> -->
-        <h2 class="heading__title heading__title--2"> {{boat}} </h2>
-        <h1 class="heading__title heading__title--1 ">Podlanica</h1>
-        <h3 class="heading__title heading__title--3 "> {{restavrant}} </h3> 
-        <button class="heading__btn"> {{reserve_now}} </button>
+        <h2 class="heading__title heading__title--2"> boat </h2>
+        <h1 class="heading__title heading__title--1">Podlanica</h1>
+        <h3 class="heading__title heading__title--3"> Restaurant </h3> 
+        <div class="heading__buttons">
+          <button class="heading__buttons--btn"> TO GO </button>
+          <button class="heading__buttons--btn"> Special offers </button>
+        </div>
       </div>
-      <div class="bg-video">
-        <video class="bg-video__content" autoplay muted loop>
+      <div class="bg-video" >
+        <!-- <video class="bg-video__content" autoplay muted loop>
           <source src="video/Fishing-2-comp.mp4" type="video/mp4" />
-        </video>
+        </video> -->
       </div>
     </header>
-    <!--ABOUT US-->
-    <div class="about-us">
-       <div class="about-us__content">
-         <div class="about-us__content--heading-bg"></div>
-         <img src="img/img1.jpg" alt="Restaurant owners" class="about-us__content--img">
-         <h2 class="about-us__content--heading heading-2">About us</h2>
-         <p class="about-us__content--paragraph">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-          quaerat. Minima reiciendis mollitia possimus architecto dolore
-          quisquam eius quae assumenda non in nemo officiis exercitationem,
-          suscipit qui voluptatem quis libero. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Tempore facere, explicabo repudiandae
-          cum excepturi laudantium reiciendis? 
-         </p>
-         <img class="about-us__content--pattern-right"  src="img/podlanica_pattern-blue-mirrored.svg" alt="Background pattern">
-       </div> 
-    </div>
-     <!--ABOUT US END-->
+     <!--HEADER END-->
      <!--DAILY TO GO START-->
     <div class="to-go ">
-      <img src="/img/garlic-1.png" alt="garlic" class="to-go__image--1">
-      <img src="/img/parsley.png" alt="parsley" class="to-go__image--2">
-      <img src="/img/salt.png" alt="salt" class="to-go__image--4">
-      <div class="to-go__menu-bg"></div>
-      <div class="to-go__heading--bg"></div>
-      <div class="to-go__heading">
+      <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="100"
+          data-aos-offset="0"
+          class="to-go__bg--left">
+        <img src="/img/fish-1-rotated.png" alt="Fish drawing" class="to-go__bg--left--1 object" data-value="5">
+        <img src="/img/fish-2.png" alt="Fish drawing" class="to-go__bg--left--2 object" data-value="-5">
+        <img src="/img/vongola.png" alt="Fish drawing" class="to-go__bg--left--3 object" data-value="-7">
+        <img src="/img/fish-2-rotated.png" alt="salt" class="to-go__bg--left--4 object" data-value="-5">
+        <img src="/img/fish-1.png" alt="salt" class="to-go__bg--left--5 object" data-value="6">
+        <img src="/img/black-muscle-rotated.png" alt="salt" class="to-go__bg--left--6 object" data-value="-4">
+        <img src="/img/vongola-rotated.png" alt="salt" class="to-go__bg--left--7 object" data-value="5">
+        <img src="/img/black-muscle.png" alt="salt" class="to-go__bg--left--8 object" data-value="-9">
+      </div>
+
+      <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="100"
+          data-aos-offset="0"
+          class="to-go__bg--right">
+        <img src="/img/fish-1-rotated.png" alt="Fish drawing" class="to-go__bg--left--1 object" data-value="5">
+        <img src="/img/fish-2.png" alt="Fish drawing" class="to-go__bg--left--2 object" data-value="-5">
+        <img src="/img/vongola.png" alt="Fish drawing" class="to-go__bg--left--3 object" data-value="-7">
+        <img src="/img/fish-2-rotated.png" alt="salt" class="to-go__bg--left--4 object" data-value="-5">
+        <img src="/img/fish-1.png" alt="salt" class="to-go__bg--left--5 object" data-value="6">
+        <img src="/img/black-muscle-rotated.png" alt="salt" class="to-go__bg--left--6 object" data-value="-4">
+        <img src="/img/vongola-rotated.png" alt="salt" class="to-go__bg--left--7 object" data-value="5">
+        <img src="/img/black-muscle.png" alt="salt" class="to-go__bg--left--8 object" data-value="-9">
+      </div>
+      
+      <div  
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-easing="linear"
+          class="to-go__menu-bg"></div>
+      <div 
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" 
+          class="to-go__heading-bg"></div>
+      <div 
+          data-aos="fade-right"
+          data-aos-delay="190"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" class="to-go__heading">
         <h1 >TO GO </h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
 
-      <div class="to-go__menu">
+      <div 
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" 
+          class="to-go__menu">
         <section>
           <h3>Marinated sardines</h3>
           <span></span>
@@ -143,8 +175,18 @@
           <p>12€</p>
         </section>
       </div>
-      <h2 class="to-go__heading-specail">Special daily offers</h2>
-      <div class="to-go__menu-special">
+      <h2 
+          data-aos="fade-right"
+          data-aos-delay="210"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" 
+          class="to-go__heading-specail">Special daily offers</h2>
+      <div 
+          data-aos="fade-right"
+          data-aos-delay="220"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" 
+          class="to-go__menu-special">
         <section>
           <h3>Special offer</h3>
           <span></span>
@@ -162,20 +204,32 @@
      <!--DAILY TO GO END-->
      <!--FISHING VIDEO START-->
     <div class="fishing-video">
-      <div class="fishing-video__heading">
+      <div 
+           data-aos="fade-down"
+           data-aos-duration="1000"
+           data-aos-easing="ease-out-cubic" 
+           class="fishing-video__heading">
         <h2>We have the freshes fish in town</h2>
       </div>
         <video class="fishing-video__video" autoplay muted loop>
-          <source src="video/Fishing-2-comp.mp4" type="video/mp4" />
+          <source src="video/Fishing-2-Comp-1.mp4" type="video/mp4" />
         </video>
     </div>
      <!--FISHING VIDEO END-->
     <!--MENU START-->
     <div class="menu" id="menu">
-     <div class="menu__food">
+     <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-easing="ease-out-cubic" 
+        class="menu__food">
         <h2 class="menu__food--h2">Menu</h2>
        
-        <div class="menu__food--apetizers">
+        <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out-cubic" 
+            class="menu__food--apetizers">
           <h3>Appetizers</h3>
          
           <section>
@@ -197,7 +251,12 @@
           </section>
         </div>
 
-        <div class="menu__food--main-dishes">
+        <div 
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out-cubic"
+            data-aos-delay="400" 
+            class="menu__food--main-dishes">
           <h3>Main dishes</h3>
 
           <section>
@@ -213,7 +272,11 @@
           </section>
         </div>
 
-        <div class="menu__food--fish">
+        <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out-cubic" 
+            class="menu__food--fish">
           <h3>Fish</h3>
           
 
@@ -236,7 +299,12 @@
           </section>
         </div>
 
-        <div class="menu__food--side-dishes">
+        <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+            data-aos-easing="ease-out-cubic" 
+            class="menu__food--side-dishes">
           <h3>Side dishes</h3>
 
           <section>
@@ -260,34 +328,57 @@
       <div class="weather-app__border"></div>
       <!--Weather app left side start-->
       <div class="weather-app__left">
-        <div class="weather-app__left--1">
-          <p class="weather-app__left--1--city" id="city">CITY</p>
+        <div class="weather-app__left--1 weather-object" data-value="5">
+          <p class="weather-app__left--1--city" id="city" >CITY</p>
           <p id="date">DATE</p>
         </div>
         
-        <img src="img/weather-app--icons/SVG/01d.svg" alt="Weather icons" id="icon"  class="weather-app__left--icon">
-        <div class="weather-app__left--2">
+        <img src="img/weather-app--icons/SVG/01d.svg" alt="Weather icons" id="icon" class="weather-app__left--icon weather-object" data-value="-4">
+        <div class="weather-app__left--2 weather-object" data-value="3">
            <h3 class="weather-app__left--2--temp" id="temp">30</h3>
            <p id="description">Description</p>
         </div>
       </div>
       <!--Weather app left side end-->
       <!--Weather app form start-->
-      <div class="weather-app__form">
-         <div class="weather-app__form--text">
+      <div 
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" 
+          class="weather-app__form">
+         <div
+             data-aos="fade-up"
+             data-aos-duration="3000"
+             data-aos-easing="ease-out-cubic" 
+             class="weather-app__form--text">
             <h2>Reserve a table now</h2>
             <p>Reservation is required. Give us a call.</p>
           </div>
-          <div class="weather-app__form--phone">
+          <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-offset="-200"
+              data-aos-easing="ease-out-cubic" 
+              class="weather-app__form--phone">
             <i class="weather-app__form--icon fas fa-mobile-alt"></i>
             <p>+386 41 338 612</p>
           </div>
-          <div class="weather-app__form--location">
+          <div 
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-offset="-200"
+              data-aos-easing="ease-out-cubic" 
+              class="weather-app__form--location">
             <i class="weather-app__form--icon fas fa-map-marker-alt"></i>
             <p>Pristanišče, <br>6300 Piran, <br> Slovenia</p>
           </div>
       
-          <div class="weather-app__form--time">
+          <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-offset="-200"
+              data-aos-easing="ease-out-cubic" 
+              class="weather-app__form--time">
             <i class="weather-app__form--icon far fa-clock"></i>
            <p> Open: 13h - 20h, <br><b>Tuesday closed </b></p>
           </div>
@@ -295,12 +386,12 @@
        <!--Weather app form end-->
        <!--Weather app right side start-->
       <div class="weather-app__right">
-        <h2 class="weather-app__right--time" id="time">Time</h2>
-        <div class="weather-app__right--max">
+        <h2 class="weather-app__right--time weather-object" data-value="3" id="time">Time</h2>
+        <div class="weather-app__right--max weather-object" data-value="-5">
           <p>Max-Temp:</p>
           <p id="max-temp">Max</p>
         </div>
-        <div class="weather-app__right--min">
+        <div class="weather-app__right--min weather-object" data-value="7">
           <p>Min-Temp:</p>
           <p id="min-temp">Min</p>
         </div>
@@ -308,22 +399,96 @@
       <!--Weather app right side end-->
     </div>
     <!--WEATHER APP + RESERVATION FORM -->
-    
+     <!--ABOUT US-->
+     <div class="about-us">
+      <div class="about-us__content">
+        <div 
+            data-aos="fade-up-right"
+            data-aos-duration="3000"
+            data-aos-easing="ease-out-cubic" 
+            class="about-us__content--heading-bg"></div>
+        <img src="img/img1.jpg" alt="Restaurant owners"
+             data-aos="fade-down-left"
+             data-aos-duration="3000"
+             data-aos-easing="ease-out-cubic" 
+             class="about-us__content--img">
+        <h2 
+            data-aos="fade-left"
+            data-aos-duration="3000"
+            data-aos-easing="ease-out-cubic" 
+            class="about-us__content--heading heading-2">About us</h2>
+        <p 
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          data-aos-easing="ease-out-cubic" 
+          class="about-us__content--paragraph">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+         quaerat. Minima reiciendis mollitia possimus architecto dolore
+         quisquam eius quae assumenda non in nemo officiis exercitationem,
+         suscipit qui voluptatem quis libero. Lorem ipsum dolor sit amet
+         consectetur adipisicing elit. Tempore facere, explicabo repudiandae
+         cum excepturi laudantium reiciendis? 
+        </p>
+        <img class="about-us__content--pattern-right"  src="img/podlanica_pattern-blue-mirrored.svg" alt="Background pattern">
+      </div> 
+   </div>
+    <!--ABOUT US END-->
     <!--GALLERY START-->
     <div class="gallery">
-      <div class="gallery__heading-bg"></div>
-      <div class="gallery__heading"><p>Gallery</p></div>
-      <div class="swiper">
+      <div 
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          data-aos-easing="ease-out-cubic" 
+          class="gallery__heading-bg"></div>
+      <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" 
+          class="gallery__heading"><p>Gallery</p></div>
+      <div 
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          data-aos-easing="ease-out-cubic" 
+          class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide swiper-slide--1"></div>
-          <div class="swiper-slide swiper-slide--2"></div>
-          <div class="swiper-slide swiper-slide--3"></div>
-          <div class="swiper-slide swiper-slide--4"></div>
-          <div class="swiper-slide swiper-slide--5"></div>
-          <div class="swiper-slide swiper-slide--6"></div>
-          <div class="swiper-slide swiper-slide--7"></div>
+          <div
+            data-background="/img/img9.jpg"
+            class="swiper-slide swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div
+            data-background="/img/img10.jpg"
+            class="swiper-slide swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div
+            data-background="/img/img4.jpg"
+            class="swiper-slide swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div
+            data-background="/img/img2.jpg"
+            class="swiper-slide swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+          </div>
+
+          <div
+            data-background="/img/img6.jpg"
+            class="swiper-slide swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div
+            data-background="/img/img8.jpg"
+            class="swiper-slide swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div
+            data-background="/img/img11.jpg"
+            class="swiper-slide swiper-lazy">
+              <div class="swiper-lazy-preloader"></div>
+          </div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -335,12 +500,17 @@
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
       </div>
-  </div>
+    </div>
     <!--GALLERY END-->
     <!--FOOTER START-->
     <footer class="footer">
-      <div class="footer__container">
-        <p class="footer__container--sp">Katarina Domnik s.p. ,</br>Ulica IX.korpusa 9,</br>6330 Piran-Pirano, </br>Slovenia,</br>VAT np.: SI62405691</p>
+      <div 
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          data-aos-offset="-200"
+          data-aos-easing="ease-out-cubic" 
+          class="footer__container">
+        <p class="footer__container--sp">Katarina Domnik s.p. ,</br>Ulica IX.korpusa 9,</br>6330 Piran-Pirano, </br>Slovenia,</br>VAT ID: SI62405691</p>
         <!--Social media start-->
         <div class="footer__container--socialmedia">
           <!--Instagram-->
@@ -354,7 +524,11 @@
       </div>
      
       <!--Information start-->
-      <div class="footer__location">
+      <div 
+          data-aos="fade-up-right"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out-cubic" 
+          class="footer__location">
         <i class="footer__location--icon fas fa-map-marker-alt"></i>
         <div class="footer__location--text">
           <h3>Location</h3>
@@ -363,7 +537,11 @@
         </div>
       </div>
     
-      <div class="footer__contact">
+      <div 
+          data-aos="fade-up-left"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out-cubic" 
+          class="footer__contact">
         <i class="footer__contact--icon fas fa-mobile-alt"></i>
         <div class="footer__contact--text">
           <h3>Contact</h3>
@@ -371,7 +549,11 @@
         </div>
       </div>
 
-      <div class="footer__time">
+      <div 
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out-cubic" 
+          class="footer__time">
         <i class="footer__time--icon far fa-clock"></i>
         <div class="footer__time--text">
           <h3>Opening hours</h3>
@@ -380,11 +562,17 @@
       </div>
       <!--Information end-->
       <!--Map start-->
-      <div class="footer__map" id="map"></div>
+      <div 
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic" 
+          class="footer__map" id="map"></div>
       <!--Map end-->
     </footer>
     <!--FOOTER END -->
     <!--SCRIPTS START-->
+    <!--Elements animation-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--Lottie files-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>

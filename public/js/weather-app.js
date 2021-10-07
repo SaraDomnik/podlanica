@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
         bodymovin.loadAnimation({
           container: document.getElementById("lottie-animation"),
           path: `img/weather-app--animations/${data.weather[0].icon}.json`,
-          // path: `Img/weather-app--animations/01d.json`,
+          // path: `Img/weather-app--animations/01n.json`,
           renderer: "svg",
           loop: true,
           autoplay: true,
@@ -66,3 +66,17 @@ date.innerText = `${weekday}, ${currentDate} ${month}`;
 //SUNRISE & SUNSET
 let sunrise = document.getElementById("sunrise");
 let sunset = document.getElementById("sunset");
+
+//PARALLAX
+
+document.addEventListener("mousemove", parallaxWeather);
+
+function parallaxWeather(e) {
+  document.querySelectorAll(".weather-object").forEach(function (move) {
+    let movingValue = move.getAttribute("data-value");
+    let x = (e.clientX * movingValue) / 200;
+    let y = (e.clientY * movingValue) / 200;
+
+    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+  });
+}

@@ -1,6 +1,6 @@
 .weather-app {
   height: 100%;
-  color: #fff;
+  color: $color-white;
   overflow: hidden;
 
   grid-row: 6 / 7;
@@ -25,7 +25,8 @@
     z-index: 1;
     padding: 5rem;
     height: 100%;
-    font-family: $font-podlanica;
+    font-family: $font-heading;
+    font-weight: 300;
     pointer-events: none;
 
     grid-column: 1 / 2;
@@ -41,7 +42,7 @@
     &--1 {
       margin-left: 10rem;
       font-size: 2.7rem;
-      text-shadow: 2px 2px 2px rgba($color-primary, 0.5);
+      text-shadow: 2px 2px 2px rgba($color-primary-dark, 0.5);
       line-height: 1;
 
       grid-column: 1 / -1;
@@ -92,13 +93,11 @@
     z-index: 2;
     margin: 5rem;
     padding: 3rem;
-    height: 57rem;
     width: 50rem;
-    font-family: $font-podlanica;
-    text-shadow: 4px 4px 4px rgba($color-primary, 0.4);
+    text-shadow: 4px 4px 4px rgba($color-primary-dark, 0.4);
     border-radius: 3px;
     box-shadow: 7px 10px 15px rgba(#000, 0.3);
-    border: 2px solid rgba($color-primary, 0.3);
+    border: 2px solid rgba($color-primary-dark, 0.3);
     background: rgba($color-primary, 0.3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -117,6 +116,8 @@
     &--text {
       pointer-events: none;
       h2 {
+        font-family: $font-heading;
+        font-weight: 300;
         margin-top: 3rem;
         font-size: 4.2rem;
         text-transform: uppercase;
@@ -143,6 +144,7 @@
 
     &--time {
       @include weather-app-info;
+
       pointer-events: none;
     }
   }
@@ -150,8 +152,9 @@
   &__right {
     z-index: 1;
     padding: 5rem;
+    font-family: $font-heading;
+    font-weight: 300;
     font-size: 4rem;
-    font-family: $font-podlanica;
     pointer-events: none;
 
     grid-column: 3 / 4;
@@ -165,7 +168,7 @@
     &--time {
       margin: 3rem 0;
       font-size: 14rem;
-      text-shadow: 4px 4px 4px rgba($color-primary, 0.7);
+      text-shadow: 4px 4px 4px rgba($color-primary-dark, 0.7);
     }
 
     p {
