@@ -12,6 +12,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px = 1rem
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,16 +20,17 @@ body {
   font-family: $font-text;
   font-weight: 300;
   line-height: 1.6;
-  max-width: 100%;
   overflow-x: hidden;
 }
 
 .container {
   display: grid;
+  grid-template-columns: minmax(auto, 192rem);
   grid-template-rows:
     6rem repeat(2, minmax(80rem, auto)) 60rem repeat(3, minmax(80rem, auto))
     80rem
     70rem;
+  justify-content: center;
 }
 
 // .navigation,

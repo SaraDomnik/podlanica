@@ -4,6 +4,7 @@
   border-top: 5rem solid $color-secondary;
   border-bottom: 5rem solid $color-primary;
 
+  grid-column: 1 / -1;
   grid-row: 7 / 8;
 
   &__content {

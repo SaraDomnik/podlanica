@@ -29,12 +29,13 @@
     <div class="navigation" id="navigation">
       <nav class="navigation__nav" id="navigation__nav">
         <ul class="navigation__list">
-          <li><a href="#" class="navigation__item">Home</a></li>
-          <li><a href="#" class="navigation__item"> TO GO </a></li>
-          <li><a href="#" class="navigation__item"> Menu </a></li>
-          <li><a href="#" class="navigation__item"> Contact </a></li>
-          <li><a href="#" class="navigation__item"> About us </a></li>
-          <li><a href="#" class="navigation__item"> Gallery </a></li>
+          <li><a href="#home" class="navigation__item">Home</a></li>
+          <li><a href="#to-go" class="navigation__item"> TO GO </a></li>
+          <li><a href="#menu" class="navigation__item"> Menu </a></li>
+          <li><a href="#contact" class="navigation__item"> Contact </a></li>
+          <li><a href="#about-us" class="navigation__item"> About us </a></li>
+          <li><a href="#gallery" class="navigation__item"> Gallery </a></li>
+          <li><a href="#location" class="navigation__item"> Location</a></li>
         </ul>
       </nav>
       <div class="navigation__dropdown">
@@ -52,12 +53,13 @@
     <div class="ham" id="ham">
       <!--Hamburger menu ul start-->
       <ul class="ham__list">
-        <li><a href="#" class="ham__item">Home </a></li>
-        <li><a href="#" class="ham__item">About us</a></li>
-        <li><a href="#" class="ham__item">Menu</a></li>
-        <li><a href="#" class="ham__item">Comments</a></li>
-        <li><a href="#" class="ham__item">Gallery</a></li>
-        <li><a href="#" class="ham__item">Contact</a></li>
+        <li><a href="#home" class="ham__item">Home </a></li>
+        <li><a href="#to-go" class="ham__item">TO GO</a></li>
+        <li><a href="#menu" class="ham__item">Menu</a></li>
+        <li><a href="#conatct" class="ham__item">Contact</a></li>
+        <li><a href="#about-us" class="ham__item">About us</a></li>
+        <li><a href="#gallery" class="ham__item">Gallery</a></li>
+        <li><a href="#location" class="ham__item">Location</a></li>
       </ul>
       <!--Hamburger menu ul end-->
       <!--Hamburger menu button start-->
@@ -74,7 +76,7 @@
        <!--HAMBURGER MENU END-->
    
        <!--HEADER START-->
-    <header class="header">
+    <header class="header" id="home">
       <div class="heading">
        <!-- <img src="img/podlanica_logo-gold.png" class="heading__logo" alt=""> -->
         <h2 class="heading__title heading__title--2"> boat </h2>
@@ -93,7 +95,7 @@
     </header>
      <!--HEADER END-->
      <!--DAILY TO GO START-->
-    <div class="to-go ">
+    <div class="to-go" id="to-go">
       <div
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-sine"
@@ -323,7 +325,7 @@
     </div>
     <!--MENU END-->
     <!--WEATHER APP + RESERVATION FORM-->
-    <div class="weather-app">
+    <div class="weather-app" id="contact">
       <div id="lottie-animation" class="weather-app__animation"></div>
       <div class="weather-app__border"></div>
       <!--Weather app left side start-->
@@ -348,7 +350,7 @@
           class="weather-app__form">
          <div
              data-aos="fade-up"
-             data-aos-duration="3000"
+             data-aos-duration="2000"
              data-aos-easing="ease-out-cubic" 
              class="weather-app__form--text">
             <h2>Reserve a table now</h2>
@@ -356,7 +358,7 @@
           </div>
           <div
               data-aos="fade-up"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
               data-aos-offset="-200"
               data-aos-easing="ease-out-cubic" 
               class="weather-app__form--phone">
@@ -365,7 +367,7 @@
           </div>
           <div 
               data-aos="fade-up"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
               data-aos-offset="-200"
               data-aos-easing="ease-out-cubic" 
               class="weather-app__form--location">
@@ -375,7 +377,7 @@
       
           <div
               data-aos="fade-up"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
               data-aos-offset="-200"
               data-aos-easing="ease-out-cubic" 
               class="weather-app__form--time">
@@ -400,26 +402,26 @@
     </div>
     <!--WEATHER APP + RESERVATION FORM -->
      <!--ABOUT US-->
-     <div class="about-us">
+     <div class="about-us" id="about-us">
       <div class="about-us__content">
         <div 
             data-aos="fade-up-right"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
             data-aos-easing="ease-out-cubic" 
             class="about-us__content--heading-bg"></div>
         <img src="img/img1.jpg" alt="Restaurant owners"
              data-aos="fade-down-left"
-             data-aos-duration="3000"
+             data-aos-duration="1000"
              data-aos-easing="ease-out-cubic" 
              class="about-us__content--img">
         <h2 
             data-aos="fade-left"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
             data-aos-easing="ease-out-cubic" 
             class="about-us__content--heading heading-2">About us</h2>
         <p 
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="1000"
           data-aos-easing="ease-out-cubic" 
           class="about-us__content--paragraph">
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
@@ -434,10 +436,10 @@
    </div>
     <!--ABOUT US END-->
     <!--GALLERY START-->
-    <div class="gallery">
+    <div class="gallery" id="gallery">
       <div 
           data-aos="fade-left"
-          data-aos-duration="3000"
+          data-aos-duration="1000"
           data-aos-easing="ease-out-cubic" 
           class="gallery__heading-bg"></div>
       <div
@@ -447,7 +449,7 @@
           class="gallery__heading"><p>Gallery</p></div>
       <div 
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="1000"
           data-aos-easing="ease-out-cubic" 
           class="swiper">
         <!-- Additional required wrapper -->
@@ -503,13 +505,8 @@
     </div>
     <!--GALLERY END-->
     <!--FOOTER START-->
-    <footer class="footer">
-      <div 
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          data-aos-offset="-200"
-          data-aos-easing="ease-out-cubic" 
-          class="footer__container">
+    <footer class="footer" id="location">
+      <div class="footer__container">
         <p class="footer__container--sp">Katarina Domnik s.p. ,</br>Ulica IX.korpusa 9,</br>6330 Piran-Pirano, </br>Slovenia,</br>VAT ID: SI62405691</p>
         <!--Social media start-->
         <div class="footer__container--socialmedia">
@@ -524,11 +521,7 @@
       </div>
      
       <!--Information start-->
-      <div 
-          data-aos="fade-up-right"
-          data-aos-duration="2000"
-          data-aos-easing="ease-out-cubic" 
-          class="footer__location">
+      <div class="footer__location">
         <i class="footer__location--icon fas fa-map-marker-alt"></i>
         <div class="footer__location--text">
           <h3>Location</h3>
@@ -537,11 +530,7 @@
         </div>
       </div>
     
-      <div 
-          data-aos="fade-up-left"
-          data-aos-duration="2000"
-          data-aos-easing="ease-out-cubic" 
-          class="footer__contact">
+      <div class="footer__contact">
         <i class="footer__contact--icon fas fa-mobile-alt"></i>
         <div class="footer__contact--text">
           <h3>Contact</h3>
@@ -549,11 +538,7 @@
         </div>
       </div>
 
-      <div 
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          data-aos-easing="ease-out-cubic" 
-          class="footer__time">
+      <div class="footer__time">
         <i class="footer__time--icon far fa-clock"></i>
         <div class="footer__time--text">
           <h3>Opening hours</h3>
@@ -563,7 +548,7 @@
       <!--Information end-->
       <!--Map start-->
       <div 
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-easing="ease-out-cubic" 
           class="footer__map" id="map"></div>

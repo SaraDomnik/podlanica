@@ -5,6 +5,7 @@
   top: 0;
   transition: all 0.3s;
 
+  grid-column: 1 / -1;
   grid-row: 1/ 2;
   justify-self: center;
 
@@ -25,7 +26,7 @@
     list-style: none;
 
     display: grid;
-    grid-template-columns: repeat(6, max-content);
+    grid-template-columns: repeat(7, max-content);
     grid-column-gap: 3rem;
     justify-content: center;
 
