@@ -1,0 +1,70 @@
+{
+  "navigation": {
+    "home": "Domov",
+    "to-go": "Naroči To go",
+    "menu": "Menu",
+    "contact": "Rezervacije",
+    "about-us": "O nas",
+    "gallery": "Galerija",
+    "location": "Lokacija",
+    "language": "Izberi jezik",
+    "si": "Slovenščina",
+    "en": "English",
+    "it": "Italiano"
+  },
+
+  "header": {
+    "boat": "Ladja",
+    "restaurant": "Restavracija",
+    "special-offers": "Posebne ponudbe"
+  },
+  "to-go": {
+    "text": "Sedaj lahko naročite hrano To go. Samo pokličite nas in pridite iskat, ko je pripravljeno."
+  },
+  "fishing": {
+    "text": "Imamo najbolj svežo ribo ",
+    "text-2": "Ribo dnevno sami ulovimo. Kar se tisti dan ne porabi se proda naprej."
+  },
+
+  "menu": {
+    "text": "Dnevno sveža riba, ki jo ulovimo sami. Pri nas doživite edinstveno izkušnjo, kjer lahko jeste na barki v Piranskemu pristanišču.",
+    "main": "Menu",
+    "apetizers": "Predjedi",
+    "spaghetti": "Špageti z vongolami",
+    "salty-fillets": "Slani fileti",
+    "main-dishes": "Glavne jedi",
+    "black-muscles": "Pedoči",
+    "in-white-souce": "na buzaro",
+    "fish": "Riba",
+    "categorie-1": "Kategorija I.",
+    "categorie-2": "Kategorija II.",
+    "categorie-3": "Kategorija III.",
+    "side-dishes": "Priloga",
+    "sesonal-salad": "Sezonska solata",
+    "polenta": "Pečena polenta",
+    "marinated-sardines": "Marinirane sardele",
+    "bacala": "Bakala",
+    "specail-offres": "Dnevne posebne ponudbe",
+    "specail-offer": "Posebna ponudba"
+  },
+
+  "weather": {
+    "reserve": "Rezervirajte mizo zdaj",
+    "reservation-required": "Rezervacija je obvezna. Pokličite nas.",
+    "port": "Pristanišče",
+    "piran": "Piran",
+    "slovenia": "Slovenija",
+    "open": "Odprto",
+    "thuseday-closed": "Torek zaprto"
+  },
+  "about-us": {
+    "text": "Ladja podlanica je restavracija v družinski lasti, kjer vam postrežemo dnevno sveže ulovljeno ribo. Na Podlanice doživiste edinstevno izkušnjo, kjer imate priložnost jest na barki s prelepim pogledom na Piran.",
+    "about-us": "O nas"
+  },
+  "gallery": {
+    "gallery": "Galerija"
+  },
+  "footer": {
+    "opening-hours": "Urnik"
+  }
+}

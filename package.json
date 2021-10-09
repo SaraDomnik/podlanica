@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
+    "build": "node-sass sass/main.scss public/css/style.css",
     "devserver": "live-server --browser=firefox",
     "nodemon": "nodemon app.js --ext *",
     "start": "npm-run-all --parallel watch:sass nodemon",
@@ -33,7 +34,8 @@
     "express": "^4.17.1",
     "git": "^0.1.5",
     "i18next": "^21.2.4",
-    "i18next-express-middleware": "^2.0.0",
+    "i18next-fs-backend": "^1.1.1",
+    "i18next-http-middleware": "^3.1.4",
     "jquery": "^3.6.0",
     "livereload": "^0.9.3",
     "lottie-web": "^5.7.13",

@@ -1,0 +1,70 @@
+{
+  "navigation": {
+    "home": "Home",
+    "to-go": "Order To go",
+    "menu": "Menu",
+    "contact": "Reservations",
+    "about-us": "About us",
+    "gallery": "Gallery",
+    "location": "Location",
+    "language": "Select language",
+    "si": "Slovenian",
+    "en": "English",
+    "it": "Italian"
+  },
+
+  "header": {
+    "boat": "boat",
+    "restaurant": "Restaurant",
+    "special-offers": "Special offers"
+  },
+  "to-go": {
+    "text": "Now you can oreder food To go. Just call us and come and pick it up when is ready."
+  },
+  "fishing": {
+    "text": "We have the freshes fish",
+    "text-2": "We catch fish ourselves. What we don't use that day we sell on the fish market."
+  },
+
+  "menu": {
+    "text": "Daily fresh fish cought by us. Unique expirance eating on the boat in the harbor of Piran.",
+    "main": "Menu",
+    "apetizers": "Apetizers",
+    "spaghetti": "Spaghetti with vongole",
+    "salty-fillets": "Salty fillets",
+    "main-dishes": "Main dishes",
+    "black-muscles": "Black-muscles",
+    "in-white-souce": "in white souce",
+    "fish": "Fish",
+    "categorie-1": "Categorie I.",
+    "categorie-2": "Categorie II.",
+    "categorie-3": "Categorie III.",
+    "side-dishes": "Side dishes",
+    "sesonal-salad": "Seasonal salad",
+    "polenta": "Grilled polenta",
+    "marinated-sardines": "Marinated sardines",
+    "bacala": "Bacala",
+    "specail-offres": "Daily specail offers",
+    "specail-offer": "Specail offer"
+  },
+
+  "weather": {
+    "reserve": "Reserve a table now",
+    "reservation-required": "Reservation is required. Give us a call.",
+    "port": "Port",
+    "piran": "Piran",
+    "slovenia": "Slovenia",
+    "open": "Open",
+    "thuseday-closed": "Thuseday closed"
+  },
+  "about-us": {
+    "text": "Lorem ipsum",
+    "about-us": "About us"
+  },
+  "gallery": {
+    "gallery": "Gallery"
+  },
+  "footer": {
+    "opening-hours": "Opening hours"
+  }
+}
