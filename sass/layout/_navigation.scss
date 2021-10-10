@@ -1,17 +1,22 @@
 .navigation {
+  max-width: 192rem;
   position: fixed;
   z-index: 300;
   height: 6rem;
   top: 0;
   transition: all 0.3s;
 
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
   grid-row: 1/ 2;
   justify-self: center;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+
+  @media only screen and (max-width: 950px) {
+    display: none;
+  }
 
   &__nav {
     grid-column: 2 / 3;
@@ -32,6 +37,10 @@
 
     &:last-child {
       margin-right: 4rem;
+
+      @media only screen and (max-width: 1030px) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -40,6 +49,11 @@
     color: $color-secondary-light;
     font-size: 2.2rem;
     transition: all 0.2s;
+
+    @media only screen and (max-width: 1250px) {
+      padding: 1rem 1rem;
+      font-size: 2rem;
+    }
 
     &:focus,
     &:link {
@@ -70,6 +84,10 @@
       background-color: $color-primary-dark;
     }
 
+    @media only screen and (max-width: 1250px) {
+      margin-right: 0;
+    }
+
     &--dropbtn {
       width: 18rem;
       background-color: $color-secondary;
@@ -77,6 +95,11 @@
       padding: 1.6rem;
       font-size: 2rem;
       border: none;
+
+      @media only screen and (max-width: 1250px) {
+        padding: 1.6rem 0.5rem;
+        font-size: 1.7rem;
+      }
     }
 
     &--content {
@@ -102,16 +125,6 @@
     }
   }
 }
-
-//Hide class for Javascript
-
-// .hide {
-//   top: -65px;
-// }
-
-// .hide__ham {
-//   opacity: 0%;
-// }
 
 //HAMBURGER MENU
 

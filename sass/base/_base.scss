@@ -27,21 +27,29 @@ body {
   display: grid;
   grid-template-columns: minmax(auto, 192rem);
   grid-template-rows:
-    6rem repeat(2, minmax(80rem, auto)) 60rem repeat(3, minmax(80rem, auto))
-    80rem
-    70rem;
+    6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 60rem) repeat(
+      4,
+      minmax(auto, 80rem)
+    )
+    minmax(auto, 70rem);
   justify-content: center;
-}
 
-// .navigation,
-// .ham,
-// .header,
-// .to-go,
-// .fishing-video,
-// .menu,
-// .weather-app,
-// .about-us,
-// .gallery,
-// .footer {
-//   max-width: 1920px;
-// }
+  @media only screen and (max-width: 1100px) {
+    grid-template-rows:
+      6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 50rem) repeat(
+        4,
+        minmax(auto, 80rem)
+      )
+      minmax(auto, 70rem);
+  }
+
+  @media only screen and (max-width: 950px) {
+    grid-template-rows:
+      6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) repeat(
+        2,
+        minmax(auto, 70rem)
+      )
+      50rem minmax(auto, 70rem)
+      minmax(auto, 60rem);
+  }
+}

@@ -1,46 +1,19 @@
-@mixin sideFoodMenu {
-  cursor: pointer;
-  height: 20rem;
-  margin-bottom: 2rem;
-  background-color: $color-primary-dark;
-  box-shadow: 1rem 2rem 5rem rgba($color-primary-dark, $alpha: 1);
-  border-bottom-right-radius: 50rem;
-  border-top-right-radius: 50rem;
-  transform: translateX(-3rem);
-  transition: all 0.2s ease-in;
-
-  display: grid;
-  grid-template-columns: repeat(2, minmax(20rem, 1fr));
-  grid-template-rows: repeat(2, 1fr);
-
-  @media only screen and (max-width: $bp-largest) {
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    transform: none;
-    margin-bottom: 0;
-
-    grid-template-columns: 1fr;
-    grid-template-row: 1fr;
-
-    justify-content: center;
-    align-content: center;
-  }
-
-  &:hover {
-    transform: translateX(0.1rem);
-    background-color: $color-blue-grey-2;
-  }
-}
-
 //WEATHER APP
 @mixin weather-app-info {
   margin-top: 5rem;
 
   display: flex;
 
+  @media only screen and (max-width: 1550px) {
+    margin-top: 4rem;
+  }
+
   p {
     margin-left: 3rem;
     font-size: 2.1rem;
+
+    @media only screen and (max-width: 1550px) {
+      font-size: 1.6rem;
+    }
   }
 }

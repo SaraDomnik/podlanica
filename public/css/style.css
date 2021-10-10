@@ -22,8 +22,14 @@ body {
 .container {
   display: grid;
   grid-template-columns: minmax(auto, 192rem);
-  grid-template-rows: 6rem repeat(2, minmax(80rem, auto)) 60rem repeat(3, minmax(80rem, auto)) 80rem 70rem;
+  grid-template-rows: 6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 60rem) repeat(4, minmax(auto, 80rem)) minmax(auto, 70rem);
   justify-content: center; }
+  @media only screen and (max-width: 1100px) {
+    .container {
+      grid-template-rows: 6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 50rem) repeat(4, minmax(auto, 80rem)) minmax(auto, 70rem); } }
+  @media only screen and (max-width: 950px) {
+    .container {
+      grid-template-rows: 6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) repeat(2, minmax(auto, 70rem)) 50rem minmax(auto, 70rem) minmax(auto, 60rem); } }
 
 .heading__title {
   line-height: 1; }
@@ -34,6 +40,18 @@ body {
     text-transform: uppercase;
     letter-spacing: 2rem;
     color: #fff; }
+    @media only screen and (max-width: 1250px) {
+      .heading__title--1 {
+        font-size: 12rem; } }
+    @media only screen and (max-width: 950px) {
+      .heading__title--1 {
+        font-size: 10rem; } }
+    @media only screen and (max-width: 750px) {
+      .heading__title--1 {
+        font-size: 8rem; } }
+    @media only screen and (max-width: 600px) {
+      .heading__title--1 {
+        font-size: 6rem; } }
   .heading__title--2 {
     font-weight: 200;
     font-size: 6rem;
@@ -41,29 +59,38 @@ body {
     letter-spacing: 2rem;
     letter-spacing: 0.3rem;
     color: #fff; }
+    @media only screen and (max-width: 1250px) {
+      .heading__title--2 {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 950px) {
+      .heading__title--2 {
+        font-size: 4rem; } }
   .heading__title--3 {
     font-weight: 200;
     font-size: 5rem;
     font-family: "Amatic SC", cursive;
     letter-spacing: 0.5rem;
     color: #fff; }
-
-.navigation__item {
-  color: #fff;
-  font-size: 1.6rem; }
+    @media only screen and (max-width: 950px) {
+      .heading__title--3 {
+        font-size: 4rem; } }
 
 .navigation {
+  max-width: 192rem;
   position: fixed;
   z-index: 300;
   height: 6rem;
   top: 0;
   transition: all 0.3s;
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
   grid-row: 1/ 2;
   justify-self: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center; }
+  @media only screen and (max-width: 950px) {
+    .navigation {
+      display: none; } }
   .navigation__nav {
     grid-column: 2 / 3;
     justify-self: center;
@@ -78,11 +105,18 @@ body {
     justify-content: center; }
     .navigation__list:last-child {
       margin-right: 4rem; }
+      @media only screen and (max-width: 1030px) {
+        .navigation__list:last-child {
+          margin-right: 0; } }
   .navigation__item {
     padding: 1rem 2rem;
     color: #bfae99;
     font-size: 2.2rem;
     transition: all 0.2s; }
+    @media only screen and (max-width: 1250px) {
+      .navigation__item {
+        padding: 1rem 1rem;
+        font-size: 2rem; } }
     .navigation__item:focus, .navigation__item:link {
       text-decoration: none; }
     .navigation__item:hover, .navigation__item:active {
@@ -99,6 +133,9 @@ body {
       display: block; }
     .navigation__dropdown:hover .navigation__dropdown--dropbtn {
       background-color: #35484d; }
+    @media only screen and (max-width: 1250px) {
+      .navigation__dropdown {
+        margin-right: 0; } }
     .navigation__dropdown--dropbtn {
       width: 18rem;
       background-color: #8c7561;
@@ -106,6 +143,10 @@ body {
       padding: 1.6rem;
       font-size: 2rem;
       border: none; }
+      @media only screen and (max-width: 1250px) {
+        .navigation__dropdown--dropbtn {
+          padding: 1.6rem 0.5rem;
+          font-size: 1.7rem; } }
     .navigation__dropdown--content {
       display: none;
       position: absolute;
@@ -179,14 +220,12 @@ body {
   grid-row: 6 / 7;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80rem;
   justify-content: center;
   align-content: center; }
   .weather-app__animation {
     z-index: 0;
     margin: auto;
     grid-column: 1 / -1;
-    grid-row: 1 / -1;
     justify-self: center;
     align-self: center; }
   .weather-app__left {
@@ -197,7 +236,6 @@ body {
     font-weight: 300;
     pointer-events: none;
     grid-column: 1 / 2;
-    grid-row: 1 / -1;
     justify-self: center;
     align-self: center;
     display: grid;
@@ -223,6 +261,9 @@ body {
       grid-row: 2 / 3;
       align-self: start;
       justify-self: end; }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__left--icon {
+          height: 15rem; } }
     .weather-app__left--2 {
       margin-left: 15rem;
       text-shadow: 4px 4px 2px rgba(53, 72, 77, 0.8);
@@ -233,13 +274,19 @@ body {
       justify-self: end; }
       .weather-app__left--2--temp {
         font-size: 13rem; }
+        @media only screen and (max-width: 1550px) {
+          .weather-app__left--2--temp {
+            font-size: 10rem; } }
       .weather-app__left--2 p {
         font-size: 3rem; }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__left--2 {
+          margin-left: 10rem; } }
   .weather-app__form {
     z-index: 2;
     margin: 5rem;
     padding: 3rem;
-    width: 50rem;
+    width: 100%;
     text-shadow: 4px 4px 4px rgba(53, 72, 77, 0.4);
     border-radius: 3px;
     box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.3);
@@ -248,7 +295,6 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     grid-column: 2 / 3;
-    grid-row: 1 / -1;
     justify-self: center;
     align-self: center; }
     .weather-app__form--icon {
@@ -263,31 +309,55 @@ body {
         font-size: 4.2rem;
         text-transform: uppercase;
         text-align: center; }
+        @media only screen and (max-width: 1550px) {
+          .weather-app__form--text h2 {
+            font-size: 3.5rem; } }
       .weather-app__form--text p {
         font-size: 2.5rem;
         line-height: 2;
         text-align: center; }
+        @media only screen and (max-width: 1550px) {
+          .weather-app__form--text p {
+            font-size: 2rem; } }
     .weather-app__form--location {
       margin-top: 5rem;
       display: flex;
       cursor: pointer; }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__form--location {
+          margin-top: 4rem; } }
       .weather-app__form--location p {
         margin-left: 3rem;
         font-size: 2.1rem; }
+        @media only screen and (max-width: 1550px) {
+          .weather-app__form--location p {
+            font-size: 1.6rem; } }
     .weather-app__form--phone {
       margin-top: 5rem;
       display: flex;
       cursor: pointer; }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__form--phone {
+          margin-top: 4rem; } }
       .weather-app__form--phone p {
         margin-left: 3rem;
         font-size: 2.1rem; }
+        @media only screen and (max-width: 1550px) {
+          .weather-app__form--phone p {
+            font-size: 1.6rem; } }
     .weather-app__form--time {
       margin-top: 5rem;
       display: flex;
       pointer-events: none; }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__form--time {
+          margin-top: 4rem; } }
       .weather-app__form--time p {
         margin-left: 3rem;
         font-size: 2.1rem; }
+        @media only screen and (max-width: 1550px) {
+          .weather-app__form--time p {
+            font-size: 1.6rem; } }
   .weather-app__right {
     z-index: 1;
     padding: 5rem;
@@ -296,7 +366,6 @@ body {
     font-size: 4rem;
     pointer-events: none;
     grid-column: 3 / 4;
-    grid-row: 1 / -1;
     justify-self: center;
     display: flex;
     flex-direction: column;
@@ -305,10 +374,16 @@ body {
       margin: 3rem 0;
       font-size: 14rem;
       text-shadow: 4px 4px 4px rgba(53, 72, 77, 0.7); }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__right--time {
+          font-size: 10rem; } }
     .weather-app__right p {
       margin-bottom: 2rem;
       margin-left: 2rem;
       text-shadow: 2px 2px 1px black; }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__right p {
+          font-size: 3rem; } }
     .weather-app__right--max {
       display: flex; }
     .weather-app__right--min {
@@ -349,6 +424,10 @@ body {
     margin-top: 5rem;
     display: flex;
     justify-content: space-around; }
+    @media only screen and (max-width: 600px) {
+      .heading__buttons {
+        flex-direction: column;
+        width: 30%; } }
     .heading__buttons--btn {
       padding: 1.5rem 4.5rem;
       margin-top: 5rem;
@@ -361,6 +440,21 @@ body {
       box-shadow: 1px 1rem 2rem rgba(0, 0, 0, 0.5);
       background-color: #61848c;
       transition: all 0.3s ease-in; }
+      @media only screen and (max-width: 950px) {
+        .heading__buttons--btn {
+          font-size: 1.5;
+          padding: 1.5rem 3rem;
+          margin-top: 3rem; } }
+      @media only screen and (max-width: 750px) {
+        .heading__buttons--btn {
+          font-size: 1.2;
+          padding: 1.2rem 2rem;
+          margin-top: 2rem; } }
+      @media only screen and (max-width: 600px) {
+        .heading__buttons--btn {
+          font-size: 1.7rem;
+          padding: 1rem 1.5rem;
+          margin-top: 2rem; } }
       .heading__buttons--btn:hover {
         color: #403226;
         background-color: #96ccd9;
@@ -368,24 +462,36 @@ body {
 
 .about-us {
   z-index: 0;
+  overflow: hidden;
   background-color: #f6f4f1;
   border-top: 5rem solid #8c7561;
-  border-bottom: 5rem solid #61848c;
   grid-column: 1 / -1;
   grid-row: 7 / 8; }
+  @media only screen and (max-width: 1050px) {
+    .about-us {
+      border-top: 2.5rem solid #8c7561; } }
   .about-us__content {
     width: 100%;
     display: grid;
     grid-template-columns: 55% 45%;
-    grid-template-rows: 30rem 50rem; }
+    grid-template-rows: 30% 70%; }
+    @media only screen and (max-width: 1050px) {
+      .about-us__content {
+        grid-template-columns: 1fr 1fr; } }
+    @media only screen and (max-width: 950px) {
+      .about-us__content {
+        grid-template-rows: 1fr; } }
     .about-us__content--pattern-right {
-      height: 65rem;
+      height: 57.2rem;
       opacity: 30%;
       z-index: 1;
       grid-column: 2 / 3;
       grid-row: 2 / 3;
       justify-self: end;
       align-self: end; }
+      @media only screen and (max-width: 1050px) {
+        .about-us__content--pattern-right {
+          height: 53rem; } }
     .about-us__content--img {
       z-index: 1;
       height: 50rem;
@@ -394,15 +500,32 @@ body {
       grid-row: 1 / -1;
       justify-self: end;
       align-self: center; }
+      @media only screen and (max-width: 1550px) {
+        .about-us__content--img {
+          height: auto;
+          width: 80%; } }
+      @media only screen and (max-width: 1300px) {
+        .about-us__content--img {
+          width: 100%; } }
+      @media only screen and (max-width: 950px) {
+        .about-us__content--img {
+          display: none; } }
     .about-us__content--heading-bg {
       z-index: -1;
       height: 60rem;
       width: 75rem;
       background-color: #61848c;
-      transform: translateY(10rem) translateX(10rem);
       grid-column: 1 / 2;
       grid-row: 1 / -1;
       align-self: center; }
+      @media only screen and (max-width: 1550px) {
+        .about-us__content--heading-bg {
+          height: 80%;
+          width: 70%;
+          justify-self: start; } }
+      @media only screen and (max-width: 950px) {
+        .about-us__content--heading-bg {
+          display: none; } }
     .about-us__content--heading {
       z-index: 20;
       margin-top: 5rem;
@@ -416,6 +539,15 @@ body {
       grid-row: 1 / 2;
       justify-self: center;
       align-self: center; }
+      @media only screen and (max-width: 1050px) {
+        .about-us__content--heading {
+          font-size: 6rem; } }
+      @media only screen and (max-width: 950px) {
+        .about-us__content--heading {
+          margin-bottom: 5rem;
+          grid-column: 1 / -1;
+          grid-row: 1 / 2;
+          align-self: start; } }
     .about-us__content--paragraph {
       z-index: 20;
       width: 60%;
@@ -427,6 +559,14 @@ body {
       grid-row: 2 / 3;
       justify-self: center;
       align-self: start; }
+      @media only screen and (max-width: 1050px) {
+        .about-us__content--paragraph {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 950px) {
+        .about-us__content--paragraph {
+          grid-column: 1 / -1;
+          grid-row: 1 / 2;
+          align-self: end; } }
 
 .to-go {
   z-index: 2;
@@ -436,10 +576,23 @@ body {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
   display: grid;
-  grid-template-columns: 20rem 1fr 20rem;
-  grid-template-rows: 20rem 25rem 25rem;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: repeat(3, 33.33%);
   justify-items: center;
   align-items: center; }
+  @media only screen and (max-width: 1250px) {
+    .to-go {
+      border-top: 3rem solid #403226;
+      border-bottom: 3rem solid #403226; } }
+  @media only screen and (max-width: 1050px) {
+    .to-go {
+      grid-template-columns: 7% 1fr 7%; } }
+  @media only screen and (max-width: 950px) {
+    .to-go {
+      border: none; } }
+  @media only screen and (max-width: 700px) {
+    .to-go {
+      grid-template-columns: 1fr; } }
   .to-go section {
     margin-bottom: 1rem;
     display: flex;
@@ -450,6 +603,9 @@ body {
   .to-go span {
     border-bottom: 2px dotted #333;
     flex: 1; }
+  @media only screen and (max-width: 800px) {
+    .to-go img {
+      display: none; } }
   .to-go__left {
     height: 100%;
     width: 100%; }
@@ -486,9 +642,26 @@ body {
     grid-row: 1 / -1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 15rem 1fr 10rem;
+    grid-template-rows: 25% 55% 20%;
     grid-column-gap: 5rem;
     grid-row-gap: 5rem; }
+    @media only screen and (max-width: 1250px) {
+      .to-go__menu {
+        height: auto;
+        margin-top: 0;
+        border: 1rem solid #8c7561;
+        grid-gap: 2rem; } }
+    @media only screen and (max-width: 700px) {
+      .to-go__menu {
+        border: 2rem solid #61848c;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column; } }
+    @media only screen and (max-width: 650px) {
+      .to-go__menu {
+        height: 100%;
+        border: none;
+        grid-gap: 0; } }
     .to-go__menu--heading {
       z-index: 3;
       height: 100%;
@@ -510,8 +683,20 @@ body {
         font-family: "Roboto", sans-serif;
         font-weight: 300;
         color: #8c7561; }
+        @media only screen and (max-width: 1250px) {
+          .to-go__menu--heading h1 {
+            font-size: 6rem; } }
+        @media only screen and (max-width: 700px) {
+          .to-go__menu--heading h1 {
+            font-size: 5rem; } }
       .to-go__menu--heading p {
         font-size: 2.5rem; }
+        @media only screen and (max-width: 1050px) {
+          .to-go__menu--heading p {
+            font-size: 2rem; } }
+        @media only screen and (max-width: 700px) {
+          .to-go__menu--heading p {
+            font-size: 1.5rem; } }
     .to-go__menu--main {
       z-index: 1;
       width: 100%;
@@ -521,12 +706,33 @@ body {
       grid-row: 2 / 3;
       justify-self: center;
       align-self: start; }
+      @media only screen and (max-width: 1250px) {
+        .to-go__menu--main {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 1050px) {
+        .to-go__menu--main {
+          font-size: 1.7rem; } }
+      @media only screen and (max-width: 700px) {
+        .to-go__menu--main {
+          font-size: 1.5rem;
+          width: 70%;
+          align-self: center; } }
       .to-go__menu--main h3 {
         padding-left: 2rem;
         margin-bottom: 2rem;
         font-size: 3rem;
         color: #f6f4f1;
         background-color: #bfae99; }
+        @media only screen and (max-width: 1250px) {
+          .to-go__menu--main h3 {
+            font-size: 2.5rem; } }
+        @media only screen and (max-width: 1050px) {
+          .to-go__menu--main h3 {
+            font-size: 2.2rem; } }
+        @media only screen and (max-width: 700px) {
+          .to-go__menu--main h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem; } }
       .to-go__menu--main p {
         padding-left: 2rem; }
     .to-go__menu--special {
@@ -538,12 +744,32 @@ body {
       grid-row: 2 / 3;
       justify-self: center;
       align-self: start; }
+      @media only screen and (max-width: 1250px) {
+        .to-go__menu--special {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 1050px) {
+        .to-go__menu--special {
+          font-size: 1.7rem; } }
+      @media only screen and (max-width: 700px) {
+        .to-go__menu--special {
+          font-size: 1.5rem;
+          width: 70%;
+          align-self: center; } }
       .to-go__menu--special h3 {
         padding-left: 2rem;
         margin-bottom: 2rem;
         font-size: 3rem;
         color: #f6f4f1;
         background-color: #bfae99; }
+        @media only screen and (max-width: 1250px) {
+          .to-go__menu--special h3 {
+            font-size: 2.5rem; } }
+        @media only screen and (max-width: 1050px) {
+          .to-go__menu--special h3 {
+            font-size: 2.2rem; } }
+        @media only screen and (max-width: 700px) {
+          .to-go__menu--special h3 {
+            font-size: 2rem; } }
       .to-go__menu--special p {
         padding-left: 2rem; }
     .to-go__menu--btn {
@@ -561,6 +787,12 @@ body {
       grid-row: 3 / 4;
       justify-self: center;
       align-self: start; }
+      @media only screen and (max-width: 700px) {
+        .to-go__menu--btn {
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+          align-self: center;
+          padding: 1.2rem 3.5rem; } }
       .to-go__menu--btn:hover {
         color: #403226;
         background-color: #96ccd9;
@@ -588,8 +820,26 @@ body {
       font-weight: 300;
       text-transform: uppercase;
       font-size: 5.5rem; }
+      @media only screen and (max-width: 1100px) {
+        .fishing-video__heading h2 {
+          font-size: 4.5rem; } }
+      @media only screen and (max-width: 950px) {
+        .fishing-video__heading h2 {
+          font-size: 4rem; } }
     .fishing-video__heading p {
       font-size: 2.9rem; }
+      @media only screen and (max-width: 1100px) {
+        .fishing-video__heading p {
+          font-size: 2.5rem; } }
+      @media only screen and (max-width: 950px) {
+        .fishing-video__heading p {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 700px) {
+        .fishing-video__heading p {
+          font-size: 1.7rem; } }
+      @media only screen and (max-width: 650px) {
+        .fishing-video__heading p {
+          display: none; } }
   .fishing-video__video {
     height: 100%;
     width: 100%;
@@ -601,8 +851,6 @@ body {
     justify-self: center; }
 
 .menu {
-  z-index: 2;
-  height: 105%;
   background-image: url(/img/bg-fish-2.png);
   background-color: #61848c;
   background-repeat: repeat-y;
@@ -610,25 +858,24 @@ body {
   background-attachment: fixed;
   background-position: center;
   border-top: 4px solid #61848c;
-  transform: translateY(-1rem);
   grid-column: 1 / -1;
   grid-row: 5 / 6;
   display: flex;
   justify-content: center;
   align-self: center; }
   .menu__food {
-    z-index: 20;
-    width: 100%;
-    padding: 3rem;
-    margin: 10rem;
+    z-index: 1;
+    width: 80%;
+    padding: 0 3rem;
+    margin: 5.5rem;
     font-size: 2.5rem;
     background-color: #fff;
     border: 2rem solid #8c7561;
     pointer-events: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 20rem repeat(2, 1fr);
-    grid-gap: 5rem;
+    grid-template-rows: 20% 40% 40%;
+    grid-gap: 3rem;
     justify-items: start;
     align-items: start; }
     .menu__food section {
@@ -645,10 +892,11 @@ body {
       list-style: none; }
     .menu__food h3 {
       padding-left: 2rem;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
       color: #f6f4f1;
       background-color: #bfae99; }
     .menu__food--h2 {
+      margin-bottom: 8rem;
       font-size: 7rem;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
