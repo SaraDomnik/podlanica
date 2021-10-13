@@ -30,7 +30,7 @@ i18next
       loadPath: __dirname + "/locales/{{lng}}/{{ns}}.json",
       addPath: __dirname + "/locales/{{lng}}/{{ns}}.missing.json",
     },
-    fallbackLng: "en",
+    fallbackLng: "si",
     // nonExplicitSupportedLngs: true,
     // supportedLngs: ['en', 'de'],
     load: "languageOnly",

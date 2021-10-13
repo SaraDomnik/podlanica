@@ -25,6 +25,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -38,52 +39,95 @@
   justify-content: center;
   align-items: center;
 
+  &__title {
+    line-height: 1;
+    &--1 {
+      font-weight: 300;
+      font-size: 15rem;
+      font-family: $font-heading;
+      text-transform: uppercase;
+      letter-spacing: 2rem;
+      color: #fff;
+
+      @media only screen and (max-width: 1250px) {
+        font-size: 12rem;
+      }
+
+      @media only screen and (max-width: 950px) {
+        font-size: 10rem;
+      }
+
+      @media only screen and (max-width: 750px) {
+        font-size: 8rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 6rem;
+      }
+
+      @media only screen and (max-width: 500px) {
+        font-size: 5rem;
+      }
+    }
+
+    &--2 {
+      font-weight: 200;
+      font-size: 6rem;
+      font-family: $font-handwriting;
+      letter-spacing: 2rem;
+      letter-spacing: 0.3rem;
+      color: #fff;
+
+      @media only screen and (max-width: 1250px) {
+        font-size: 5rem;
+      }
+
+      @media only screen and (max-width: 950px) {
+        font-size: 4rem;
+      }
+    }
+
+    &--3 {
+      font-weight: 200;
+      font-size: 5rem;
+      font-family: $font-handwriting;
+      letter-spacing: 0.5rem;
+      color: #fff;
+
+      @media only screen and (max-width: 950px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
   &__buttons {
-    width: 50%;
-    margin-top: 5rem;
+    width: 70%;
+    margin-top: 10rem;
 
     display: flex;
     justify-content: space-around;
 
+    @media only screen and (max-width: 750px) {
+      width: 60%;
+    }
+
     @media only screen and (max-width: 600px) {
       flex-direction: column;
-      width: 30%;
+      width: 40%;
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 50%;
     }
     &--btn {
-      padding: 1.5rem 4.5rem;
-      margin-top: 5rem;
-      cursor: pointer;
-      color: $color-white;
-      font-size: 2rem;
-      font-weight: 200;
-      border: none;
-      border-radius: 3rem;
-      box-shadow: 1px 1rem 2rem rgba(#000, 0.5);
-      background-color: $color-primary;
-      transition: all 0.3s ease-in;
+      @include button;
 
-      @media only screen and (max-width: 950px) {
-        font-size: 1.5;
-        padding: 1.5rem 3rem;
-        margin-top: 3rem;
+      @media only screen and (max-width: 1250px) {
+        margin-right: 5rem;
       }
 
       @media only screen and (max-width: 750px) {
-        font-size: 1.2;
-        padding: 1.2rem 2rem;
-        margin-top: 2rem;
-      }
-
-      @media only screen and (max-width: 600px) {
-        font-size: 1.7rem;
-        padding: 1rem 1.5rem;
-        margin-top: 2rem;
-      }
-
-      &:hover {
-        color: $color-secondary-dark;
-        background-color: $color-primary-light;
-        transform: scale(110%);
+        margin-right: 2rem;
       }
     }
   }

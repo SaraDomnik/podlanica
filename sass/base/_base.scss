@@ -52,4 +52,32 @@ body {
       50rem minmax(auto, 70rem)
       minmax(auto, 60rem);
   }
+
+  @media only screen and (max-width: 750px) {
+    grid-template-rows:
+      6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) minmax(
+        auto,
+        70rem
+      )
+      auto 50rem minmax(auto, 70rem)
+      minmax(auto, 60rem);
+  }
+
+  @media only screen and (max-width: 650px) {
+    grid-template-rows:
+      6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) repeat(2, auto) 50rem minmax(
+        auto,
+        70rem
+      )
+      minmax(auto, 60rem);
+  }
+
+  @media only screen and (max-width: 500px) {
+    grid-template-rows:
+      6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) auto 120rem 50rem minmax(
+        auto,
+        70rem
+      )
+      minmax(auto, 60rem);
+  }
 }

@@ -4,8 +4,65 @@ let description = document.getElementById("description");
 let maxTemp = document.getElementById("max-temp");
 let minTemp = document.getElementById("min-temp");
 
+let weather = undefined;
+let fullScreenAnimation = undefined;
+let mediumScreenAnimation = undefined;
+let smallScreenAnimation = undefined;
+
+function loadAnimation(animationPath) {
+  return bodymovin.loadAnimation({
+    container: document.getElementById("lottie-animation"),
+    path: animationPath,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    name: "Demo Animation",
+    rendererSettings: {
+      clearCanvas: false,
+      preserveAspectRatio: "xMinYMin slice",
+      progressiveLoad: false,
+      hideOnTransparent: true,
+    },
+  });
+}
+function destroyAnimation(animation) {
+  if (isAnimationLoaded(animation)) {
+    animation.destroy();
+  }
+}
+
+function isSmallerThanPixels(pixels) {
+  return window.matchMedia(`(max-width: ${pixels}px)`).matches;
+}
+
+function isAnimationLoaded(animation) {
+  return bodymovin.getRegisteredAnimations().includes(animation);
+}
+
+function loadAnimations(weatherIcon) {
+  //Lottie animation
+  if (!isAnimationLoaded(smallScreenAnimation) && isSmallerThanPixels(500)) {
+    destroyAnimation(mediumScreenAnimation);
+    destroyAnimation(fullScreenAnimation);
+    smallScreenAnimation = loadAnimation(`img/weather-app--animations-smallest/${weatherIcon}.json`);
+  } else if (!isAnimationLoaded(mediumScreenAnimation) && isSmallerThanPixels(1250) && !isSmallerThanPixels(500)) {
+    destroyAnimation(smallScreenAnimation);
+    destroyAnimation(fullScreenAnimation);
+    mediumScreenAnimation = loadAnimation(`img/weather-app--animations-small/${weatherIcon}.json`);
+  } else if (!isAnimationLoaded(fullScreenAnimation) && !isSmallerThanPixels(1250)) {
+    destroyAnimation(smallScreenAnimation);
+    destroyAnimation(mediumScreenAnimation);
+    fullScreenAnimation = loadAnimation(`img/weather-app--animations/${weatherIcon}.json`);
+  }
+}
+
+window.addEventListener("resize", function () {
+  loadAnimations(weather.icon);
+});
+
 window.addEventListener("load", () => {
   if (navigator.geolocation) {
+    const celsiusSign = "\u00B0";
     const currentApi = `http://api.openweathermap.org/data/2.5/weather?q=piran&units=metric&appid=730aaf925ed5cbb5cd67a136c55fba02`;
 
     fetch(currentApi)
@@ -13,28 +70,19 @@ window.addEventListener("load", () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
-
-        temp.textContent = Math.round(data.main.temp) + "\u00B0";
-        city.textContent = data.name;
-        description.textContent = data.weather[0].main;
-        maxTemp.textContent = Math.round(data.main.temp_max) + "\u00B0";
-        minTemp.textContent = Math.round(data.main.temp_min) + "\u00B0";
-        //Set icon
-        document.getElementById(
-          "icon"
-        ).src = `img/weather-app--icons/SVG/${data.weather[0].icon}.svg`;
-
-        //Lottie animation
-        bodymovin.loadAnimation({
-          container: document.getElementById("lottie-animation"),
-          path: `img/weather-app--animations/${data.weather[0].icon}.json`,
-          // path: `Img/weather-app--animations/01n.json`,
-          renderer: "svg",
-          loop: true,
-          autoplay: true,
-          name: "Demo Animation",
-        });
+        if (data.weather && data.weather.length > 0) {
+          weather = data.weather[0];
+          temp.textContent = Math.round(data.main.temp) + celsiusSign;
+          city.textContent = data.name;
+          description.textContent = weather.main;
+          maxTemp.textContent = Math.round(data.main.temp_max) + celsiusSign;
+          minTemp.textContent = Math.round(data.main.temp_min) + celsiusSign;
+          //Set icon
+          document.getElementById("icon").src = `img/weather-app--icons/SVG/${weather.icon}.svg`;
+          loadAnimations(weather.icon);
+        } else {
+          loadAnimations("01d");
+        }
       });
   }
 });

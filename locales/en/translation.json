@@ -8,6 +8,7 @@
     "gallery": "Gallery",
     "location": "Location",
     "language": "Select language",
+    "just-language": "Language",
     "si": "Slovenian",
     "en": "English",
     "it": "Italian"
@@ -19,7 +20,7 @@
     "special-offers": "Special offers"
   },
   "to-go": {
-    "text": "Now you can oreder food To go. Just call us and come and pick it up when is ready."
+    "text": "Now you can order food To go. Just call us and come and pick it up when is ready."
   },
   "fishing": {
     "text": "We have the freshes fish",
@@ -27,14 +28,14 @@
   },
 
   "menu": {
-    "text": "Daily fresh fish cought by us. Unique expirance eating on the boat in the harbor of Piran.",
+    "text": "Daily fresh fish caught by us. Unique experience eating on the boat in the harbor of Piran.",
     "main": "Menu",
-    "apetizers": "Apetizers",
+    "apetizers": "Appetizers",
     "spaghetti": "Spaghetti with vongole",
     "salty-fillets": "Salty fillets",
     "main-dishes": "Main dishes",
     "black-muscles": "Black-muscles",
-    "in-white-souce": "in white souce",
+    "in-white-souce": "in white sauce",
     "fish": "Fish",
     "categorie-1": "Categorie I.",
     "categorie-2": "Categorie II.",
@@ -44,8 +45,8 @@
     "polenta": "Grilled polenta",
     "marinated-sardines": "Marinated sardines",
     "bacala": "Bacala",
-    "specail-offres": "Daily specail offers",
-    "specail-offer": "Specail offer"
+    "specail-offres": "Daily special offers",
+    "specail-offer": "Special offer"
   },
 
   "weather": {
@@ -55,7 +56,7 @@
     "piran": "Piran",
     "slovenia": "Slovenia",
     "open": "Open",
-    "thuseday-closed": "Thuseday closed"
+    "thuseday-closed": "Tuesday closed"
   },
   "about-us": {
     "text": "Lorem ipsum",

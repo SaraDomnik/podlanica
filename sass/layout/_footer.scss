@@ -9,6 +9,14 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 45rem 25rem;
 
+  @media only screen and(max-width:950px) {
+    grid-template-rows: 60% 40%;
+  }
+
+  @media only screen and(max-width:450px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &__map {
     height: 100%;
     width: 100%;
@@ -31,6 +39,10 @@
     &--sp {
       margin-bottom: 1rem;
       font-size: 1.7rem;
+
+      @media only screen and(max-width:1150px) {
+        font-size: 1.4rem;
+      }
     }
 
     &--socialmedia {
@@ -53,56 +65,28 @@
 
   &__location {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    justify-self: center;
+    @include footer-items;
 
-    display: flex;
-    align-items: center;
-
-    &--icon {
-      margin-right: 2rem;
-      font-size: 3.6rem;
-    }
-
-    &--text {
-      font-size: 1.7rem;
-      font-weight: 400;
+    @media only screen and(max-width:700px) {
+      display: none;
     }
   }
 
   &__contact {
     grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    justify-self: center;
+    @include footer-items;
 
-    display: flex;
-    align-items: center;
-
-    &--icon {
-      margin-right: 2rem;
-      font-size: 3.6rem;
-    }
-
-    &--text {
-      font-size: 1.7rem;
-      font-weight: 400;
+    @media only screen and(max-width:950px) {
+      grid-column: 2 / 3;
     }
   }
 
   &__time {
     grid-column: 4 / 5;
-    grid-row: 2 / 3;
+    @include footer-items;
 
-    display: flex;
-    align-items: center;
-    &--icon {
-      margin-right: 2rem;
-      font-size: 3.6rem;
-    }
-
-    &--text {
-      font-size: 1.7rem;
-      font-weight: 400;
+    @media only screen and(max-width:700px) {
+      display: none;
     }
   }
 }

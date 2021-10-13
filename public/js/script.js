@@ -91,7 +91,14 @@ const swiper = new Swiper(".swiper", {
   },
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 3,
+  breakpoints: {
+    950: {
+      slidesPerView: 2,
+    },
+    1550: {
+      slidesPerView: 3,
+    },
+  },
   freeMode: {
     enabled: true,
     sticky: true,

@@ -8,6 +8,7 @@
     "gallery": "Galerija",
     "location": "Lokacija",
     "language": "Izberi jezik",
+    "just-language": "Jezik",
     "si": "Slovenščina",
     "en": "English",
     "it": "Italiano"
@@ -49,7 +50,7 @@
   },
 
   "weather": {
-    "reserve": "Rezervirajte mizo zdaj",
+    "reserve": "Rezervirajte mizo",
     "reservation-required": "Rezervacija je obvezna. Pokličite nas.",
     "port": "Pristanišče",
     "piran": "Piran",
@@ -58,7 +59,7 @@
     "thuseday-closed": "Torek zaprto"
   },
   "about-us": {
-    "text": "Ladja podlanica je restavracija v družinski lasti, kjer vam postrežemo dnevno sveže ulovljeno ribo. Na Podlanice doživiste edinstevno izkušnjo, kjer imate priložnost jest na barki s prelepim pogledom na Piran.",
+    "text": "Ladja podlanica je restavracija v družinski lasti, kjer vam postrežemo dnevno sveže ulovljeno ribo. Na Podlanice doživiste edinstveno izkušnjo, kjer imate priložnost jest na barki s prelepim pogledom na Piran.",
     "about-us": "O nas"
   },
   "gallery": {

@@ -1,7 +1,7 @@
 .to-go {
   z-index: 2;
   background-color: $color-primary;
-  border-bottom: 5rem solid $color-secondary;
+  border-bottom: 4rem solid $color-secondary;
   overflow: hidden;
 
   grid-column: 1 / -1;
@@ -94,22 +94,23 @@
   }
 
   &__menu {
-    height: 100%;
+    z-index: 1;
+    height: auto;
     width: 100%;
     padding: 0 5rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     box-shadow: 7px 10px 15px rgba(#000, 0.3);
     border: 2rem solid $color-secondary;
     background: rgba(#fff, 1);
+    overflow: hidden;
 
     grid-column: 2 / 3;
     grid-row: 1 / -1;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 25% 55% 20%;
-    grid-column-gap: 5rem;
-    grid-row-gap: 5rem;
+    grid-template-rows: 30% 45% 15%;
+    grid-gap: 3rem;
 
     @media only screen and (max-width: 1250px) {
       height: auto;
@@ -180,134 +181,39 @@
     }
 
     &--main {
-      z-index: 1;
-      width: 100%;
-      margin-top: 3rem;
-      font-size: 2.5rem;
+      @include menu-to-go-items;
 
       grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      justify-self: center;
-      align-self: start;
-
-      @media only screen and (max-width: 1250px) {
-        font-size: 2rem;
-      }
-
-      @media only screen and (max-width: 1050px) {
-        font-size: 1.7rem;
-      }
-
-      @media only screen and (max-width: 700px) {
-        font-size: 1.5rem;
-        width: 70%;
-        align-self: center;
-      }
-
-      h3 {
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-        font-size: 3rem;
-        color: $color-white;
-        background-color: $color-secondary-light;
-
-        @media only screen and (max-width: 1250px) {
-          font-size: 2.5rem;
-        }
-
-        @media only screen and (max-width: 1050px) {
-          font-size: 2.2rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 2rem;
-          margin-bottom: 1rem;
-        }
-      }
-
-      p {
-        padding-left: 2rem;
-      }
     }
 
     &--special {
-      z-index: 1;
-      width: 100%;
-      margin-top: 3rem;
-      font-size: 2.5rem;
-
+      @include menu-to-go-items;
       grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      justify-self: center;
-      align-self: start;
-
-      @media only screen and (max-width: 1250px) {
-        font-size: 2rem;
-      }
-
-      @media only screen and (max-width: 1050px) {
-        font-size: 1.7rem;
-      }
-
-      @media only screen and (max-width: 700px) {
-        font-size: 1.5rem;
-        width: 70%;
-        align-self: center;
-      }
-
-      h3 {
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-        font-size: 3rem;
-        color: $color-white;
-        background-color: $color-secondary-light;
-
-        @media only screen and (max-width: 1250px) {
-          font-size: 2.5rem;
-        }
-
-        @media only screen and (max-width: 1050px) {
-          font-size: 2.2rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 2rem;
-        }
-      }
-
-      p {
-        padding-left: 2rem;
-      }
     }
 
     &--btn {
-      padding: 1.5rem 4.5rem;
-      cursor: pointer;
-      color: $color-white;
-      font-size: 2rem;
-      font-weight: 200;
-      border: none;
-      border-radius: 3rem;
-      box-shadow: 1px 1rem 2rem rgba(#000, 0.5);
-      background-color: $color-primary;
-      transition: all 0.3s ease-in;
+      @include button;
 
       grid-column: 1 / -1;
       grid-row: 3 / 4;
       justify-self: center;
-      align-self: start;
+      align-self: center;
+
+      @media only screen and (max-width: 900px) {
+        align-self: start;
+      }
 
       @media only screen and (max-width: 700px) {
         font-size: 1.5rem;
-        margin-bottom: 2rem;
         align-self: center;
         padding: 1.2rem 3.5rem;
+        margin-bottom: 2rem;
       }
 
       &:hover {
-        color: $color-secondary-dark;
-        background-color: $color-primary-light;
-        transform: scale(110%);
+        color: $color-white;
+        border-inline: 5px solid $color-primary;
+        background-color: $color-secondary;
       }
     }
   }

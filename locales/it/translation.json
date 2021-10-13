@@ -8,6 +8,7 @@
     "gallery": "Galleria",
     "location": "Posizione",
     "language": "Lingua",
+    "just-language": "Lingua",
     "si": "Slovenščina",
     "en": "English",
     "it": "Italiano"
@@ -16,7 +17,7 @@
   "header": {
     "boat": "Nave",
     "restaurant": "Ristorante",
-    "special-offers": "Offerte speciali giornale"
+    "special-offers": "Offerte speciali"
   },
   "to-go": {
     "text": "Ora puoi ordinare cibo da asporto. Chiamaci e vieni a prenderlo quando è pronto."
@@ -49,7 +50,7 @@
   },
 
   "weather": {
-    "reserve": "Prenota subito un tavolo",
+    "reserve": "Prenota un tavolo",
     "reservation-required": "È necessaria la prenotazione. Chiama ora",
     "port": "Prorta",
     "piran": "Pirano",
