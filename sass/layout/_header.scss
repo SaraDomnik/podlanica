@@ -41,12 +41,14 @@
 
   &__title {
     line-height: 1;
+
     &--1 {
       font-weight: 300;
       font-size: 15rem;
       font-family: $font-heading;
       text-transform: uppercase;
       letter-spacing: 2rem;
+
       color: #fff;
 
       @media only screen and (max-width: 1250px) {
@@ -67,6 +69,10 @@
 
       @media only screen and (max-width: 500px) {
         font-size: 5rem;
+      }
+
+      @media only screen and (max-width: 400px) {
+        letter-spacing: 0;
       }
     }
 
@@ -93,6 +99,7 @@
       font-family: $font-handwriting;
       letter-spacing: 0.5rem;
       color: #fff;
+      text-shadow: 4px 4px 3px rgba(#000, $alpha: 1);
 
       @media only screen and (max-width: 950px) {
         font-size: 4rem;
@@ -118,6 +125,10 @@
 
     @media only screen and (max-width: 500px) {
       width: 50%;
+    }
+
+    @media only screen and(max-width: 400px ) {
+      width: 80%;
     }
     &--btn {
       @include button;

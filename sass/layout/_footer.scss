@@ -17,6 +17,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  @media only screen and(max-width: 400px ) {
+    grid-template-rows: 70% 30%;
+  }
+
   &__map {
     height: 100%;
     width: 100%;
@@ -36,12 +40,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media only screen and(max-width: 400px ) {
+      padding: 2rem;
+    }
     &--sp {
       margin-bottom: 1rem;
       font-size: 1.7rem;
 
       @media only screen and(max-width:1150px) {
         font-size: 1.4rem;
+      }
+
+      @media only screen and(max-width: 400px ) {
+        font-size: 1.2rem;
       }
     }
 
@@ -52,6 +64,9 @@
       justify-content: flex-end;
       align-items: center;
 
+      @media only screen and(max-width: 400px ) {
+        font-size: 2rem;
+      }
       &--fb {
         margin-left: 4rem;
       }
@@ -59,6 +74,10 @@
       &--trip {
         margin-left: 4rem;
         height: 3rem;
+
+        @media only screen and(max-width: 400px ) {
+          height: 2rem;
+        }
       }
     }
   }

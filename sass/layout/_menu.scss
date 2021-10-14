@@ -12,10 +12,6 @@
   display: flex;
   justify-content: center;
 
-  @media only screen and (max-width: 400px) {
-    padding-left: 3rem;
-  }
-
   &__food {
     z-index: 1;
     width: 80%;
@@ -56,7 +52,6 @@
 
     @media only screen and (max-width: 400px) {
       font-size: 1.7rem;
-      margin-left: 2rem;
     }
 
     section {

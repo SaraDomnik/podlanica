@@ -133,6 +133,10 @@
       grid-gap: 0;
     }
 
+    @media only screen and(max-width: 400px ) {
+      padding: 0 1rem;
+    }
+
     &--heading {
       z-index: 3;
       height: 100%;
@@ -165,6 +169,10 @@
         @media only screen and (max-width: 700px) {
           font-size: 5rem;
         }
+
+        @media only screen and(max-width: 400px ) {
+          font-size: 3.5rem;
+        }
       }
 
       p {
@@ -176,6 +184,10 @@
 
         @media only screen and (max-width: 700px) {
           font-size: 1.5rem;
+        }
+
+        @media only screen and(max-width: 400px ) {
+          font-size: 1.4rem;
         }
       }
     }
