@@ -16,23 +16,18 @@
     z-index: 1;
     width: 80%;
     padding: 0 3rem;
-    margin: 5.5rem;
+    margin: 4.5rem;
     font-size: 2.5rem;
     background-color: #fff;
     border: 2rem solid $color-secondary;
-    pointer-events: none;
     overflow: hidden;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 20% 40% 40%;
+    grid-template-rows: repeat(3, 1fr) 15%;
     grid-gap: 3rem;
     justify-items: start;
     align-items: start;
-
-    @media only screen and (max-width: 1850px) {
-      grid-template-rows: repeat(3, 1fr);
-    }
 
     @media only screen and (max-width: 1100px) {
       width: 100%;
@@ -46,6 +41,7 @@
     }
 
     @media only screen and (max-width: 650px) {
+      padding: 3rem;
       display: flex;
       flex-direction: column;
     }
@@ -87,7 +83,7 @@
     }
 
     &--h2 {
-      margin-bottom: 8rem;
+      margin-bottom: 5rem;
       font-size: 7rem;
       font-family: $font-heading;
       font-weight: 300;
@@ -110,12 +106,19 @@
     }
 
     &--text {
+      font-size: 2rem;
+      color: $color-grey-text;
+      font-style: italic;
       text-align: center;
 
       grid-column: 1 / -1;
       grid-row: 1 / 2;
       justify-self: center;
       align-self: end;
+
+      @media only screen and (max-width: 950px) {
+        font-size: 2.5rem;
+      }
     }
 
     &--apetizers {
@@ -144,6 +147,23 @@
 
       grid-column: 2 / 3;
       grid-row: 3 / 4;
+    }
+
+    &--button {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+
+      justify-self: center;
+      align-self: start;
+
+      @media only screen and (max-width: 650px) {
+        align-self: center;
+      }
+
+      &--btn {
+        padding: 0;
+        @include button;
+      }
     }
   }
 }

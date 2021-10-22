@@ -17,18 +17,19 @@
   "header": {
     "boat": "Ladja",
     "restaurant": "Restavracija",
-    "special-offers": "Posebne ponudbe"
+    "second-btn": "Rezerviraj",
+    "special-offers": "Menu"
   },
   "to-go": {
     "text": "Sedaj lahko naročite hrano To go. Samo pokličite nas in pridite iskat, ko je pripravljeno."
   },
   "fishing": {
-    "text": "Imamo najbolj svežo ribo ",
-    "text-2": "Ribo dnevno sami ulovimo. Kar se tisti dan ne porabi se proda naprej."
+    "text": "Preprostost je lepota",
+    "text-2": "Ponosni smo na ustvarjanje okusnih jedi z lokalnimi sestavinami in svežo ribo."
   },
 
   "menu": {
-    "text": "Dnevno sveža riba, ki jo ulovimo sami. Pri nas doživite edinstveno izkušnjo, kjer lahko jeste na barki v Piranskemu pristanišču.",
+    "text": "Naše slastne jedi lahko okusite, medtem ko uživate v pogledu na Jadran",
     "main": "Menu",
     "apetizers": "Predjedi",
     "spaghetti": "Špageti z vongolami",
@@ -39,7 +40,6 @@
     "fish": "Riba",
     "categorie-1": "Kategorija I.",
     "categorie-2": "Kategorija II.",
-    "categorie-3": "Kategorija III.",
     "side-dishes": "Priloga",
     "sesonal-salad": "Sezonska solata",
     "polenta": "Pečena polenta",
@@ -59,7 +59,9 @@
     "thuseday-closed": "Torek zaprto"
   },
   "about-us": {
-    "text": "Ladja podlanica je restavracija v družinski lasti, kjer vam postrežemo dnevno sveže ulovljeno ribo. Na Podlanice doživiste edinstveno izkušnjo, kjer imate priložnost jest na barki s prelepim pogledom na Piran.",
+    "text-1": "Osrednja figura naše restavracije je naša ladja. Narejena je bila leta 1935 in od leta 2008 pa je nam zagotavlja rustikalno in edinstveno kuliso. Pri nas doživite edinstveno kulinarično izkušnjo, ker jeste na dejanski ladji.",
+    "text-2": "Podlanico vodiva jaz (Katarina) in moj mož Rok. Rok skrbi za svež ulov in kuhanje, med tem, ko jaz poskrbim za vas, ko čakate na vaše naročilo. Te slastne jedi lahko okusite med tem, ko uživate pogled na Jadransko morje. Ponosni smo na ustvarjanje okusnih jedi z lokalnimi sestavinami in svežo ribo.",
+    "text-3": "Kljub naši majhni ekipi, lahko svoji gostom ponudimo najboljše domače jedi v intimnem okolju.  Vsi sedijo drug poleg drugega in to vedno veže ljudi, ki so bili prej tujci. Pri nas vsi sklepajo nova prijateljstva in uživajo v toplini domače hrane.",
     "about-us": "O nas"
   },
   "gallery": {

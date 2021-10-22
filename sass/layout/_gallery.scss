@@ -4,7 +4,8 @@
   background-color: $color-primary;
 
   grid-column: 1 / -1;
-  grid-row: 8 / 9;
+  // grid-row: 8 / 9; //with to-go menu
+  grid-row: 7 / 8;
 
   display: grid;
   grid-template-columns: 1fr;

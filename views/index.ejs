@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--SWIPER-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <!--ICONS-->
     <link rel="stylesheet" href="/Fonts/css/all.css" />
     <link rel="stylesheet" href="/Fonts/js/all.js" />
@@ -29,27 +32,42 @@
       <nav class="navigation__nav" id="navigation__nav">
         <ul class="navigation__list">
           <li>
-            <a href="#home" class="navigation__item"><%=t('navigation.home')%></a>
+            <a href="#home" class="navigation__item"
+              ><%=t('navigation.home')%></a
+            >
+          </li>
+          <!-- <li>
+            <a href="#to-go" class="navigation__item"
+              ><%=t('navigation.to-go')%></a
+            >
+          </li> -->
+
+          <li>
+            <a href="#contact" class="navigation__item"
+              ><%=t('navigation.contact')%></a
+            >
           </li>
           <li>
-            <a href="#to-go" class="navigation__item"><%=t('navigation.to-go')%></a>
+            <a href="#menu" class="navigation__item"
+              ><%=t('navigation.menu')%></a
+            >
           </li>
           <li>
-            <a href="#menu" class="navigation__item"><%=t('navigation.menu')%></a>
+            <a href="#about-us" class="navigation__item"
+              ><%=t('navigation.about-us')%></a
+            >
           </li>
           <li>
-            <a href="#contact" class="navigation__item"><%=t('navigation.contact')%></a>
-          </li>
-          <li>
-            <a href="#about-us" class="navigation__item"><%=t('navigation.about-us')%></a>
-          </li>
-          <li>
-            <a href="#gallery" class="navigation__item"><%=t('navigation.gallery')%></a>
+            <a href="#gallery" class="navigation__item"
+              ><%=t('navigation.gallery')%></a
+            >
           </li>
         </ul>
       </nav>
       <div class="navigation__dropdown">
-        <button class="navigation__dropdown--dropbtn"><%=t('navigation.language')%></button>
+        <button class="navigation__dropdown--dropbtn">
+          <%=t('navigation.language')%>
+        </button>
         <div class="navigation__dropdown--content">
           <a href="?lng=si">Slovenščina</a>
           <a href="?lng=en">English</a>
@@ -64,13 +82,15 @@
       <!--Hamburger menu ul start-->
       <ul class="ham__list">
         <li><a href="#home" class="ham__item"><%=t('navigation.home')%></a></li>
-        <li><a href="#to-go" class="ham__item">TO GO</a></li>
-        <li><a href="#menu" class="ham__item"><%=t('navigation.menu')%></a></li>
+        <!-- <li><a href="#to-go" class="ham__item">TO GO</a></li> -->
         <li>
           <a href="#contact" class="ham__item"><%=t('navigation.contact')%></a>
         </li>
+        <li><a href="#menu" class="ham__item"><%=t('navigation.menu')%></a></li>
         <li>
-          <a href="#about-us" class="ham__item"><%=t('navigation.about-us')%></a>
+          <a href="#about-us" class="ham__item"
+            ><%=t('navigation.about-us')%></a
+          >
         </li>
         <li>
           <a href="#gallery" class="ham__item"><%=t('navigation.gallery')%></a>
@@ -93,9 +113,24 @@
           <i class="fas fa-globe"></i>
         </button>
         <div class="ham__dropdown--content">
-          <a href="?lng=si"><img src="/img/si-flag.svg" alt="Slovenian flag" class="ham__dropdown--content-flag" /></a>
-          <a href="?lng=en"><img src="/img/en-flag.svg" alt="English flag" class="ham__dropdown--content-flag" /></a>
-          <a href="?lng=it"><img src="/img/it-flag.svg" alt="Italian flag" class="ham__dropdown--content-flag" /></a>
+          <a href="?lng=si"
+            ><img
+              src="/img/si-flag.svg"
+              alt="Slovenian flag"
+              class="ham__dropdown--content-flag"
+          /></a>
+          <a href="?lng=en"
+            ><img
+              src="/img/en-flag.svg"
+              alt="English flag"
+              class="ham__dropdown--content-flag"
+          /></a>
+          <a href="?lng=it"
+            ><img
+              src="/img/it-flag.svg"
+              alt="Italian flag"
+              class="ham__dropdown--content-flag"
+          /></a>
         </div>
       </div>
     </div>
@@ -106,14 +141,24 @@
       <div class="heading">
         <!-- <h2 class="heading__title heading__title--2"><%=t('header.boat')%></h2> -->
         <h1 class="heading__title heading__title--1">Podlanica</h1>
-        <h3 class="heading__title heading__title--3"><%=t('header.restaurant')%></h3>
+        <h3 class="heading__title heading__title--3">
+          <%=t('header.restaurant')%>
+        </h3>
         <div class="heading__buttons">
-          <button class="heading__buttons--btn">TO GO</button>
-          <button class="heading__buttons--btn"><%=t('header.special-offers')%></button>
+          <a href="#contact">
+            <button class="heading__buttons--btn">
+              <%=t('header.second-btn')%>
+            </button>
+          </a>
+          <a href="#menu">
+            <button class="heading__buttons--btn">
+              <%=t('header.special-offers')%>
+            </button>
+          </a>
         </div>
       </div>
       <div class="bg-video">
-        <img src="/img/img-13.jpg" alt="" class="bg-video__content" />
+        <!-- <img src="/img/img-13.jpg" alt="" class="bg-video__content" /> -->
         <!-- <video class="bg-video__content" autoplay muted loop>
           <source src="video/Fishing-2-Comp-1.mp4" type="video/mp4" />
         </video> -->
@@ -121,7 +166,7 @@
     </header>
     <!--HEADER END-->
     <!--DAILY TO GO START-->
-    <div class="to-go" id="to-go">
+    <!-- <div class="to-go" id="to-go">
       <img src="/img/fish-1-rotated.png" alt="Fish drawing" class="to-go__bg--left--1 object" data-value="5" />
       <img src="/img/fish-2.png" alt="Fish drawing" class="to-go__bg--left--2 object" data-value="-5" />
       <img src="/img/vongola.png" alt="Fish drawing" class="to-go__bg--left--3 object" data-value="-7" />
@@ -180,7 +225,7 @@
 
         <button class="to-go__menu--btn">Order now</button>
       </div>
-    </div>
+    </div> -->
 
     <!--DAILY TO GO END-->
     <!--FISHING VIDEO START-->
@@ -206,19 +251,19 @@
           <section>
             <p><%=t('menu.marinated-sardines')%></p>
             <span></span>
-            <p>8€</p>
+            <p>10€</p>
           </section>
 
           <section>
             <p><%=t('menu.bacala')%></p>
             <span></span>
-            <p>8€</p>
+            <p>10€</p>
           </section>
 
           <section>
             <p><%=t('menu.salty-fillets')%></p>
             <span></span>
-            <p>8€</p>
+            <p>10€</p>
           </section>
         </div>
 
@@ -228,13 +273,15 @@
           <section>
             <p><%=t('menu.spaghetti')%></p>
             <span></span>
-            <p>12€</p>
+            <p>14€</p>
           </section>
 
           <section>
-            <p><%=t('menu.black-muscles')%> <br /><%=t('menu.in-white-souce')%></p>
+            <p>
+              <%=t('menu.black-muscles')%> <br /><%=t('menu.in-white-souce')%>
+            </p>
             <span></span>
-            <p>10€</p>
+            <p>8€</p>
           </section>
         </div>
 
@@ -244,19 +291,13 @@
           <section>
             <p><%=t('menu.categorie-1')%></p>
             <span></span>
-            <p>50€/1kg</p>
+            <p>5€/100g</p>
           </section>
 
           <section>
             <p><%=t('menu.categorie-2')%></p>
             <span></span>
-            <p>45€/1kg</p>
-          </section>
-
-          <section>
-            <p><%=t('menu.categorie-3')%></p>
-            <span></span>
-            <p>40€/1kg</p>
+            <p>4€/100g</p>
           </section>
         </div>
 
@@ -266,14 +307,15 @@
           <section>
             <p><%=t('menu.sesonal-salad')%></p>
             <span></span>
-            <p>7€</p>
+            <p>3€</p>
           </section>
-
-          <section>
-            <p><%=t('menu.polenta')%></p>
-            <span></span>
-            <p>6€</p>
-          </section>
+        </div>
+        <div class="menu__food--button">
+          <a href="#contact">
+            <button class="menu__food--button--btn">
+              <%=t('header.second-btn')%>
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -322,13 +364,23 @@
 
         <div class="weather-app__form--time">
           <i class="weather-app__form--icon far fa-clock"></i>
-          <p><%=t('weather.open')%>: 13h - 20h, <br /><b><%=t('weather.thuseday-closed')%> </b></p>
+          <p>
+            <%=t('weather.open')%>: 13h - 20h, <br /><b
+              ><%=t('weather.thuseday-closed')%>
+            </b>
+          </p>
         </div>
       </div>
       <!--Weather app form end-->
       <!--Weather app right side start-->
       <div class="weather-app__right">
-        <h2 class="weather-app__right--time weather-object" data-value="3" id="time">Time</h2>
+        <h2
+          class="weather-app__right--time weather-object"
+          data-value="3"
+          id="time"
+        >
+          Time
+        </h2>
         <div class="weather-app__right--max weather-object" data-value="-5">
           <p>Max-Temp:</p>
           <p id="max-temp">Max</p>
@@ -345,14 +397,19 @@
     <div class="about-us" id="about-us">
       <div class="about-us__content">
         <div class="about-us__content--heading-bg"></div>
-        <img src="img/img1.jpg" alt="Restaurant owners" class="about-us__content--img" />
-        <h2 class="about-us__content--heading heading-2"><%=t('about-us.about-us')%></h2>
-        <p class="about-us__content--paragraph"><%=t('about-us.text')%></p>
         <img
-          class="about-us__content--pattern-right"
-          src="img/podlanica_pattern-blue-mirrored.svg"
-          alt="Background pattern"
+          src="img/img1.jpg"
+          alt="Restaurant owners"
+          class="about-us__content--img"
         />
+        <h2 class="about-us__content--heading heading-2">
+          <%=t('about-us.about-us')%>
+        </h2>
+        <div class="about-us__content--paragraph">
+          <p><%=t('about-us.text-1')%></p>
+          <p><%=t('about-us.text-2')%></p>
+          <p><%=t('about-us.text-3')%></p>
+        </div>
       </div>
     </div>
     <!--ABOUT US END-->
@@ -367,7 +424,10 @@
           <div data-background="/img/img9.jpg" class="swiper-slide swiper-lazy">
             <div class="swiper-lazy-preloader"></div>
           </div>
-          <div data-background="/img/img10.jpg" class="swiper-slide swiper-lazy">
+          <div
+            data-background="/img/img10.jpg"
+            class="swiper-slide swiper-lazy"
+          >
             <div class="swiper-lazy-preloader"></div>
           </div>
           <div data-background="/img/img4.jpg" class="swiper-slide swiper-lazy">
@@ -383,7 +443,10 @@
           <div data-background="/img/img8.jpg" class="swiper-slide swiper-lazy">
             <div class="swiper-lazy-preloader"></div>
           </div>
-          <div data-background="/img/img11.jpg" class="swiper-slide swiper-lazy">
+          <div
+            data-background="/img/img11.jpg"
+            class="swiper-slide swiper-lazy"
+          >
             <div class="swiper-lazy-preloader"></div>
           </div>
         </div>
@@ -403,20 +466,24 @@
     <footer class="footer" id="location">
       <div class="footer__container">
         <p class="footer__container--sp">
-          Katarina Domnik s.p. ,<br />Ulica IX.korpusa 9,<br />6330 Piran-Pirano, <br />Slovenia,<br />VAT ID:
-          SI62405691
+          Katarina Domnik s.p. ,<br />Ulica IX.korpusa 9,<br />6330
+          Piran-Pirano, <br />Slovenia,<br />VAT ID: SI62405691
         </p>
         <!--Social media start-->
         <div class="footer__container--socialmedia">
           <!--Instagram-->
           <i class="footer__container--socialmedia--ig fab fa-instagram"></i>
           <!--Facebook-->
-          <i class="footer__container--socialmedia--fb fab fa-facebook-square"></i>
+          <i
+            class="footer__container--socialmedia--fb fab fa-facebook-square"
+          ></i>
           <!--Tripadvisor-->
           <a
             target="_blank"
             href="https://www.tripadvisor.com/Restaurant_Review-g274876-d8701031-Reviews-Ladja_Podlanica-Piran_Slovenian_Istria_Slovenian_Littoral_Region.html"
-            ><img src="Img/tripadvisor_icon.svg" class="footer__container--socialmedia--trip"
+            ><img
+              src="Img/tripadvisor_icon.svg"
+              class="footer__container--socialmedia--trip"
           /></a>
         </div>
         <!--Social media end-->
@@ -446,7 +513,11 @@
         <i class="footer__time--icon far fa-clock"></i>
         <div class="footer__time--text">
           <h3><%=t('footer.opening-hours')%></h3>
-          <p><%=t('weather.open')%>: 13h - 20h, <br /><b><%=t('weather.thuseday-closed')%> </b></p>
+          <p>
+            <%=t('weather.open')%>: 13h - 20h, <br /><b
+              ><%=t('weather.thuseday-closed')%>
+            </b>
+          </p>
         </div>
       </div>
       <!--Information end-->

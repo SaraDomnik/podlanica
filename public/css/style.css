@@ -22,23 +22,23 @@ body {
 .container {
   display: grid;
   grid-template-columns: minmax(auto, 192rem);
-  grid-template-rows: 6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 60rem) repeat(4, minmax(auto, 80rem)) minmax(auto, 70rem);
+  grid-template-rows: 6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 60rem) minmax(auto, 85rem) auto minmax(auto, 80rem) minmax(auto, 70rem);
   justify-content: center; }
   @media only screen and (max-width: 1100px) {
     .container {
-      grid-template-rows: 6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 50rem) repeat(4, minmax(auto, 80rem)) minmax(auto, 70rem); } }
+      grid-template-rows: 6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 50rem) repeat(4, minmax(auto, 90rem)) minmax(auto, 70rem); } }
   @media only screen and (max-width: 950px) {
     .container {
-      grid-template-rows: 6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) repeat(2, minmax(auto, 70rem)) 50rem minmax(auto, 70rem) minmax(auto, 60rem); } }
+      grid-template-rows: 6rem minmax(auto, 60rem) minmax(auto, 70rem) minmax(auto, 40rem) minmax(auto, 80rem) 50rem minmax(auto, 70rem) minmax(auto, 60rem); } }
   @media only screen and (max-width: 750px) {
     .container {
-      grid-template-rows: 6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) minmax(auto, 70rem) auto 50rem minmax(auto, 70rem) minmax(auto, 60rem); } }
+      grid-template-rows: 6rem minmax(auto, 60rem) auto minmax(auto, 40rem) minmax(auto, 75rem) 60rem minmax(auto, 70rem) minmax(auto, 60rem); } }
   @media only screen and (max-width: 650px) {
     .container {
-      grid-template-rows: 6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) repeat(2, auto) 50rem minmax(auto, 70rem) minmax(auto, 60rem); } }
+      grid-template-rows: 6rem minmax(auto, 60rem) auto minmax(auto, 40rem) auto repeat(2, minmax(auto, 70rem)) minmax(auto, 60rem); } }
   @media only screen and (max-width: 500px) {
     .container {
-      grid-template-rows: 6rem repeat(2, minmax(auto, 60rem)) minmax(auto, 40rem) auto 120rem 50rem minmax(auto, 70rem) minmax(auto, 60rem); } }
+      grid-template-rows: 6rem minmax(auto, 60rem) 120rem minmax(auto, 40rem) auto repeat(2, minmax(auto, 70rem)) minmax(auto, 60rem); } }
 
 .navigation {
   max-width: 192rem;
@@ -75,7 +75,7 @@ body {
           margin-right: 0; } }
   .navigation__item {
     padding: 1rem 2rem;
-    color: #8c7561;
+    color: #f6f4f1;
     font-weight: 400;
     font-size: 2.2rem;
     transition: all 0.2s; }
@@ -238,7 +238,7 @@ body {
   color: #f6f4f1;
   overflow: hidden;
   grid-column: 1 / -1;
-  grid-row: 6 / 7;
+  grid-row: 3 / 4;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -319,6 +319,9 @@ body {
       @media only screen and (max-width: 400px) {
         .weather-app__left--1 {
           font-size: 2rem; } }
+      @media only screen and (max-width: 390px) {
+        .weather-app__left--1 {
+          margin-left: 1rem; } }
       .weather-app__left--1--city {
         font-size: 10rem; }
         @media only screen and (max-width: 1350px) {
@@ -330,6 +333,9 @@ body {
         @media only screen and (max-width: 550px) {
           .weather-app__left--1--city {
             font-size: 4rem; } }
+        @media only screen and (max-width: 390px) {
+          .weather-app__left--1--city {
+            font-size: 3rem; } }
     .weather-app__left--icon {
       height: 20rem;
       grid-column: 1 / 2;
@@ -356,6 +362,9 @@ body {
       @media only screen and (max-width: 650px) {
         .weather-app__left--icon {
           height: 12rem; } }
+      @media only screen and (max-width: 390px) {
+        .weather-app__left--icon {
+          height: 8rem; } }
     .weather-app__left--2 {
       margin-left: 15rem;
       text-shadow: 4px 4px 2px rgba(53, 72, 77, 0.8);
@@ -378,6 +387,9 @@ body {
       @media only screen and (max-width: 750px) {
         .weather-app__left--2 {
           justify-self: center; } }
+      @media only screen and (max-width: 390px) {
+        .weather-app__left--2 {
+          margin-left: 4rem; } }
       .weather-app__left--2--temp {
         font-size: 13rem; }
         @media only screen and (max-width: 1750px) {
@@ -390,8 +402,14 @@ body {
         @media only screen and (max-width: 650px) {
           .weather-app__left--2--temp {
             font-size: 6rem; } }
+        @media only screen and (max-width: 390px) {
+          .weather-app__left--2--temp {
+            font-size: 5rem; } }
       .weather-app__left--2 p {
         font-size: 3rem; }
+        @media only screen and (max-width: 390px) {
+          .weather-app__left--2 p {
+            font-size: 2.5rem; } }
   .weather-app__form {
     z-index: 2;
     margin: 5rem;
@@ -602,6 +620,9 @@ body {
       @media only screen and (max-width: 500px) {
         .weather-app__right--time {
           font-size: 11rem; } }
+      @media only screen and (max-width: 390px) {
+        .weather-app__right--time {
+          font-size: 9rem; } }
     .weather-app__right p {
       margin-bottom: 2rem;
       margin-left: 2rem;
@@ -757,88 +778,66 @@ body {
   overflow: hidden;
   background-color: #f6f4f1;
   grid-column: 1 / -1;
-  grid-row: 7 / 8; }
-  @media only screen and (max-width: 950px) {
-    .about-us {
-      background-image: url(/img/podlanica_pattern-blue-rotated.svg);
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed; } }
+  grid-row: 6 / 7; }
   .about-us__content {
     z-index: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 55% 45%;
-    grid-template-rows: 30% 70%; }
-    @media only screen and (max-width: 1050px) {
-      .about-us__content {
-        grid-template-columns: 1fr 1fr; } }
+    grid-template-rows: 15rem repeat(2, auto); }
     @media only screen and (max-width: 950px) {
       .about-us__content {
         height: 100%;
         display: flex;
-        flex-direction: column;
-        background-color: rgba(246, 244, 241, 0.6);
-        backdrop-filter: blur(7px) saturate(60%); } }
-    .about-us__content--pattern-right {
-      height: 57.2rem;
-      opacity: 30%;
-      z-index: 1;
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      justify-self: end;
-      align-self: end; }
-      @media only screen and (max-width: 1050px) {
-        .about-us__content--pattern-right {
-          height: 53rem; } }
-      @media only screen and (max-width: 950px) {
-        .about-us__content--pattern-right {
-          display: none; } }
+        flex-direction: column; } }
+    @media only screen and (max-width: 700px) {
+      .about-us__content {
+        padding: 3rem; } }
     .about-us__content--img {
       z-index: 1;
-      height: 50rem;
-      width: 75rem;
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-      justify-self: end;
-      align-self: center; }
-      @media only screen and (max-width: 1550px) {
-        .about-us__content--img {
-          height: auto;
-          background-color: rgba(246, 244, 241, 0.5);
-          width: 680% contrast(90%); } }
+      padding: 7rem;
+      height: auto;
+      width: 50%;
+      background-color: rgba(246, 244, 241, 0.5);
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+      justify-self: center;
+      align-self: start; }
       @media only screen and (max-width: 1300px) {
         .about-us__content--img {
           width: 100%; } }
+      @media only screen and (max-width: 1100px) {
+        .about-us__content--img {
+          width: 60%; } }
       @media only screen and (max-width: 950px) {
         .about-us__content--img {
           display: none; } }
     .about-us__content--heading-bg {
       z-index: -1;
-      height: 60rem;
-      width: 75rem;
+      height: 80%;
+      width: 60%;
       background-color: #61848c;
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-      align-self: center; }
-      @media only screen and (max-width: 1550px) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+      align-self: center;
+      justify-self: start; }
+      @media only screen and (max-width: 1100px) {
         .about-us__content--heading-bg {
-          height: 80%;
-          width: 70%;
-          justify-self: start; } }
+          background-image: url(/img/bg-fish-2.png);
+          background-size: cover;
+          height: 50%;
+          width: 100%; } }
       @media only screen and (max-width: 950px) {
         .about-us__content--heading-bg {
           display: none; } }
     .about-us__content--heading {
       z-index: 20;
-      margin-top: 5rem;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
       color: #8c7561;
       font-size: 8rem;
       text-align: center;
       pointer-events: none;
-      grid-column: 2 / 3;
+      grid-column: 1 / -1;
       grid-row: 1 / 2;
       justify-self: center;
       align-self: center; }
@@ -847,311 +846,31 @@ body {
           font-size: 6rem; } }
       @media only screen and (max-width: 950px) {
         .about-us__content--heading {
+          margin-bottom: 3rem;
           font-weight: 400;
-          margin-bottom: 5rem;
           align-self: center; } }
       @media only screen and (max-width: 400px) {
         .about-us__content--heading {
           font-size: 4.5rem; } }
     .about-us__content--paragraph {
       z-index: 20;
-      width: 60%;
+      width: 70%;
       overflow: hidden;
-      font-size: 2.5rem;
+      font-size: 1.7rem;
       font-weight: 400;
       text-align: center;
-      grid-column: 2 / 3;
+      color: #696969;
+      grid-column: 1 / -1;
       grid-row: 2 / 3;
       justify-self: center;
       align-self: start; }
       @media only screen and (max-width: 1050px) {
         .about-us__content--paragraph {
-          font-size: 2rem; } }
+          width: 80%; } }
       @media only screen and (max-width: 950px) {
         .about-us__content--paragraph {
           width: 80%;
           align-self: center; } }
-      @media only screen and (max-width: 400px) {
-        .about-us__content--paragraph {
-          font-size: 1.7rem; } }
-
-.to-go {
-  z-index: 2;
-  background-color: #61848c;
-  border-bottom: 4rem solid #8c7561;
-  overflow: hidden;
-  grid-column: 1 / -1;
-  grid-row: 3 / 4;
-  display: grid;
-  grid-template-columns: 15% 1fr 15%;
-  grid-template-rows: repeat(3, 33.33%);
-  justify-items: center;
-  align-items: center; }
-  @media only screen and (max-width: 1250px) {
-    .to-go {
-      border-top: 3rem solid #403226;
-      border-bottom: 3rem solid #403226; } }
-  @media only screen and (max-width: 1050px) {
-    .to-go {
-      grid-template-columns: 7% 1fr 7%; } }
-  @media only screen and (max-width: 950px) {
-    .to-go {
-      border: none; } }
-  @media only screen and (max-width: 700px) {
-    .to-go {
-      grid-template-columns: 1fr; } }
-  .to-go section {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: baseline; }
-  .to-go section > * {
-    padding: 0;
-    margin: 0; }
-  .to-go span {
-    border-bottom: 2px dotted #333;
-    flex: 1; }
-  @media only screen and (max-width: 800px) {
-    .to-go img {
-      display: none; } }
-  .to-go__left {
-    height: 100%;
-    width: 100%; }
-    .to-go__left--1 {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2; }
-    .to-go__left--2 {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3; }
-    .to-go__left--3 {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4; }
-  .to-go__right {
-    height: 100%;
-    width: 100%; }
-    .to-go__right--1 {
-      grid-column: 3 / 4;
-      grid-row: 1 / 2; }
-    .to-go__right--2 {
-      grid-column: 3 / 4;
-      grid-row: 2 / 3; }
-    .to-go__right--3 {
-      grid-column: 3 / 4;
-      grid-row: 3 / 4; }
-  .to-go__menu {
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    padding: 0 5rem;
-    margin-top: 3rem;
-    box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.3);
-    border: 2rem solid #8c7561;
-    background: white;
-    overflow: hidden;
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 30% 45% 15%;
-    grid-gap: 3rem; }
-    @media only screen and (max-width: 1250px) {
-      .to-go__menu {
-        height: auto;
-        margin-top: 0;
-        border: 1rem solid #8c7561;
-        grid-gap: 2rem; } }
-    @media only screen and (max-width: 700px) {
-      .to-go__menu {
-        border: 2rem solid #61848c;
-        grid-column: 1 / -1;
-        display: flex;
-        flex-direction: column; } }
-    @media only screen and (max-width: 650px) {
-      .to-go__menu {
-        height: 100%;
-        border: none;
-        grid-gap: 0; } }
-    @media only screen and (max-width: 400px) {
-      .to-go__menu {
-        padding: 0 1rem; } }
-    .to-go__menu--heading {
-      z-index: 3;
-      height: 100%;
-      width: 100%;
-      margin-top: 2rem;
-      line-height: 1.5;
-      text-align: center;
-      pointer-events: none;
-      grid-column: 1 / -1;
-      grid-row: 1 / 2;
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .to-go__menu--heading h1 {
-        font-size: 7rem;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        color: #8c7561; }
-        @media only screen and (max-width: 1250px) {
-          .to-go__menu--heading h1 {
-            font-size: 6rem; } }
-        @media only screen and (max-width: 700px) {
-          .to-go__menu--heading h1 {
-            font-size: 5rem; } }
-        @media only screen and (max-width: 400px) {
-          .to-go__menu--heading h1 {
-            font-size: 3.5rem; } }
-      .to-go__menu--heading p {
-        font-size: 2.5rem; }
-        @media only screen and (max-width: 1050px) {
-          .to-go__menu--heading p {
-            font-size: 2rem; } }
-        @media only screen and (max-width: 700px) {
-          .to-go__menu--heading p {
-            font-size: 1.5rem; } }
-        @media only screen and (max-width: 400px) {
-          .to-go__menu--heading p {
-            font-size: 1.4rem; } }
-    .to-go__menu--main {
-      z-index: 1;
-      width: 100%;
-      margin-top: 3rem;
-      font-size: 2.5rem;
-      grid-row: 2 / 3;
-      justify-self: center;
-      align-self: start;
-      grid-column: 1 / 2; }
-      @media only screen and (max-width: 1250px) {
-        .to-go__menu--main {
-          font-size: 2rem; } }
-      @media only screen and (max-width: 1050px) {
-        .to-go__menu--main {
-          font-size: 1.7rem; } }
-      @media only screen and (max-width: 700px) {
-        .to-go__menu--main {
-          font-size: 2rem;
-          margin-top: 1rem;
-          width: 80%;
-          align-self: center; } }
-      @media only screen and (max-width: 400px) {
-        .to-go__menu--main {
-          font-size: 1.7rem;
-          width: 90%; } }
-      .to-go__menu--main h3 {
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-        font-size: 3rem;
-        color: #f6f4f1;
-        background-color: #bfae99; }
-        @media only screen and (max-width: 1250px) {
-          .to-go__menu--main h3 {
-            font-size: 2.5rem; } }
-        @media only screen and (max-width: 1050px) {
-          .to-go__menu--main h3 {
-            font-size: 2.2rem; } }
-        @media only screen and (max-width: 700px) {
-          .to-go__menu--main h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem; } }
-        @media only screen and (max-width: 400px) {
-          .to-go__menu--main h3 {
-            font-size: 1.7rem; } }
-      .to-go__menu--main p {
-        padding-left: 2rem; }
-    .to-go__menu--special {
-      z-index: 1;
-      width: 100%;
-      margin-top: 3rem;
-      font-size: 2.5rem;
-      grid-row: 2 / 3;
-      justify-self: center;
-      align-self: start;
-      grid-column: 2 / 3; }
-      @media only screen and (max-width: 1250px) {
-        .to-go__menu--special {
-          font-size: 2rem; } }
-      @media only screen and (max-width: 1050px) {
-        .to-go__menu--special {
-          font-size: 1.7rem; } }
-      @media only screen and (max-width: 700px) {
-        .to-go__menu--special {
-          font-size: 2rem;
-          margin-top: 1rem;
-          width: 80%;
-          align-self: center; } }
-      @media only screen and (max-width: 400px) {
-        .to-go__menu--special {
-          font-size: 1.7rem;
-          width: 90%; } }
-      .to-go__menu--special h3 {
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-        font-size: 3rem;
-        color: #f6f4f1;
-        background-color: #bfae99; }
-        @media only screen and (max-width: 1250px) {
-          .to-go__menu--special h3 {
-            font-size: 2.5rem; } }
-        @media only screen and (max-width: 1050px) {
-          .to-go__menu--special h3 {
-            font-size: 2.2rem; } }
-        @media only screen and (max-width: 700px) {
-          .to-go__menu--special h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem; } }
-        @media only screen and (max-width: 400px) {
-          .to-go__menu--special h3 {
-            font-size: 1.7rem; } }
-      .to-go__menu--special p {
-        padding-left: 2rem; }
-    .to-go__menu--btn {
-      padding: 1.5rem 4.5rem;
-      cursor: pointer;
-      color: #f6f4f1;
-      font-size: 2rem;
-      font-weight: 200;
-      border: none;
-      border-radius: 5px;
-      background-color: #61848c;
-      transition: all 0.4s ease-in;
-      grid-column: 1 / -1;
-      grid-row: 3 / 4;
-      justify-self: center;
-      align-self: center; }
-      @media only screen and (max-width: 950px) {
-        .to-go__menu--btn {
-          font-size: 1.5;
-          padding: 1.5rem 3rem;
-          margin-top: 3rem; } }
-      @media only screen and (max-width: 750px) {
-        .to-go__menu--btn {
-          font-size: 1.2;
-          padding: 1.2rem 2rem;
-          margin-top: 2rem; } }
-      @media only screen and (max-width: 600px) {
-        .to-go__menu--btn {
-          font-size: 1.7rem;
-          padding: 1rem 1.5rem;
-          margin-top: 2rem; } }
-      .to-go__menu--btn:hover {
-        color: #000;
-        border-inline: 5px solid #8c7561;
-        background-color: #f6f4f1; }
-      @media only screen and (max-width: 900px) {
-        .to-go__menu--btn {
-          align-self: start; } }
-      @media only screen and (max-width: 700px) {
-        .to-go__menu--btn {
-          font-size: 1.5rem;
-          align-self: center;
-          padding: 1.2rem 3.5rem;
-          margin-bottom: 2rem; } }
-      .to-go__menu--btn:hover {
-        color: #f6f4f1;
-        border-inline: 5px solid #61848c;
-        background-color: #8c7561; }
 
 .fishing-video {
   grid-column: 1 / -1;
@@ -1185,6 +904,7 @@ body {
         .fishing-video__heading h2 {
           font-size: 2.7rem; } }
     .fishing-video__heading p {
+      font-style: italic;
       font-size: 2.9rem; }
       @media only screen and (max-width: 1100px) {
         .fishing-video__heading p {
@@ -1223,21 +943,17 @@ body {
     z-index: 1;
     width: 80%;
     padding: 0 3rem;
-    margin: 5.5rem;
+    margin: 4.5rem;
     font-size: 2.5rem;
     background-color: #fff;
     border: 2rem solid #8c7561;
-    pointer-events: none;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 20% 40% 40%;
+    grid-template-rows: repeat(3, 1fr) 15%;
     grid-gap: 3rem;
     justify-items: start;
     align-items: start; }
-    @media only screen and (max-width: 1850px) {
-      .menu__food {
-        grid-template-rows: repeat(3, 1fr); } }
     @media only screen and (max-width: 1100px) {
       .menu__food {
         width: 100%;
@@ -1249,6 +965,7 @@ body {
         border: none; } }
     @media only screen and (max-width: 650px) {
       .menu__food {
+        padding: 3rem;
         display: flex;
         flex-direction: column; } }
     @media only screen and (max-width: 400px) {
@@ -1275,7 +992,7 @@ body {
         .menu__food h3 {
           margin-bottom: 1rem; } }
     .menu__food--h2 {
-      margin-bottom: 8rem;
+      margin-bottom: 5rem;
       font-size: 7rem;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
@@ -1293,11 +1010,17 @@ body {
           align-self: center;
           justify-self: flex-start; } }
     .menu__food--text {
+      font-size: 2rem;
+      color: #696969;
+      font-style: italic;
       text-align: center;
       grid-column: 1 / -1;
       grid-row: 1 / 2;
       justify-self: center;
       align-self: end; }
+      @media only screen and (max-width: 950px) {
+        .menu__food--text {
+          font-size: 2.5rem; } }
     .menu__food--apetizers {
       font-family: "Roboto", sans-serif;
       width: 100%;
@@ -1334,13 +1057,51 @@ body {
         .menu__food--side-dishes {
           width: 80%;
           align-self: center; } }
+    .menu__food--button {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+      justify-self: center;
+      align-self: start; }
+      @media only screen and (max-width: 650px) {
+        .menu__food--button {
+          align-self: center; } }
+      .menu__food--button--btn {
+        padding: 0;
+        padding: 1.5rem 4.5rem;
+        cursor: pointer;
+        color: #f6f4f1;
+        font-size: 2rem;
+        font-weight: 200;
+        border: none;
+        border-radius: 5px;
+        background-color: #61848c;
+        transition: all 0.4s ease-in; }
+        @media only screen and (max-width: 950px) {
+          .menu__food--button--btn {
+            font-size: 1.5;
+            padding: 1.5rem 3rem;
+            margin-top: 3rem; } }
+        @media only screen and (max-width: 750px) {
+          .menu__food--button--btn {
+            font-size: 1.2;
+            padding: 1.2rem 2rem;
+            margin-top: 2rem; } }
+        @media only screen and (max-width: 600px) {
+          .menu__food--button--btn {
+            font-size: 1.7rem;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem; } }
+        .menu__food--button--btn:hover {
+          color: #000;
+          border-inline: 5px solid #8c7561;
+          background-color: #f6f4f1; }
 
 .gallery {
   height: 100%;
   padding-bottom: 2rem;
   background-color: #61848c;
   grid-column: 1 / -1;
-  grid-row: 8 / 9;
+  grid-row: 7 / 8;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 20% 80%;
@@ -1400,7 +1161,7 @@ body {
   color: #f5f5f5;
   background-color: #8c7561;
   grid-column: 1 / -1;
-  grid-row: 9 / 10;
+  grid-row: 8 / 9;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 45rem 25rem; }

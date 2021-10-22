@@ -57,7 +57,7 @@ app.get("", (req, res) => {
   res.render("index");
 });
 
-//Listen on port 3000
+//Listen on port 8080
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
 });

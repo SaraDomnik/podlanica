@@ -3,7 +3,8 @@
   background-color: $color-secondary;
 
   grid-column: 1 / -1;
-  grid-row: 9 / 10;
+  // grid-row: 9 / 10; //with to-go menu
+  grid-row: 8 / 9;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);

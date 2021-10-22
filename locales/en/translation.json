@@ -17,18 +17,19 @@
   "header": {
     "boat": "boat",
     "restaurant": "Restaurant",
-    "special-offers": "Special offers"
+    "second-btn": "Reservation",
+    "special-offers": "Menu"
   },
   "to-go": {
     "text": "Now you can order food To go. Just call us and come and pick it up when is ready."
   },
   "fishing": {
-    "text": "We have the freshes fish",
-    "text-2": "We catch fish ourselves. What we don't use that day we sell on the fish market."
+    "text": "Simplicity is beauty",
+    "text-2": "We take pride in creating flavorful dishes with local ingredients and fresh fish."
   },
 
   "menu": {
-    "text": "Daily fresh fish caught by us. Unique experience eating on the boat in the harbor of Piran.",
+    "text": "You can have a taste of our delectable dishes while enjoying the view of the Adriatic at Podlanica.",
     "main": "Menu",
     "apetizers": "Appetizers",
     "spaghetti": "Spaghetti with vongole",
@@ -39,7 +40,6 @@
     "fish": "Fish",
     "categorie-1": "Categorie I.",
     "categorie-2": "Categorie II.",
-    "categorie-3": "Categorie III.",
     "side-dishes": "Side dishes",
     "sesonal-salad": "Seasonal salad",
     "polenta": "Grilled polenta",
@@ -59,7 +59,9 @@
     "thuseday-closed": "Tuesday closed"
   },
   "about-us": {
-    "text": "Lorem ipsum",
+    "text-1": "A central figure about our restaurant is our boat. This magnificent structure was constructed in 1935 and from 2008, it has provided a rustic and unique backdrop to our establishment. You get a unique dining experience with us because you eat on an actual boat.",
+    "text-2": "Podlanica is run by me (Katarina) and my husband Rok. Rok takes care of the fresh catch and the cooking, while I’m the one responsible to take care of you while you wait for your orders. We take pride in creating flavorful dishes with local ingredients and fresh fish.",
+    "text-3": "Despite our lean team, we’re able to offer the best home-cooked meals to our patrons in an intimate setting like no other! Everybody seats next to each other, and that always bonds people who were before strangers. Everybody makes new friends here and get to enjoying the warmth and care of a home-cooked meal.",
     "about-us": "About us"
   },
   "gallery": {

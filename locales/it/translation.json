@@ -17,7 +17,8 @@
   "header": {
     "boat": "Nave",
     "restaurant": "Ristorante",
-    "special-offers": "Offerte speciali"
+    "second-btn": "Prenotare",
+    "special-offers": "Menu"
   },
   "to-go": {
     "text": "Ora puoi ordinare cibo da asporto. Chiamaci e vieni a prenderlo quando è pronto."
@@ -39,7 +40,6 @@
     "fish": "Pesce",
     "categorie-1": "Categoria I.",
     "categorie-2": "Categoria II.",
-    "categorie-3": "Categoria III.",
     "side-dishes": "Allegato",
     "sesonal-salad": "Insalata di stagione",
     "polenta": "Polenta grillata",
@@ -59,7 +59,9 @@
     "thuseday-closed": "Martedì chiuso"
   },
   "about-us": {
-    "text": "Lorem ipsum",
+    "text-1": "",
+    "text-2": "",
+    "text-3": "",
     "about-us": "Chi siamo"
   },
   "gallery": {
