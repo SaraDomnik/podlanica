@@ -1,6 +1,10 @@
 .header {
   z-index: 10;
   position: relative;
+  background-image: url(/img/header_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
   background-color: $color-primary;
 
   grid-column: 1 / -1;
@@ -9,6 +13,19 @@
   display: grid;
   justify-content: center;
   align-content: center;
+
+  @media only screen and (max-width: 900px) {
+    background-image: url(/img/header_bg-900px.png);
+  }
+
+  @media only screen and (max-width: 700px) {
+    background-image: url(/img/header_bg-700px.png);
+    background-position: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-image: url(/img/header_bg-600px.png);
+  }
 }
 
 //VIDEO BG
@@ -108,19 +125,27 @@
   }
 
   &__buttons {
-    width: 70%;
+    width: 55%;
     margin-top: 10rem;
 
     display: flex;
-    justify-content: space-around;
+
+    [href="#contact"] {
+      margin-right: auto;
+    }
+
+    [href="#menu"] {
+      margin-left: auto;
+    }
 
     @media only screen and (max-width: 750px) {
       width: 60%;
+      justify-content: center;
+      align-items: center;
     }
 
     @media only screen and (max-width: 600px) {
-      flex-direction: column;
-      width: 40%;
+      width: 80%;
     }
 
     @media only screen and (max-width: 500px) {

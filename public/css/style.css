@@ -26,16 +26,16 @@ body {
   justify-content: center; }
   @media only screen and (max-width: 1100px) {
     .container {
-      grid-template-rows: 6rem repeat(2, minmax(auto, 80rem)) minmax(auto, 50rem) repeat(4, minmax(auto, 90rem)) minmax(auto, 70rem); } }
+      grid-template-rows: 6rem minmax(auto, 60rem) minmax(auto, 80rem) minmax(auto, 50rem) repeat(3, minmax(auto, 90rem)) minmax(auto, 70rem); } }
   @media only screen and (max-width: 950px) {
     .container {
       grid-template-rows: 6rem minmax(auto, 60rem) minmax(auto, 70rem) minmax(auto, 40rem) minmax(auto, 80rem) 50rem minmax(auto, 70rem) minmax(auto, 60rem); } }
   @media only screen and (max-width: 750px) {
     .container {
-      grid-template-rows: 6rem minmax(auto, 60rem) auto minmax(auto, 40rem) minmax(auto, 75rem) 60rem minmax(auto, 70rem) minmax(auto, 60rem); } }
+      grid-template-rows: 6rem minmax(auto, 70rem) auto minmax(auto, 40rem) minmax(auto, 75rem) 60rem minmax(auto, 70rem) minmax(auto, 60rem); } }
   @media only screen and (max-width: 650px) {
     .container {
-      grid-template-rows: 6rem minmax(auto, 60rem) auto minmax(auto, 40rem) auto repeat(2, minmax(auto, 70rem)) minmax(auto, 60rem); } }
+      grid-template-rows: 6rem minmax(auto, 70rem) auto minmax(auto, 40rem) auto repeat(2, minmax(auto, 70rem)) minmax(auto, 60rem); } }
   @media only screen and (max-width: 500px) {
     .container {
       grid-template-rows: 6rem minmax(auto, 60rem) 120rem minmax(auto, 40rem) auto repeat(2, minmax(auto, 70rem)) minmax(auto, 60rem); } }
@@ -446,6 +446,66 @@ body {
     @media only screen and (max-width: 400px) {
       .weather-app__form {
         width: 100%; } }
+    .weather-app__form--banner {
+      z-index: 10;
+      height: 56rem;
+      width: 100%;
+      background-image: url(/img/banner.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+      justify-self: center;
+      align-self: center; }
+      @media only screen and (max-width: 1750px) {
+        .weather-app__form--banner {
+          height: 55rem; } }
+      @media only screen and (max-width: 1550px) {
+        .weather-app__form--banner {
+          height: 49rem; } }
+      @media only screen and (max-width: 1500px) {
+        .weather-app__form--banner {
+          height: 48rem; } }
+      @media only screen and (max-width: 1400px) {
+        .weather-app__form--banner {
+          height: 55rem; } }
+      @media only screen and (max-width: 1370px) {
+        .weather-app__form--banner {
+          height: 60rem; } }
+      @media only screen and (max-width: 1350px) {
+        .weather-app__form--banner {
+          height: 53rem; } }
+      @media only screen and (max-width: 1150px) {
+        .weather-app__form--banner {
+          height: 47rem;
+          width: 90%; } }
+      @media only screen and (max-width: 1050px) {
+        .weather-app__form--banner {
+          height: 52rem; } }
+      @media only screen and (max-width: 750px) {
+        .weather-app__form--banner {
+          height: 49rem;
+          grid-column: 1 / -1;
+          grid-row: 1 / 2; } }
+      @media only screen and (max-width: 550px) {
+        .weather-app__form--banner {
+          height: 56rem; } }
+      @media only screen and (max-width: 530px) {
+        .weather-app__form--banner {
+          height: 60rem; } }
+      @media only screen and (max-width: 500px) {
+        .weather-app__form--banner {
+          height: 65rem; } }
+      @media only screen and (max-width: 450px) {
+        .weather-app__form--banner {
+          height: 71rem; } }
+      @media only screen and (max-width: 400px) {
+        .weather-app__form--banner {
+          height: 65rem;
+          width: 100%; } }
+      @media only screen and (max-width: 350px) {
+        .weather-app__form--banner {
+          height: 73rem; } }
     .weather-app__form--icon {
       z-index: 3;
       font-size: 3.2rem;
@@ -478,8 +538,7 @@ body {
           font-size: 2rem;
           margin-left: 5rem; } }
     .weather-app__form--text {
-      z-index: 3;
-      pointer-events: none; }
+      z-index: 3; }
       .weather-app__form--text h2 {
         font-family: "Roboto", sans-serif;
         font-weight: 300;
@@ -641,12 +700,26 @@ body {
 .header {
   z-index: 10;
   position: relative;
+  background-image: url(/img/header_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
   background-color: #61848c;
   grid-column: 1 / -1;
   grid-row: 1 / 3;
   display: grid;
   justify-content: center;
   align-content: center; }
+  @media only screen and (max-width: 900px) {
+    .header {
+      background-image: url(/img/header_bg-900px.png); } }
+  @media only screen and (max-width: 700px) {
+    .header {
+      background-image: url(/img/header_bg-700px.png);
+      background-position: center; } }
+  @media only screen and (max-width: 600px) {
+    .header {
+      background-image: url(/img/header_bg-600px.png); } }
 
 .bg-video {
   z-index: 0;
@@ -720,17 +793,21 @@ body {
         .heading__title--3 {
           font-size: 4rem; } }
   .heading__buttons {
-    width: 70%;
+    width: 55%;
     margin-top: 10rem;
-    display: flex;
-    justify-content: space-around; }
+    display: flex; }
+    .heading__buttons [href="#contact"] {
+      margin-right: auto; }
+    .heading__buttons [href="#menu"] {
+      margin-left: auto; }
     @media only screen and (max-width: 750px) {
       .heading__buttons {
-        width: 60%; } }
+        width: 60%;
+        justify-content: center;
+        align-items: center; } }
     @media only screen and (max-width: 600px) {
       .heading__buttons {
-        flex-direction: column;
-        width: 40%; } }
+        width: 80%; } }
     @media only screen and (max-width: 500px) {
       .heading__buttons {
         width: 50%; } }
@@ -1168,9 +1245,6 @@ body {
   @media only screen and (max-width: 950px) {
     .footer {
       grid-template-rows: 60% 40%; } }
-  @media only screen and (max-width: 450px) {
-    .footer {
-      grid-template-columns: repeat(2, 1fr); } }
   @media only screen and (max-width: 400px) {
     .footer {
       grid-template-rows: 70% 30%; } }
@@ -1271,9 +1345,6 @@ body {
         .footer__contact--text {
           font-size: 1.2rem;
           margin-right: 2rem; } }
-    @media only screen and (max-width: 950px) {
-      .footer__contact {
-        grid-column: 2 / 3; } }
   .footer__time {
     grid-column: 4 / 5;
     grid-row: 2 / 3;

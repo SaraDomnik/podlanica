@@ -14,10 +14,6 @@
     grid-template-rows: 60% 40%;
   }
 
-  @media only screen and(max-width:450px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   @media only screen and(max-width: 400px ) {
     grid-template-rows: 70% 30%;
   }
@@ -95,10 +91,6 @@
   &__contact {
     grid-column: 3 / 4;
     @include footer-items;
-
-    @media only screen and(max-width:950px) {
-      grid-column: 2 / 3;
-    }
   }
 
   &__time {

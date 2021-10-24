@@ -44,15 +44,28 @@ function loadAnimations(weatherIcon) {
   if (!isAnimationLoaded(smallScreenAnimation) && isSmallerThanPixels(500)) {
     destroyAnimation(mediumScreenAnimation);
     destroyAnimation(fullScreenAnimation);
-    smallScreenAnimation = loadAnimation(`img/weather-app--animations-smallest/${weatherIcon}.json`);
-  } else if (!isAnimationLoaded(mediumScreenAnimation) && isSmallerThanPixels(1250) && !isSmallerThanPixels(500)) {
+    smallScreenAnimation = loadAnimation(
+      `img/weather-app--animations-smallest/${weatherIcon}.json`
+    );
+  } else if (
+    !isAnimationLoaded(mediumScreenAnimation) &&
+    isSmallerThanPixels(1250) &&
+    !isSmallerThanPixels(500)
+  ) {
     destroyAnimation(smallScreenAnimation);
     destroyAnimation(fullScreenAnimation);
-    mediumScreenAnimation = loadAnimation(`img/weather-app--animations-small/${weatherIcon}.json`);
-  } else if (!isAnimationLoaded(fullScreenAnimation) && !isSmallerThanPixels(1250)) {
+    mediumScreenAnimation = loadAnimation(
+      `img/weather-app--animations-small/${weatherIcon}.json`
+    );
+  } else if (
+    !isAnimationLoaded(fullScreenAnimation) &&
+    !isSmallerThanPixels(1250)
+  ) {
     destroyAnimation(smallScreenAnimation);
     destroyAnimation(mediumScreenAnimation);
-    fullScreenAnimation = loadAnimation(`img/weather-app--animations/${weatherIcon}.json`);
+    fullScreenAnimation = loadAnimation(
+      `img/weather-app--animations/${weatherIcon}.json`
+    );
   }
 }
 
@@ -78,7 +91,9 @@ window.addEventListener("load", () => {
           maxTemp.textContent = Math.round(data.main.temp_max) + celsiusSign;
           minTemp.textContent = Math.round(data.main.temp_min) + celsiusSign;
           //Set icon
-          document.getElementById("icon").src = `img/weather-app--icons/SVG/${weather.icon}.svg`;
+          document.getElementById(
+            "icon"
+          ).src = `img/weather-app--icons/SVG/${weather.icon}.svg`;
           loadAnimations(weather.icon);
         } else {
           loadAnimations("01d");
@@ -91,17 +106,20 @@ window.addEventListener("load", () => {
 
 let time = document.getElementById("time");
 
-setInterval(function () {
+function setTime() {
   let today = new Date();
   let hours = addZero(today.getHours());
   let minutes = addZero(today.getMinutes());
   let currentTime = `${hours}:${minutes}`;
   time.textContent = currentTime;
-}, 1000);
+}
 
 function addZero(num) {
   return num < 10 ? `0${num}` : num;
 }
+
+setTime();
+setInterval(setTime, 1000);
 
 //DATE
 let date = document.getElementById("date");

@@ -71,7 +71,7 @@
         <div class="navigation__dropdown--content">
           <a href="?lng=si">Slovenščina</a>
           <a href="?lng=en">English</a>
-          <a href="?lng=it">Italiano</a>
+          <!-- <a href="?lng=it">Italiano</a> -->
         </div>
       </div>
     </div>
@@ -125,12 +125,12 @@
               alt="English flag"
               class="ham__dropdown--content-flag"
           /></a>
-          <a href="?lng=it"
+          <!-- <a href="?lng=it"
             ><img
               src="/img/it-flag.svg"
               alt="Italian flag"
               class="ham__dropdown--content-flag"
-          /></a>
+          /></a> -->
         </div>
       </div>
     </div>
@@ -230,7 +230,12 @@
     <!--DAILY TO GO END-->
     <!--FISHING VIDEO START-->
     <div class="fishing-video">
-      <div class="fishing-video__heading">
+      <div
+        class="fishing-video__heading"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="700"
+      >
         <h2><%=t('fishing.text')%></h2>
         <p><%=t('fishing.text-2')%></p>
       </div>
@@ -245,7 +250,12 @@
         <h2 class="menu__food--h2">Menu</h2>
         <p class="menu__food--text"><%=t('menu.text')%></p>
 
-        <div class="menu__food--apetizers">
+        <div
+          class="menu__food--apetizers"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
           <h3><%=t('menu.apetizers')%></h3>
 
           <section>
@@ -267,7 +277,12 @@
           </section>
         </div>
 
-        <div class="menu__food--main-dishes">
+        <div
+          class="menu__food--main-dishes"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
           <h3><%=t('menu.main-dishes')%></h3>
 
           <section>
@@ -285,7 +300,12 @@
           </section>
         </div>
 
-        <div class="menu__food--fish">
+        <div
+          class="menu__food--fish"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
           <h3><%=t('menu.fish')%></h3>
 
           <section>
@@ -301,7 +321,12 @@
           </section>
         </div>
 
-        <div class="menu__food--side-dishes">
+        <div
+          class="menu__food--side-dishes"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
           <h3><%=t('menu.side-dishes')%></h3>
 
           <section>
@@ -324,7 +349,12 @@
     <div class="weather-app" id="contact">
       <div id="lottie-animation" class="weather-app__animation"></div>
       <!--Weather app left side start-->
-      <div class="weather-app__left">
+      <div
+        class="weather-app__left"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <div class="weather-app__left--1 weather-object" data-value="5">
           <p class="weather-app__left--1--city" id="city">CITY</p>
           <p id="date">DATE</p>
@@ -344,8 +374,18 @@
       </div>
       <!--Weather app left side end-->
       <!--Weather app form start-->
-      <div class="weather-app__form">
-        <div class="weather-app__form--bg"></div>
+      <div
+        class="weather-app__form--banner"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      ></div>
+      <div
+        class="weather-app__form"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <div class="weather-app__form--text">
           <h2><%=t('weather.reserve')%></h2>
           <p><%=t('weather.reservation-required')%></p>
@@ -373,7 +413,12 @@
       </div>
       <!--Weather app form end-->
       <!--Weather app right side start-->
-      <div class="weather-app__right">
+      <div
+        class="weather-app__right"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1700"
+      >
         <h2
           class="weather-app__right--time weather-object"
           data-value="3"
@@ -398,14 +443,24 @@
       <div class="about-us__content">
         <div class="about-us__content--heading-bg"></div>
         <img
-          src="img/img1.jpg"
+          src="img/img1-1.jpg"
           alt="Restaurant owners"
           class="about-us__content--img"
+          class="fishing-video__heading"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
         />
         <h2 class="about-us__content--heading heading-2">
           <%=t('about-us.about-us')%>
         </h2>
-        <div class="about-us__content--paragraph">
+        <div
+          class="about-us__content--paragraph"
+          class="fishing-video__heading"
+          data-aos="fade-zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
           <p><%=t('about-us.text-1')%></p>
           <p><%=t('about-us.text-2')%></p>
           <p><%=t('about-us.text-3')%></p>
@@ -416,7 +471,14 @@
     <!--GALLERY START-->
     <div class="gallery" id="gallery">
       <div class="gallery__heading-bg"></div>
-      <div class="gallery__heading"><p><%=t('gallery.gallery')%></p></div>
+      <div
+        class="gallery__heading"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        <p><%=t('gallery.gallery')%></p>
+      </div>
       <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
@@ -440,7 +502,10 @@
           <div data-background="/img/img6.jpg" class="swiper-slide swiper-lazy">
             <div class="swiper-lazy-preloader"></div>
           </div>
-          <div data-background="/img/img8.jpg" class="swiper-slide swiper-lazy">
+          <div
+            data-background="/img/img8-8.jpg"
+            class="swiper-slide swiper-lazy"
+          >
             <div class="swiper-lazy-preloader"></div>
           </div>
           <div
