@@ -10,14 +10,14 @@ const app = express();
 const port = 8080;
 
 //Live Reload
-
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-});
-
-app.use(connectLivereload());
+if (process.env.ENVIRONMENT !== "production") {
+  liveReloadServer.server.once("connection", () => {
+    setTimeout(() => {
+      liveReloadServer.refresh("/");
+    }, 100);
+  });
+  app.use(connectLivereload());
+}
 
 // Internationalization i18next
 i18next
