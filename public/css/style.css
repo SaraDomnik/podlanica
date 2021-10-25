@@ -1277,7 +1277,7 @@ body {
       @media only screen and (max-width: 400px) {
         .footer__container--sp {
           font-size: 1.2rem; } }
-      @media only screen and (max-width: 300px) {
+      @media only screen and (max-width: 360px) {
         .footer__container--sp {
           font-size: 0.9rem; } }
     .footer__container--socialmedia {
@@ -1288,7 +1288,7 @@ body {
       @media only screen and (max-width: 400px) {
         .footer__container--socialmedia {
           font-size: 2rem; } }
-      @media only screen and (max-width: 300px) {
+      @media only screen and (max-width: 360px) {
         .footer__container--socialmedia {
           display: none; } }
       .footer__container--socialmedia--fb {
@@ -1299,7 +1299,7 @@ body {
         @media only screen and (max-width: 400px) {
           .footer__container--socialmedia--trip {
             height: 2rem; } }
-        @media only screen and (max-width: 300px) {
+        @media only screen and (max-width: 360px) {
           .footer__container--socialmedia--trip {
             display: none; } }
   .footer__location {
