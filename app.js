@@ -1,8 +1,6 @@
 //Import
 const express = require("express");
-const connectLivereload = require("connect-livereload");
-const livereload = require("livereload");
-const liveReloadServer = livereload.createServer();
+
 const i18next = require("i18next");
 const i18nextMiddleware = require("i18next-http-middleware");
 const Backend = require("i18next-fs-backend");
@@ -11,6 +9,9 @@ const port = 8080;
 
 //Live Reload
 if (process.env.ENVIRONMENT !== "production") {
+  const connectLivereload = require("connect-livereload");
+  const livereload = require("livereload");
+  const liveReloadServer = livereload.createServer();
   liveReloadServer.server.once("connection", () => {
     setTimeout(() => {
       liveReloadServer.refresh("/");
