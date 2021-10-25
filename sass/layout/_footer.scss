@@ -52,6 +52,10 @@
       @media only screen and(max-width: 400px ) {
         font-size: 1.2rem;
       }
+
+      @media only screen and(max-width: 300px ) {
+        font-size: 0.9rem;
+      }
     }
 
     &--socialmedia {
@@ -64,6 +68,10 @@
       @media only screen and(max-width: 400px ) {
         font-size: 2rem;
       }
+
+      @media only screen and(max-width: 300px ) {
+        display: none;
+      }
       &--fb {
         margin-left: 4rem;
       }
@@ -74,6 +82,10 @@
 
         @media only screen and(max-width: 400px ) {
           height: 2rem;
+        }
+
+        @media only screen and(max-width: 300px ) {
+          display: none;
         }
       }
     }
