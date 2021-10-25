@@ -765,9 +765,7 @@ body {
           font-size: 6rem; } }
       @media only screen and (max-width: 500px) {
         .heading__title--1 {
-          font-size: 5rem; } }
-      @media only screen and (max-width: 400px) {
-        .heading__title--1 {
+          font-size: 5rem;
           letter-spacing: 0; } }
       @media only screen and (max-width: 300px) {
         .heading__title--1 {
