@@ -25,10 +25,8 @@ let nav = document.getElementById("navigation");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 60) {
     nav.style.backgroundColor = "#497382";
-    nav.style.color = "#fff";
   } else {
     nav.style.backgroundColor = "transparent";
-    nav.css.color = "#000";
   }
 });
 
