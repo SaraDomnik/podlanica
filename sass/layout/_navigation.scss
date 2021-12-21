@@ -1,0 +1,269 @@
+.navigation {
+  max-width: 192rem;
+  position: fixed;
+  z-index: 300;
+  height: 6rem;
+  top: 0;
+  transition: all 0.3s;
+
+  grid-column: 1 / 2;
+  grid-row: 1/ 2;
+  justify-self: center;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  @media only screen and (max-width: 950px) {
+    display: none;
+  }
+
+  &__nav {
+    grid-column: 2 / 3;
+    justify-self: center;
+    align-self: center;
+
+    display: block;
+  }
+
+  &__list {
+    cursor: pointer;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(7, max-content);
+    grid-column-gap: 3rem;
+    justify-content: center;
+
+    &:last-child {
+      margin-right: 4rem;
+
+      @media only screen and (max-width: 1030px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 2.2rem;
+    transition: all 0.2s;
+
+    @media only screen and (max-width: 1250px) {
+      padding: 1rem 1rem;
+      font-size: 2rem;
+    }
+
+    &:focus,
+    &:link {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+  }
+
+  &__dropdown {
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    margin-right: 5rem;
+    transition: all 0.3s ease-in;
+
+    grid-column: 3 / 4;
+    justify-self: end;
+
+    &:hover &--content {
+      display: block;
+    }
+
+    &:hover &--dropbtn {
+      background-color: $color-primary-dark;
+    }
+
+    @media only screen and (max-width: 1250px) {
+      margin-right: 0;
+    }
+
+    &--dropbtn {
+      height: 100%;
+      width: 18rem;
+      background-color: $color-secondary;
+      color: $color-white;
+      padding: 1.6rem;
+      font-size: 2rem;
+      border: none;
+
+      @media only screen and (max-width: 1250px) {
+        padding: 1.6rem 0.5rem;
+        font-size: 1.7rem;
+      }
+    }
+
+    &--content {
+      display: none;
+      position: absolute;
+      background-color: $color-secondary;
+      width: 18rem;
+      box-shadow: 0px 8px 16px 0px rgba(#000000, 0.2);
+      z-index: 1;
+
+      a {
+        color: $color-white;
+        padding: 12px 16px;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        transition: all 0.5s ease-in;
+
+        &:hover {
+          background-color: $color-primary-light;
+        }
+      }
+    }
+  }
+}
+
+//HAMBURGER MENU
+
+.ham {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  transition: opacity 0.2s ease-in;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0.3rem 0;
+    background-color: $color-primary-dark;
+    transition: all 0.3s ease-in;
+
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 200;
+    cursor: pointer;
+    height: 6rem;
+    width: 6rem;
+    margin-right: 2rem;
+    font-size: 3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: $color-secondary-light;
+
+    display: none;
+
+    @media only screen and(max-width: 950px) {
+      display: block;
+    }
+
+    &--x-icon {
+      display: none;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 4rem;
+    z-index: 100;
+    width: 100%;
+    background-color: $color-secondary;
+    list-style: none;
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item {
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__showMenu {
+    transform: translateY(0);
+  }
+
+  &__dropdown {
+    height: 100%;
+    position: relative;
+    display: none;
+    transition: all 0.3s ease-in;
+
+    @media only screen and(max-width:950px) {
+      display: inline-block;
+    }
+
+    &:hover &--content {
+      display: block;
+    }
+
+    &:hover:active &--dropbtn {
+      background-color: $color-primary-dark;
+    }
+
+    &--dropbtn {
+      height: 100%;
+      width: auto;
+      background-color: $color-secondary;
+      color: $color-white;
+      padding: 1.6rem;
+      font-size: 2rem;
+      border: none;
+    }
+
+    &--content {
+      display: none;
+      position: absolute;
+      background-color: $color-secondary;
+      width: auto;
+      box-shadow: 0px 8px 16px 0px rgba(#000000, 0.2);
+      z-index: 1;
+
+      a {
+        color: $color-white;
+        padding: 7px 16px;
+        font-size: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        transition: all 0.5s ease-in;
+
+        &:hover:active {
+          background-color: $color-primary-dark;
+        }
+
+        img {
+          height: 2.5rem;
+          width: 2.5rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

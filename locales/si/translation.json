@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "home": "Domov",
+    "to-go": "Naroči To go",
+    "menu": "Menu",
+    "contact": "Rezervacije",
+    "about-us": "O nas",
+    "gallery": "Galerija",
+    "location": "Lokacija",
+    "language": "Izberi jezik",
+    "just-language": "Jezik",
+    "si": "Slovenščina",
+    "en": "English",
+    "it": "Italiano"
+  },
+
+  "header": {
+    "boat": "Ladja",
+    "restaurant": "Restavracija",
+    "second-btn": "Rezerviraj",
+    "special-offers": "Menu"
+  },
+  "to-go": {
+    "text": "Sedaj lahko naročite hrano To go. Samo pokličite nas in pridite iskat, ko je pripravljeno."
+  },
+  "fishing": {
+    "text": "Preprostost je lepota",
+    "text-2": "Ponosni smo na ustvarjanje okusnih jedi z lokalnimi sestavinami in svežo ribo."
+  },
+
+  "menu": {
+    "text": "Naše slastne jedi lahko okusite, medtem ko uživate v pogledu na Jadran",
+    "main": "Menu",
+    "apetizers": "Predjedi",
+    "spaghetti": "Špageti z vongolami",
+    "salty-fillets": "Slani fileti",
+    "main-dishes": "Glavne jedi",
+    "black-muscles": "Pedoči",
+    "in-white-souce": "na buzaro",
+    "fish": "Riba",
+    "categorie-1": "Kategorija I.",
+    "categorie-1-plus": "Kategorija I.PLUS",
+    "categorie-2": "Kategorija II.PLUS",
+    "side-dishes": "Priloga",
+    "sesonal-salad": "Sezonska solata",
+    "polenta": "Pečena polenta",
+    "marinated-sardines": "Marinirane sardele",
+    "bacala": "Bakala",
+    "specail-offres": "Dnevne posebne ponudbe",
+    "specail-offer": "Posebna ponudba"
+  },
+
+  "weather": {
+    "reserve": "Rezervirajte mizo",
+    "reservation-required": "Rezervacija je obvezna. Pokličite nas.",
+    "port": "Pristanišče",
+    "piran": "Piran",
+    "slovenia": "Slovenija",
+    "open": "Odprto",
+    "thuseday-closed": "Torek zaprto",
+    "closed": "Zaprto"
+  },
+  "about-us": {
+    "text-1": "Glavna atrakcija restavracije je naša ladja. Narejena je bila leta 1935, od leta 2008 nam zagotavlja rustikalno kuliso. Pri nas doživite edinstveno kulinarično izkušnjo, ker jeste na ladji.",
+    "text-2": "Podlanico vodiva jaz (Katarina) in moj mož Rok. On skrbi za svež ulov in kuhanje, jaz pa poskrbim za vas in vaše naročilo. Slastne jedi lahko uživate v pogledu na Jadransko morje in staro mesto jedro. Ponosni smo na ustvarjanje okusnih jedi z lokalnimi sestavinami in svežo ribo.",
+    "text-3": "Kljub naši majhni ekipi, lahko svoji gostom ponudimo najboljše domače jedi v intimnem okolju.  Vsi sedijo drug poleg drugega, sklepajo nova prijateljstva in uživajo v toplini domače hrane.",
+    "about-us": "O nas"
+  },
+  "gallery": {
+    "gallery": "Galerija"
+  },
+  "footer": {
+    "opening-hours": "Urnik"
+  }
+}

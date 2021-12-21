@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--SWIPER-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!--ICONS-->
+    <link rel="stylesheet" href="/Fonts/css/all.css" />
+    <link rel="stylesheet" href="/Fonts/js/all.js" />
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Elements animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Ladja Podlanica</title>
+  </head>
+  <body class="container">
+    <!--NAVIGATION START-->
+    <div class="navigation" id="navigation">
+      <nav class="navigation__nav" id="navigation__nav">
+        <ul class="navigation__list">
+          <li>
+            <a href="#home" class="navigation__item"
+              ><%=t('navigation.home')%></a
+            >
+          </li>
+          <!-- <li>
+            <a href="#to-go" class="navigation__item"
+              ><%=t('navigation.to-go')%></a
+            >
+          </li> -->
+
+          <li>
+            <a href="#contact" class="navigation__item"
+              ><%=t('navigation.contact')%></a
+            >
+          </li>
+          <li>
+            <a href="#menu" class="navigation__item"
+              ><%=t('navigation.menu')%></a
+            >
+          </li>
+          <li>
+            <a href="#about-us" class="navigation__item"
+              ><%=t('navigation.about-us')%></a
+            >
+          </li>
+          <li>
+            <a href="#gallery" class="navigation__item"
+              ><%=t('navigation.gallery')%></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="navigation__dropdown">
+        <button class="navigation__dropdown--dropbtn">
+          <%=t('navigation.language')%>
+        </button>
+        <div class="navigation__dropdown--content">
+          <a href="?lng=si">Slovenščina</a>
+          <a href="?lng=en">English</a>
+          <!-- <a href="?lng=it">Italiano</a> -->
+        </div>
+      </div>
+    </div>
+    <!--NAVIGATION END-->
+
+    <!--HAMBURGER MENU START-->
+    <div class="ham" id="ham">
+      <!--Hamburger menu ul start-->
+      <ul class="ham__list">
+        <li><a href="#home" class="ham__item"><%=t('navigation.home')%></a></li>
+        <!-- <li><a href="#to-go" class="ham__item">TO GO</a></li> -->
+        <li>
+          <a href="#contact" class="ham__item"><%=t('navigation.contact')%></a>
+        </li>
+        <li><a href="#menu" class="ham__item"><%=t('navigation.menu')%></a></li>
+        <li>
+          <a href="#about-us" class="ham__item"
+            ><%=t('navigation.about-us')%></a
+          >
+        </li>
+        <li>
+          <a href="#gallery" class="ham__item"><%=t('navigation.gallery')%></a>
+        </li>
+      </ul>
+      <!--Hamburger menu ul end-->
+      <!--Hamburger menu button start-->
+      <button class="ham__btn">
+        <span class="ham__btn--menu-icon">
+          <i class="fas fa-bars"></i>
+        </span>
+        <span class="ham__btn--x-icon">
+          <i class="fas fa-times"></i>
+        </span>
+      </button>
+      <!--Hamburger menu button end-->
+
+      <div class="ham__dropdown">
+        <button class="ham__dropdown--dropbtn">
+          <i class="fas fa-globe"></i>
+        </button>
+        <div class="ham__dropdown--content">
+          <a href="?lng=si"
+            ><img
+              src="/img/si-flag.svg"
+              alt="Slovenian flag"
+              class="ham__dropdown--content-flag"
+          /></a>
+          <a href="?lng=en"
+            ><img
+              src="/img/en-flag.svg"
+              alt="English flag"
+              class="ham__dropdown--content-flag"
+          /></a>
+          <!-- <a href="?lng=it"
+            ><img
+              src="/img/it-flag.svg"
+              alt="Italian flag"
+              class="ham__dropdown--content-flag"
+          /></a> -->
+        </div>
+      </div>
+    </div>
+    <!--HAMBURGER MENU END-->
+
+    <!--HEADER START-->
+    <header class="header" id="home">
+      <div class="heading">
+        <!-- <h2 class="heading__title heading__title--2"><%=t('header.boat')%></h2> -->
+        <h1 class="heading__title heading__title--1">Podlanica</h1>
+        <h3 class="heading__title heading__title--3">
+          <%=t('header.restaurant')%>
+        </h3>
+        <div class="heading__buttons">
+          <a href="#contact">
+            <button class="heading__buttons--btn">
+              <%=t('header.second-btn')%>
+            </button>
+          </a>
+          <a href="#menu">
+            <button class="heading__buttons--btn">
+              <%=t('header.special-offers')%>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="bg-video">
+        <!-- <img src="/img/img-13.jpg" alt="" class="bg-video__content" /> -->
+        <!-- <video class="bg-video__content" autoplay muted loop>
+          <source src="video/Fishing-2-Comp-1.mp4" type="video/mp4" />
+        </video> -->
+      </div>
+    </header>
+    <!--HEADER END-->
+    <!--DAILY TO GO START-->
+    <!-- <div class="to-go" id="to-go">
+      <img src="/img/fish-1-rotated.png" alt="Fish drawing" class="to-go__bg--left--1 object" data-value="5" />
+      <img src="/img/fish-2.png" alt="Fish drawing" class="to-go__bg--left--2 object" data-value="-5" />
+      <img src="/img/vongola.png" alt="Fish drawing" class="to-go__bg--left--3 object" data-value="-7" />
+
+      <img src="/img/fish-1-rotated.png" alt="Fish drawing" class="to-go__right--1 object" data-value="5" />
+      <img src="/img/fish-2.png" alt="Fish drawing" class="to-go__right--2 object" data-value="-5" />
+      <img src="/img/vongola.png" alt="Fish drawing" class="to-go__right--3 object" data-value="-7" />
+
+      <div class="to-go__menu">
+        <div class="to-go__menu--heading">
+          <h1>Menu To Go</h1>
+          <p><%=t('to-go.text')%></p>
+        </div>
+
+        <div class="to-go__menu--main">
+          <h3><%=t('menu.main')%></h3>
+          <section>
+            <p><%=t('menu.marinated-sardines')%></p>
+            <span></span>
+            <p>8€</p>
+          </section>
+
+          <section>
+            <p><%=t('menu.bacala')%></p>
+            <span></span>
+            <p>8€</p>
+          </section>
+
+          <section>
+            <p><%=t('menu.salty-fillets')%></p>
+            <span></span>
+            <p>8€</p>
+          </section>
+
+          <section>
+            <p><%=t('menu.spaghetti')%></p>
+            <span></span>
+            <p>12€</p>
+          </section>
+        </div>
+
+        <div class="to-go__menu--special">
+          <h3><%=t('menu.specail-offres')%></h3>
+          <section>
+            <p><%=t('menu.specail-offer')%></p>
+            <span></span>
+            <p>12€</p>
+          </section>
+
+          <section>
+            <p><%=t('menu.specail-offer')%></p>
+            <span></span>
+            <p>12€</p>
+          </section>
+        </div>
+
+        <button class="to-go__menu--btn">Order now</button>
+      </div>
+    </div> -->
+
+    <!--DAILY TO GO END-->
+    <!--FISHING VIDEO START-->
+    <div class="fishing-video">
+      <div
+        class="fishing-video__heading"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="700"
+      >
+        <h2><%=t('fishing.text')%></h2>
+        <p><%=t('fishing.text-2')%></p>
+      </div>
+      <video class="fishing-video__video" autoplay muted loop>
+        <source src="video/Fishing-2-Comp-1.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!--FISHING VIDEO END-->
+    <!--MENU START-->
+    <div class="menu" id="menu">
+      <div class="menu__food">
+        <h2 class="menu__food--h2">Menu</h2>
+        <p class="menu__food--text"><%=t('menu.text')%></p>
+
+        <div
+          class="menu__food--apetizers"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="800"
+        >
+          <h3><%=t('menu.apetizers')%></h3>
+
+          <section>
+            <p><%=t('menu.marinated-sardines')%></p>
+            <span></span>
+            <p>10€</p>
+          </section>
+
+          <section>
+            <p><%=t('menu.bacala')%></p>
+            <span></span>
+            <p>10€</p>
+          </section>
+
+          <section>
+            <p><%=t('menu.salty-fillets')%></p>
+            <span></span>
+            <p>10€</p>
+          </section>
+        </div>
+
+        <div
+          class="menu__food--main-dishes"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="800"
+        >
+          <h3><%=t('menu.main-dishes')%></h3>
+
+          <section>
+            <p><%=t('menu.spaghetti')%></p>
+            <span></span>
+            <p>14€</p>
+          </section>
+
+          <section>
+            <p>
+              <%=t('menu.black-muscles')%> <br /><%=t('menu.in-white-souce')%>
+            </p>
+            <span></span>
+            <p>8€</p>
+          </section>
+        </div>
+
+        <div
+          class="menu__food--fish"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="800"
+        >
+          <h3><%=t('menu.fish')%></h3>
+
+          <section>
+            <p><%=t('menu.categorie-1')%></p>
+            <span></span>
+            <p>4,5€/100g</p>
+          </section>
+          <section>
+            <p><%=t('menu.categorie-1-plus')%></p>
+            <span></span>
+            <p>5,5€/100g</p>
+          </section>
+
+          <section>
+            <p><%=t('menu.categorie-2')%></p>
+            <span></span>
+            <p>3,5€/100g</p>
+          </section>
+        </div>
+
+        <div
+          class="menu__food--side-dishes"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="900"
+        >
+          <h3><%=t('menu.side-dishes')%></h3>
+
+          <section>
+            <p><%=t('menu.sesonal-salad')%></p>
+            <span></span>
+            <p>3€</p>
+          </section>
+        </div>
+        <div class="menu__food--button">
+          <a href="#contact">
+            <button class="menu__food--button--btn">
+              <%=t('header.second-btn')%>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--MENU END-->
+    <!--WEATHER APP + RESERVATION FORM-->
+    <div class="weather-app" id="contact">
+      <div id="lottie-animation" class="weather-app__animation"></div>
+      <!--Weather app left side start-->
+      <div
+        class="weather-app__left"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        <div class="weather-app__left--1 weather-object" data-value="5">
+          <p class="weather-app__left--1--city" id="city">CITY</p>
+          <p id="date">DATE</p>
+        </div>
+
+        <img
+          src="img/weather-app--icons/SVG/01d.svg"
+          alt="Weather icons"
+          id="icon"
+          class="weather-app__left--icon weather-object"
+          data-value="-4"
+        />
+        <div class="weather-app__left--2 weather-object" data-value="3">
+          <h3 class="weather-app__left--2--temp" id="temp">30</h3>
+          <p id="description">Description</p>
+        </div>
+      </div>
+      <!--Weather app left side end-->
+      <!--Weather app form start-->
+      <div
+        class="weather-app__form--banner"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="700"
+        data-aos-offset="400"
+      ></div>
+      <div
+        class="weather-app__form"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="700"
+      >
+        <div class="weather-app__form--text">
+          <h2><%=t('weather.reserve')%></h2>
+          <p><%=t('weather.reservation-required')%></p>
+        </div>
+        <div class="weather-app__form--phone">
+          <i class="weather-app__form--icon fas fa-mobile-alt"></i>
+          <p>+386 41 338 612</p>
+        </div>
+        <div class="weather-app__form--location">
+          <i class="weather-app__form--icon fas fa-map-marker-alt"></i>
+          <p>
+            <%=t('weather.port')%>, <br />6300 <%=t('weather.piran')%>, <br />
+            <%=t('weather.slovenia')%>
+          </p>
+        </div>
+
+        <div class="weather-app__form--time">
+          <i class="weather-app__form--icon far fa-clock"></i>
+          <p>
+            <!-- <%=t('weather.open')%>: 13h - 20h, <br /><b
+              ><%=t('weather.thuseday-closed')%>
+            </b> -->
+            <b>
+              <%=t('weather.closed')%>
+            </b>
+          </p>
+        </div>
+      </div>
+      <!--Weather app form end-->
+      <!--Weather app right side start-->
+      <div
+        class="weather-app__right"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1700"
+      >
+        <h2
+          class="weather-app__right--time weather-object"
+          data-value="3"
+          id="time"
+        >
+          Time
+        </h2>
+        <div class="weather-app__right--max weather-object" data-value="-5">
+          <p>Max-Temp:</p>
+          <p id="max-temp">Max</p>
+        </div>
+        <div class="weather-app__right--min weather-object" data-value="7">
+          <p>Min-Temp:</p>
+          <p id="min-temp">Min</p>
+        </div>
+      </div>
+      <!--Weather app right side end-->
+    </div>
+    <!--WEATHER APP + RESERVATION FORM -->
+    <!--ABOUT US-->
+    <div class="about-us" id="about-us">
+      <div class="about-us__content">
+        <div class="about-us__content--heading-bg"></div>
+        <img
+          src="img/img1-1.jpg"
+          alt="Restaurant owners"
+          class="about-us__content--img"
+          class="fishing-video__heading"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        />
+        <h2 class="about-us__content--heading heading-2">
+          <%=t('about-us.about-us')%>
+        </h2>
+        <div
+          class="about-us__content--paragraph"
+          class="fishing-video__heading"
+          data-aos="fade-zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <p><%=t('about-us.text-1')%></p>
+          <p><%=t('about-us.text-2')%></p>
+          <p><%=t('about-us.text-3')%></p>
+        </div>
+      </div>
+    </div>
+    <!--ABOUT US END-->
+    <!--GALLERY START-->
+    <div class="gallery" id="gallery">
+      <div class="gallery__heading-bg"></div>
+      <div
+        class="gallery__heading"
+        data-aos="fade-zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        <p><%=t('gallery.gallery')%></p>
+      </div>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div data-background="/img/img9.jpg" class="swiper-slide swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div
+            data-background="/img/img10.jpg"
+            class="swiper-slide swiper-lazy"
+          >
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div data-background="/img/img4.jpg" class="swiper-slide swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div data-background="/img/img2.jpg" class="swiper-slide swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+
+          <div data-background="/img/img6.jpg" class="swiper-slide swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div data-background="/img/img8.jpg" class="swiper-slide swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div
+            data-background="/img/img11.jpg"
+            class="swiper-slide swiper-lazy"
+          >
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+    <!--GALLERY END-->
+    <!--FOOTER START-->
+    <footer class="footer" id="location">
+      <div class="footer__container">
+        <p class="footer__container--sp">
+          Katarina Domnik s.p. ,<br />Ulica IX.korpusa 9,<br />6330
+          Piran-Pirano, <br />Slovenia,<br />VAT ID: SI62405691
+        </p>
+        <!--Social media start-->
+        <div class="footer__container--socialmedia">
+          <!--Instagram-->
+          <i class="footer__container--socialmedia--ig fab fa-instagram"></i>
+          <!--Facebook-->
+          <i
+            class="footer__container--socialmedia--fb fab fa-facebook-square"
+          ></i>
+          <!--Tripadvisor-->
+          <a
+            target="_blank"
+            href="https://www.tripadvisor.com/Restaurant_Review-g274876-d8701031-Reviews-Ladja_Podlanica-Piran_Slovenian_Istria_Slovenian_Littoral_Region.html"
+            ><img
+              src="Img/tripadvisor_icon.svg"
+              class="footer__container--socialmedia--trip"
+          /></a>
+        </div>
+        <!--Social media end-->
+      </div>
+
+      <!--Information start-->
+      <div class="footer__location">
+        <i class="footer__location--icon fas fa-map-marker-alt"></i>
+        <div class="footer__location--text">
+          <h3><%=t('navigation.location')%></h3>
+          <p>
+            <%=t('weather.port')%>, <br />
+            6330 <%=t('weather.piran')%>, <%=t('weather.slovenia')%>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__contact">
+        <i class="footer__contact--icon fas fa-mobile-alt"></i>
+        <div class="footer__contact--text">
+          <h3><%=t('navigation.contact')%></h3>
+          <p>+386 41 338 612</p>
+        </div>
+      </div>
+
+      <div class="footer__time">
+        <i class="footer__time--icon far fa-clock"></i>
+        <div class="footer__time--text">
+          <h3><%=t('footer.opening-hours')%></h3>
+          <p>
+            <%=t('weather.open')%>: 13h - 20h, <br /><b
+              ><%=t('weather.thuseday-closed')%>
+            </b>
+          </p>
+        </div>
+      </div>
+      <!--Information end-->
+      <!--Map start-->
+      <div class="footer__map" id="map"></div>
+      <!--Map end-->
+    </footer>
+    <!--FOOTER END -->
+    <!--SCRIPTS START-->
+    <!--Elements animation-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--Lottie files-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!--Swiper-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!--Weather app-->
+    <script src="js/weather-app.js"></script>
+    <!--Normal script-->
+    <script src="js/script.js"></script>
+    <!--Google Map-->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOMRSckt288BdAN2l5LaqkbewTCAn6vj0&callback=initMap&v=weekly"
+      async
+    ></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

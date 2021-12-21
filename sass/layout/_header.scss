@@ -1,0 +1,174 @@
+.header {
+  z-index: 10;
+  position: relative;
+  background-image: url(/img/header_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-color: $color-primary;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / 3;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  @media only screen and (max-width: 900px) {
+    background-image: url(/img/header_bg-900px.png);
+  }
+
+  @media only screen and (max-width: 700px) {
+    background-image: url(/img/header_bg-700px.png);
+    background-position: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-image: url(/img/header_bg-600px.png);
+  }
+}
+
+//VIDEO BG
+.bg-video {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+//HEADING FONT
+.heading {
+  z-index: 10;
+  text-shadow: 2px 2px 3px rgba($color-primary-dark, $alpha: 1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    line-height: 1;
+
+    &--1 {
+      font-weight: 300;
+      font-size: 15rem;
+      font-family: $font-heading;
+      text-transform: uppercase;
+      letter-spacing: 2rem;
+
+      color: #fff;
+
+      @media only screen and (max-width: 1250px) {
+        font-size: 12rem;
+      }
+
+      @media only screen and (max-width: 950px) {
+        font-size: 10rem;
+      }
+
+      @media only screen and (max-width: 750px) {
+        font-size: 8rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 6rem;
+      }
+
+      @media only screen and (max-width: 500px) {
+        font-size: 5rem;
+        letter-spacing: 0;
+      }
+
+      @media only screen and (max-width: 400px) {
+      }
+
+      @media only screen and (max-width: 300px) {
+        font-size: 4rem;
+      }
+    }
+
+    &--2 {
+      font-weight: 200;
+      font-size: 6rem;
+      font-family: $font-handwriting;
+      letter-spacing: 2rem;
+      letter-spacing: 0.3rem;
+      color: #fff;
+
+      @media only screen and (max-width: 1250px) {
+        font-size: 5rem;
+      }
+
+      @media only screen and (max-width: 950px) {
+        font-size: 4rem;
+      }
+    }
+
+    &--3 {
+      font-weight: 200;
+      font-size: 5rem;
+      font-family: $font-handwriting;
+      letter-spacing: 0.5rem;
+      color: #fff;
+      text-shadow: 4px 4px 3px rgba(#000, $alpha: 1);
+
+      @media only screen and (max-width: 950px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__buttons {
+    width: 55%;
+    margin-top: 10rem;
+
+    display: flex;
+
+    [href="#contact"] {
+      margin-right: auto;
+    }
+
+    [href="#menu"] {
+      margin-left: auto;
+    }
+
+    @media only screen and (max-width: 750px) {
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 50%;
+    }
+
+    @media only screen and(max-width: 400px ) {
+      width: 80%;
+    }
+    &--btn {
+      @include button;
+
+      @media only screen and (max-width: 1250px) {
+        margin-right: 5rem;
+      }
+
+      @media only screen and (max-width: 750px) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

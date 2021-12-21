@@ -1,0 +1,232 @@
+.to-go {
+  z-index: 2;
+  background-color: $color-primary;
+  border-bottom: 4rem solid $color-secondary;
+  overflow: hidden;
+
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: repeat(3, 33.33%);
+  justify-items: center;
+  align-items: center;
+
+  @media only screen and (max-width: 1250px) {
+    border-top: 3rem solid $color-secondary-dark;
+    border-bottom: 3rem solid $color-secondary-dark;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    grid-template-columns: 7% 1fr 7%;
+  }
+
+  @media only screen and (max-width: 950px) {
+    border: none;
+  }
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: baseline;
+  }
+
+  section > * {
+    padding: 0;
+    margin: 0;
+  }
+
+  span {
+    border-bottom: 2px dotted #333;
+    flex: 1;
+  }
+
+  img {
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &__left {
+    height: 100%;
+    width: 100%;
+
+    &--1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--2 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &--3 {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+  }
+
+  &__right {
+    height: 100%;
+    width: 100%;
+
+    &--1 {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+
+    &--2 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+
+    &--3 {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+    }
+  }
+
+  &__menu {
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    padding: 0 5rem;
+    margin-top: 3rem;
+    box-shadow: 7px 10px 15px rgba(#000, 0.3);
+    border: 2rem solid $color-secondary;
+    background: rgba(#fff, 1);
+    overflow: hidden;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30% 45% 15%;
+    grid-gap: 3rem;
+
+    @media only screen and (max-width: 1250px) {
+      height: auto;
+      margin-top: 0;
+      border: 1rem solid $color-secondary;
+      grid-gap: 2rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+      border: 2rem solid $color-primary;
+      grid-column: 1 / -1;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 650px) {
+      height: 100%;
+      border: none;
+      grid-gap: 0;
+    }
+
+    @media only screen and(max-width: 400px ) {
+      padding: 0 1rem;
+    }
+
+    &--heading {
+      z-index: 3;
+      height: 100%;
+      width: 100%;
+      margin-top: 2rem;
+      line-height: 1.5;
+      text-align: center;
+      pointer-events: none;
+
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      justify-self: center;
+      align-self: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-size: 7rem;
+        font-family: $font-heading;
+        font-weight: 300;
+        color: $color-secondary;
+
+        @media only screen and (max-width: 1250px) {
+          font-size: 6rem;
+        }
+
+        @media only screen and (max-width: 700px) {
+          font-size: 5rem;
+        }
+
+        @media only screen and(max-width: 400px ) {
+          font-size: 3.5rem;
+        }
+      }
+
+      p {
+        font-size: 2.5rem;
+
+        @media only screen and (max-width: 1050px) {
+          font-size: 2rem;
+        }
+
+        @media only screen and (max-width: 700px) {
+          font-size: 1.5rem;
+        }
+
+        @media only screen and(max-width: 400px ) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &--main {
+      @include menu-to-go-items;
+
+      grid-column: 1 / 2;
+    }
+
+    &--special {
+      @include menu-to-go-items;
+      grid-column: 2 / 3;
+    }
+
+    &--btn {
+      @include button;
+
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+      justify-self: center;
+      align-self: center;
+
+      @media only screen and (max-width: 900px) {
+        align-self: start;
+      }
+
+      @media only screen and (max-width: 700px) {
+        font-size: 1.5rem;
+        align-self: center;
+        padding: 1.2rem 3.5rem;
+        margin-bottom: 2rem;
+      }
+
+      &:hover {
+        color: $color-white;
+        border-inline: 5px solid $color-primary;
+        background-color: $color-secondary;
+      }
+    }
+  }
+}

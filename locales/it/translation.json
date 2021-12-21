@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "home": "Casa",
+    "menu": "Menu",
+    "to-go": "Ordine To go",
+    "contact": "Prenotazioni",
+    "about-us": "Chi siamo",
+    "gallery": "Galleria",
+    "location": "Posizione",
+    "language": "Lingua",
+    "just-language": "Lingua",
+    "si": "Slovenščina",
+    "en": "English",
+    "it": "Italiano"
+  },
+
+  "header": {
+    "boat": "Nave",
+    "restaurant": "Ristorante",
+    "second-btn": "Prenotare",
+    "special-offers": "Menu"
+  },
+  "to-go": {
+    "text": "Ora puoi ordinare cibo da asporto. Chiamaci e vieni a prenderlo quando è pronto."
+  },
+  "fishing": {
+    "text": "Abbiamo il pesce più fresco",
+    "text-2": "Prendiamo il pesce noi stessi. Quello che non usiamo quel giorno lo vendiamo al mercato del pesce"
+  },
+
+  "menu": {
+    "text": "Pesce fresco di giornata pescato da noi. Esperienza unica mangiando in barca nel porto di Pirano",
+    "main": "Menu",
+    "apetizers": "Antipasti",
+    "spaghetti": "Spaghetti con vongole",
+    "salty-fillets": "Achugi",
+    "main-dishes": "Piattii principali",
+    "black-muscles": "Cozze",
+    "in-white-souce": "alla buzara",
+    "fish": "Pesce",
+    "categorie-1": "Categoria I.",
+    "categorie-1-plus": "Categoria  I.PLUS",
+    "categorie-2": "Categoria II.PLUS",
+    "side-dishes": "Allegato",
+    "sesonal-salad": "Insalata di stagione",
+    "polenta": "Polenta grillata",
+    "marinated-sardines": "Sardine marinate",
+    "bacala": "Bacala",
+    "specail-offres": "Offerte specaili giornaliere",
+    "specail-offer": "Offerte specaili"
+  },
+
+  "weather": {
+    "reserve": "Prenota un tavolo",
+    "reservation-required": "È necessaria la prenotazione. Chiama ora",
+    "port": "Prorta",
+    "piran": "Pirano",
+    "slovenia": "Slovenia",
+    "open": "Apperto",
+    "thuseday-closed": "Martedì chiuso",
+    "closed": "Chiuso"
+  },
+  "about-us": {
+    "text-1": "",
+    "text-2": "",
+    "text-3": "",
+    "about-us": "Chi siamo"
+  },
+  "gallery": {
+    "gallery": "Galleria"
+  },
+  "footer": {
+    "opening-hours": "Orario"
+  }
+}
