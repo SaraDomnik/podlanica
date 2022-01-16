@@ -446,66 +446,6 @@ body {
     @media only screen and (max-width: 400px) {
       .weather-app__form {
         width: 100%; } }
-    .weather-app__form--banner {
-      z-index: 10;
-      height: 56rem;
-      width: 100%;
-      background-image: url(/img/banner.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      grid-column: 2 / 3;
-      grid-row: 1 / -1;
-      justify-self: center;
-      align-self: center; }
-      @media only screen and (max-width: 1750px) {
-        .weather-app__form--banner {
-          height: 55rem; } }
-      @media only screen and (max-width: 1550px) {
-        .weather-app__form--banner {
-          height: 49rem; } }
-      @media only screen and (max-width: 1500px) {
-        .weather-app__form--banner {
-          height: 48rem; } }
-      @media only screen and (max-width: 1400px) {
-        .weather-app__form--banner {
-          height: 55rem; } }
-      @media only screen and (max-width: 1370px) {
-        .weather-app__form--banner {
-          height: 60rem; } }
-      @media only screen and (max-width: 1350px) {
-        .weather-app__form--banner {
-          height: 53rem; } }
-      @media only screen and (max-width: 1150px) {
-        .weather-app__form--banner {
-          height: 47rem;
-          width: 90%; } }
-      @media only screen and (max-width: 1050px) {
-        .weather-app__form--banner {
-          height: 52rem; } }
-      @media only screen and (max-width: 750px) {
-        .weather-app__form--banner {
-          height: 49rem;
-          grid-column: 1 / -1;
-          grid-row: 1 / 2; } }
-      @media only screen and (max-width: 550px) {
-        .weather-app__form--banner {
-          height: 56rem; } }
-      @media only screen and (max-width: 530px) {
-        .weather-app__form--banner {
-          height: 60rem; } }
-      @media only screen and (max-width: 500px) {
-        .weather-app__form--banner {
-          height: 65rem; } }
-      @media only screen and (max-width: 450px) {
-        .weather-app__form--banner {
-          height: 71rem; } }
-      @media only screen and (max-width: 400px) {
-        .weather-app__form--banner {
-          height: 65rem;
-          width: 100%; } }
-      @media only screen and (max-width: 350px) {
-        .weather-app__form--banner {
-          height: 73rem; } }
     .weather-app__form--icon {
       z-index: 3;
       font-size: 3.2rem;
@@ -579,11 +519,15 @@ body {
             font-size: 1.8rem; } }
     .weather-app__form--location {
       margin-top: 5rem;
+      margin-left: 4rem;
       display: flex;
       cursor: pointer; }
       @media only screen and (max-width: 1550px) {
         .weather-app__form--location {
           margin-top: 4rem; } }
+      @media only screen and (max-width: 700px) {
+        .weather-app__form--location {
+          margin-left: 0; } }
       .weather-app__form--location p {
         margin-left: 3rem;
         font-size: 2.1rem; }
@@ -595,11 +539,15 @@ body {
             font-size: 1.5rem; } }
     .weather-app__form--phone {
       margin-top: 5rem;
+      margin-left: 4rem;
       display: flex;
       cursor: pointer; }
       @media only screen and (max-width: 1550px) {
         .weather-app__form--phone {
           margin-top: 4rem; } }
+      @media only screen and (max-width: 700px) {
+        .weather-app__form--phone {
+          margin-left: 0; } }
       .weather-app__form--phone p {
         margin-left: 3rem;
         font-size: 2.1rem; }
@@ -611,11 +559,15 @@ body {
             font-size: 1.5rem; } }
     .weather-app__form--time {
       margin-top: 5rem;
+      margin-left: 4rem;
       display: flex;
       pointer-events: none; }
       @media only screen and (max-width: 1550px) {
         .weather-app__form--time {
           margin-top: 4rem; } }
+      @media only screen and (max-width: 700px) {
+        .weather-app__form--time {
+          margin-left: 0; } }
       .weather-app__form--time p {
         margin-left: 3rem;
         font-size: 2.1rem; }

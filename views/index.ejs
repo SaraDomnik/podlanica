@@ -71,7 +71,7 @@
         <div class="navigation__dropdown--content">
           <a href="?lng=si">Slovenščina</a>
           <a href="?lng=en">English</a>
-          <!-- <a href="?lng=it">Italiano</a> -->
+          <a href="?lng=it">Italiano</a>
         </div>
       </div>
     </div>
@@ -125,12 +125,12 @@
               alt="English flag"
               class="ham__dropdown--content-flag"
           /></a>
-          <!-- <a href="?lng=it"
+          <a href="?lng=it"
             ><img
               src="/img/it-flag.svg"
               alt="Italian flag"
               class="ham__dropdown--content-flag"
-          /></a> -->
+          /></a>
         </div>
       </div>
     </div>
@@ -311,13 +311,18 @@
           <section>
             <p><%=t('menu.categorie-1')%></p>
             <span></span>
-            <p>5€/100g</p>
+            <p>4,5€/100g</p>
+          </section>
+          <section>
+            <p><%=t('menu.categorie-1-plus')%></p>
+            <span></span>
+            <p>5,5€/100g</p>
           </section>
 
           <section>
             <p><%=t('menu.categorie-2')%></p>
             <span></span>
-            <p>4€/100g</p>
+            <p>3,5€/100g</p>
           </section>
         </div>
 
@@ -406,9 +411,12 @@
         <div class="weather-app__form--time">
           <i class="weather-app__form--icon far fa-clock"></i>
           <p>
-            <%=t('weather.open')%>: 13h - 20h, <br /><b
+            <%=t('weather.open')%>: 12.30 - 19h, <br /><b
               ><%=t('weather.thuseday-closed')%>
             </b>
+            <!-- <b>
+              <%=t('weather.closed')%>
+            </b> -->
           </p>
         </div>
       </div>
