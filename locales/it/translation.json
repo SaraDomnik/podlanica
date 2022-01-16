@@ -39,7 +39,8 @@
     "in-white-souce": "alla buzara",
     "fish": "Pesce",
     "categorie-1": "Categoria I.",
-    "categorie-2": "Categoria II.",
+    "categorie-1-plus": "Categoria  I.PLUS",
+    "categorie-2": "Categoria II.PLUS",
     "side-dishes": "Allegato",
     "sesonal-salad": "Insalata di stagione",
     "polenta": "Polenta grillata",
@@ -56,12 +57,13 @@
     "piran": "Pirano",
     "slovenia": "Slovenia",
     "open": "Apperto",
-    "thuseday-closed": "Martedì chiuso"
+    "thuseday-closed": "Martedì chiuso",
+    "closed": "Chiuso"
   },
   "about-us": {
-    "text-1": "",
-    "text-2": "",
-    "text-3": "",
+    "text-1": "La figura centrale del nostro ristorante è la nostra imbarcazione. Costruita nel 1935, è dal 2008 che ci offre uno scenario rusticale e unico. Da noi potete vivere un'esperrienta culinaria unica, perchè potete gustare i nostri pisatti su una cera e propria barca.",
+    "text-2": "La Podlanica è gestita da me (Katarina) e da mio marito Rok. Lui si occupa della pesca del pesce fresco e della cuccina, mentre io mi prendo cura di voi mentre siete in attesa del vostro piatto. Da noi potete gustare i nostri pisatti prelibati mentre vi godete la vista sul mare Adriatico. Siamo fiere di usare prodotti locali e pesce fresco per le nostre creazioni culinarie saporite.",
+    "text-3": "Malgrado siamo una piccola equipe, siamo in grado di offrire ai nostri clienti le miglior pietanze caserecce in un ambiente intimo. Tutti sono seduti uno accento all'altro e ciò collega le persone, che fino a poco prima erano estranei. Da noi tutti fanno nuove amicizie e si godono il calore del cibo casereccio.",
     "about-us": "Chi siamo"
   },
   "gallery": {

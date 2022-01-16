@@ -110,11 +110,16 @@
 //WEATHER APP
 @mixin weather-app-info {
   margin-top: 5rem;
+  margin-left: 4rem;
 
   display: flex;
 
   @media only screen and (max-width: 1550px) {
     margin-top: 4rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    margin-left: 0;
   }
 
   p {
